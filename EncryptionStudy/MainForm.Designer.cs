@@ -95,6 +95,8 @@
             this.answer10_2 = new System.Windows.Forms.RadioButton();
             this.answer10_1 = new System.Windows.Forms.RadioButton();
             this.label10 = new System.Windows.Forms.Label();
+            this.btnCheck = new System.Windows.Forms.Button();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.tabsMain.SuspendLayout();
             this.tabBasics.SuspendLayout();
             this.tabsBasics.SuspendLayout();
@@ -119,6 +121,7 @@
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabsMain
@@ -215,6 +218,7 @@
             // tabTest
             // 
             this.tabTest.AutoScroll = true;
+            this.tabTest.Controls.Add(this.panel11);
             this.tabTest.Controls.Add(this.panel10);
             this.tabTest.Controls.Add(this.panel9);
             this.tabTest.Controls.Add(this.panel8);
@@ -901,6 +905,25 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "label10";
             // 
+            // btnCheck
+            // 
+            this.btnCheck.Location = new System.Drawing.Point(3, 3);
+            this.btnCheck.Name = "btnCheck";
+            this.btnCheck.Size = new System.Drawing.Size(75, 23);
+            this.btnCheck.TabIndex = 4;
+            this.btnCheck.Text = "Check";
+            this.btnCheck.UseVisualStyleBackColor = true;
+            // 
+            // panel11
+            // 
+            this.panel11.AutoSize = true;
+            this.panel11.Controls.Add(this.btnCheck);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel11.Location = new System.Drawing.Point(3, 1180);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(653, 29);
+            this.panel11.TabIndex = 4;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -947,6 +970,7 @@
             this.panel9.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
+            this.panel11.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1020,6 +1044,8 @@
         private System.Windows.Forms.RadioButton answer1_2;
         private System.Windows.Forms.RadioButton answer1_1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Button btnCheck;
 
     }
 }
