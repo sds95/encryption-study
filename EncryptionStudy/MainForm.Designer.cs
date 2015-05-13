@@ -1022,7 +1022,6 @@
             this.Name = "MainForm";
             this.Text = "Encryption Study Project";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.tabsMain.ResumeLayout(false);
             this.tabBasics.ResumeLayout(false);
             this.tabsBasics.ResumeLayout(false);
