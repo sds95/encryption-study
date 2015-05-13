@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using System.Threading;
 using System.Globalization;
@@ -23,8 +17,10 @@ namespace EncryptionStudy
             // Initialize components.
             InitCaptions();
 
-            // Load text files.
-            boxBasics.LoadFile("test.rtf");
+            // Load RTF resources.
+            // All RTF resources should be put inside resx files or so.
+            // Also, while loading, cool logo image should display as "loading program image".
+            //boxBasics.LoadFile("Basics.rtf");
         }
 
         private void InitCaptions()
@@ -39,24 +35,11 @@ namespace EncryptionStudy
             tabBasics.Text = Strings.CryptographyEssentials;
         }
 
-        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Properties.Settings.Default.Language = comboLanguage.SelectedIndex;
-            Properties.Settings.Default.Save();
-        }
-
         private void comboLanguage_SelectedIndexChanged(object sender, EventArgs e)
         {
             Properties.Settings.Default.Language = comboLanguage.SelectedIndex;
+            Properties.Settings.Default.Save();
             InitCaptions();
         }
-
-        /*private void btnStartEncryption_Click(object sender, EventArgs e)
-        {
-            switch (comboEncryption.SelectedIndex)
-            { 
-    
-            }
-        }*/
     }
 }
