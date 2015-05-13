@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
 using System.Threading;
 using System.Globalization;
 
@@ -51,5 +50,13 @@ namespace EncryptionStudy
             Properties.Settings.Default.Language = comboLanguage.SelectedIndex;
             InitCaptions();
         }
+
+        /*private void btnStartEncryption_Click(object sender, EventArgs e)
+        {
+            switch (comboEncryption.SelectedIndex)
+            { 
+    
+            }
+        }*/
     }
 }
