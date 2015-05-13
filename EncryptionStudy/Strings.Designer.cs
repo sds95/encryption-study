@@ -61,11 +61,110 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Asymmetric encryption.
+        /// </summary>
+        internal static string AsymmetricEncryption {
+            get {
+                return ResourceManager.GetString("AsymmetricEncryption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Basics.
+        /// </summary>
+        internal static string BasicConcepts {
+            get {
+                return ResourceManager.GetString("BasicConcepts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Block encryption.
+        /// </summary>
+        internal static string BlockEncryption {
+            get {
+                return ResourceManager.GetString("BlockEncryption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Start.
+        /// </summary>
+        internal static string BtnStart {
+            get {
+                return ResourceManager.GetString("BtnStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Cryptography essentials.
         /// </summary>
         internal static string CryptographyEssentials {
             get {
                 return ResourceManager.GetString("CryptographyEssentials", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Encryption algorithms.
+        /// </summary>
+        internal static string EncryptionAlgorithms {
+            get {
+                return ResourceManager.GetString("EncryptionAlgorithms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Settings.
+        /// </summary>
+        internal static string LanguageSettings {
+            get {
+                return ResourceManager.GetString("LanguageSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Keyword.
+        /// </summary>
+        internal static string LbKeyword {
+            get {
+                return ResourceManager.GetString("LbKeyword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Language.
+        /// </summary>
+        internal static string LbLanguage {
+            get {
+                return ResourceManager.GetString("LbLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Text.
+        /// </summary>
+        internal static string LbText {
+            get {
+                return ResourceManager.GetString("LbText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Symmetric encryption.
+        /// </summary>
+        internal static string SymmetricEncryption {
+            get {
+                return ResourceManager.GetString("SymmetricEncryption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Test.
+        /// </summary>
+        internal static string Tests {
+            get {
+                return ResourceManager.GetString("Tests", resourceCulture);
             }
         }
     }

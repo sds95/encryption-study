@@ -31,10 +31,24 @@ namespace EncryptionStudy
             else
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ru-RU");
 
-            // Tabs.
+            // Tabs for first part of theory.
             tabBasics.Text = Strings.CryptographyEssentials;
+                tabBasicsBasics.Text = Strings.BasicConcepts;
+                tabBasicsBlocks.Text = Strings.BlockEncryption;
+                tabBasicsSymmetric.Text = Strings.SymmetricEncryption;
+                tabBasicsAssymetric.Text = Strings.AsymmetricEncryption;
+            // Tab for test.
+            tabTest.Text = Strings.Tests;
+            // Tabs for second part of theory.
+            tabAlgorythms.Text = Strings.EncryptionAlgorithms;
+                labelEncryptionText.Text = Strings.LbText;
+                labelEncryptionKeyword.Text = Strings.LbKeyword;
+                btnEncryptionStart.Text = Strings.BtnStart;
+            // Tabs for settings.
+            tabSettings.Text = Strings.LanguageSettings;
+                labelLanguage.Text = Strings.LbLanguage;
         }
-
+        
         private void comboLanguage_SelectedIndexChanged(object sender, EventArgs e)
         {
             Properties.Settings.Default.Language = comboLanguage.SelectedIndex;
