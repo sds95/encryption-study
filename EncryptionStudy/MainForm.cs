@@ -19,17 +19,34 @@ namespace EncryptionStudy
 
             // Load RTF resources.
             // All RTF resources should be put inside resx files or so.
-            // Also, while loading, cool logo image should display as "loading program image".
-            //boxBasics.LoadFile("Basics.rtf");
+            //boxBasics.LoadFile("Basics En.rtf");
         }
 
         private void InitCaptions()
         {
             // Load language.
             if (Properties.Settings.Default.Language == 0)
+            {
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.InvariantCulture;
+            }
             else
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("ru-RU");
+            
+            // Load theory.
+            if (Thread.CurrentThread.CurrentUICulture == CultureInfo.GetCultureInfo("ru-RU"))
+            {
+                boxBasics.LoadFile("Basics Ru.rtf");
+                boxBlockEncryption.LoadFile("Block encryption Ru.rtf");
+                boxSymmetricEncryption.LoadFile("Symmetric encryption Ru.rtf");
+                boxAsymmetricEncryption.LoadFile("Asymmetric encryption Ru.rtf");
+            }
+            else
+            {
+                boxBasics.LoadFile("Basics En.rtf");
+                boxBlockEncryption.LoadFile("Block encryption En.rtf");
+                boxSymmetricEncryption.LoadFile("Symmetric encryption En.rtf");
+                boxAsymmetricEncryption.LoadFile("Asymmetric encryption En.rtf");
+            }
 
             // Tabs for first part of theory.
             tabBasics.Text = Strings.CryptographyEssentials;
