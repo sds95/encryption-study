@@ -70,7 +70,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Basics.
+        ///   Ищет локализованную строку, похожую на Basic concepts.
         /// </summary>
         internal static string BasicConcepts {
             get {
@@ -111,6 +111,15 @@ namespace EncryptionStudy {
         internal static string EncryptionAlgorithms {
             get {
                 return ResourceManager.GetString("EncryptionAlgorithms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Exordium.
+        /// </summary>
+        internal static string Exordium {
+            get {
+                return ResourceManager.GetString("Exordium", resourceCulture);
             }
         }
         

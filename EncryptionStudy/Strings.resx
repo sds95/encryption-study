@@ -121,7 +121,7 @@
     <value>Asymmetric encryption</value>
   </data>
   <data name="BasicConcepts" xml:space="preserve">
-    <value>Basics</value>
+    <value>Basic concepts</value>
   </data>
   <data name="BlockEncryption" xml:space="preserve">
     <value>Block encryption</value>
@@ -134,6 +134,9 @@
   </data>
   <data name="EncryptionAlgorithms" xml:space="preserve">
     <value>Encryption algorithms</value>
+  </data>
+  <data name="Exordium" xml:space="preserve">
+    <value>Exordium</value>
   </data>
   <data name="LanguageSettings" xml:space="preserve">
     <value>Settings</value>

@@ -35,14 +35,16 @@ namespace EncryptionStudy
             // Load theory.
             if (Thread.CurrentThread.CurrentUICulture == CultureInfo.GetCultureInfo("ru-RU"))
             {
-                boxBasics.LoadFile("Basics Ru.rtf");
+                boxBasics.LoadFile("Exordium Ru.rtf");
+                boxBasicsConcepts.LoadFile("Basic concepts Ru.rtf");
                 boxBlockEncryption.LoadFile("Block encryption Ru.rtf");
                 boxSymmetricEncryption.LoadFile("Symmetric encryption Ru.rtf");
                 boxAsymmetricEncryption.LoadFile("Asymmetric encryption Ru.rtf");
             }
             else
             {
-                boxBasics.LoadFile("Basics En.rtf");
+                boxBasics.LoadFile("Exordium En.rtf");
+                boxBasicsConcepts.LoadFile("Basic concepts En.rtf");
                 boxBlockEncryption.LoadFile("Block encryption En.rtf");
                 boxSymmetricEncryption.LoadFile("Symmetric encryption En.rtf");
                 boxAsymmetricEncryption.LoadFile("Asymmetric encryption En.rtf");
@@ -50,7 +52,8 @@ namespace EncryptionStudy
 
             // Tabs for first part of theory.
             tabBasics.Text = Strings.CryptographyEssentials;
-                tabBasicsBasics.Text = Strings.BasicConcepts;
+                tabBasicsBasics.Text = Strings.Exordium;
+                tabBasicsConcepts.Text = Strings.BasicConcepts;
                 tabBasicsBlocks.Text = Strings.BlockEncryption;
                 tabBasicsSymmetric.Text = Strings.SymmetricEncryption;
                 tabBasicsAssymetric.Text = Strings.AsymmetricEncryption;

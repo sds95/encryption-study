@@ -33,9 +33,13 @@
             this.tabsBasics = new System.Windows.Forms.TabControl();
             this.tabBasicsBasics = new System.Windows.Forms.TabPage();
             this.boxBasics = new System.Windows.Forms.RichTextBox();
+            this.tabBasicsConcepts = new System.Windows.Forms.TabPage();
             this.tabBasicsBlocks = new System.Windows.Forms.TabPage();
+            this.boxBlockEncryption = new System.Windows.Forms.RichTextBox();
             this.tabBasicsSymmetric = new System.Windows.Forms.TabPage();
+            this.boxSymmetricEncryption = new System.Windows.Forms.RichTextBox();
             this.tabBasicsAssymetric = new System.Windows.Forms.TabPage();
+            this.boxAsymmetricEncryption = new System.Windows.Forms.RichTextBox();
             this.tabTest = new System.Windows.Forms.TabPage();
             this.panel11 = new System.Windows.Forms.Panel();
             this.btnCheck = new System.Windows.Forms.Button();
@@ -103,13 +107,12 @@
             this.tabSettings = new System.Windows.Forms.TabPage();
             this.labelLanguage = new System.Windows.Forms.Label();
             this.comboLanguage = new System.Windows.Forms.ComboBox();
-            this.boxBlockEncryption = new System.Windows.Forms.RichTextBox();
-            this.boxSymmetricEncryption = new System.Windows.Forms.RichTextBox();
-            this.boxAsymmetricEncryption = new System.Windows.Forms.RichTextBox();
+            this.boxBasicsConcepts = new System.Windows.Forms.RichTextBox();
             this.tabsMain.SuspendLayout();
             this.tabBasics.SuspendLayout();
             this.tabsBasics.SuspendLayout();
             this.tabBasicsBasics.SuspendLayout();
+            this.tabBasicsConcepts.SuspendLayout();
             this.tabBasicsBlocks.SuspendLayout();
             this.tabBasicsSymmetric.SuspendLayout();
             this.tabBasicsAssymetric.SuspendLayout();
@@ -166,6 +169,7 @@
             // 
             this.tabsBasics.Alignment = System.Windows.Forms.TabAlignment.Bottom;
             this.tabsBasics.Controls.Add(this.tabBasicsBasics);
+            this.tabsBasics.Controls.Add(this.tabBasicsConcepts);
             this.tabsBasics.Controls.Add(this.tabBasicsBlocks);
             this.tabsBasics.Controls.Add(this.tabBasicsSymmetric);
             this.tabsBasics.Controls.Add(this.tabBasicsAssymetric);
@@ -202,6 +206,17 @@
             this.boxBasics.TabIndex = 0;
             this.boxBasics.Text = "";
             // 
+            // tabBasicsConcepts
+            // 
+            this.tabBasicsConcepts.Controls.Add(this.boxBasicsConcepts);
+            this.tabBasicsConcepts.Location = new System.Drawing.Point(4, 4);
+            this.tabBasicsConcepts.Name = "tabBasicsConcepts";
+            this.tabBasicsConcepts.Padding = new System.Windows.Forms.Padding(3);
+            this.tabBasicsConcepts.Size = new System.Drawing.Size(890, 478);
+            this.tabBasicsConcepts.TabIndex = 4;
+            this.tabBasicsConcepts.Text = "Basic concepts";
+            this.tabBasicsConcepts.UseVisualStyleBackColor = true;
+            // 
             // tabBasicsBlocks
             // 
             this.tabBasicsBlocks.Controls.Add(this.boxBlockEncryption);
@@ -213,6 +228,18 @@
             this.tabBasicsBlocks.TabIndex = 1;
             this.tabBasicsBlocks.Text = "Block encryption";
             this.tabBasicsBlocks.UseVisualStyleBackColor = true;
+            // 
+            // boxBlockEncryption
+            // 
+            this.boxBlockEncryption.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.boxBlockEncryption.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.boxBlockEncryption.Location = new System.Drawing.Point(3, 2);
+            this.boxBlockEncryption.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.boxBlockEncryption.Name = "boxBlockEncryption";
+            this.boxBlockEncryption.ReadOnly = true;
+            this.boxBlockEncryption.Size = new System.Drawing.Size(884, 474);
+            this.boxBlockEncryption.TabIndex = 1;
+            this.boxBlockEncryption.Text = "";
             // 
             // tabBasicsSymmetric
             // 
@@ -226,6 +253,18 @@
             this.tabBasicsSymmetric.Text = "Symmetric encryption";
             this.tabBasicsSymmetric.UseVisualStyleBackColor = true;
             // 
+            // boxSymmetricEncryption
+            // 
+            this.boxSymmetricEncryption.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.boxSymmetricEncryption.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.boxSymmetricEncryption.Location = new System.Drawing.Point(3, 2);
+            this.boxSymmetricEncryption.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.boxSymmetricEncryption.Name = "boxSymmetricEncryption";
+            this.boxSymmetricEncryption.ReadOnly = true;
+            this.boxSymmetricEncryption.Size = new System.Drawing.Size(884, 474);
+            this.boxSymmetricEncryption.TabIndex = 1;
+            this.boxSymmetricEncryption.Text = "";
+            // 
             // tabBasicsAssymetric
             // 
             this.tabBasicsAssymetric.Controls.Add(this.boxAsymmetricEncryption);
@@ -237,6 +276,18 @@
             this.tabBasicsAssymetric.TabIndex = 3;
             this.tabBasicsAssymetric.Text = "Asymmetric encryption";
             this.tabBasicsAssymetric.UseVisualStyleBackColor = true;
+            // 
+            // boxAsymmetricEncryption
+            // 
+            this.boxAsymmetricEncryption.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.boxAsymmetricEncryption.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.boxAsymmetricEncryption.Location = new System.Drawing.Point(3, 2);
+            this.boxAsymmetricEncryption.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.boxAsymmetricEncryption.Name = "boxAsymmetricEncryption";
+            this.boxAsymmetricEncryption.ReadOnly = true;
+            this.boxAsymmetricEncryption.Size = new System.Drawing.Size(884, 474);
+            this.boxAsymmetricEncryption.TabIndex = 1;
+            this.boxAsymmetricEncryption.Text = "";
             // 
             // tabTest
             // 
@@ -1073,41 +1124,17 @@
             this.comboLanguage.TabIndex = 0;
             this.comboLanguage.SelectedIndexChanged += new System.EventHandler(this.comboLanguage_SelectedIndexChanged);
             // 
-            // boxBlockEncryption
+            // boxBasicsConcepts
             // 
-            this.boxBlockEncryption.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.boxBlockEncryption.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.boxBlockEncryption.Location = new System.Drawing.Point(3, 2);
-            this.boxBlockEncryption.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.boxBlockEncryption.Name = "boxBlockEncryption";
-            this.boxBlockEncryption.ReadOnly = true;
-            this.boxBlockEncryption.Size = new System.Drawing.Size(884, 474);
-            this.boxBlockEncryption.TabIndex = 1;
-            this.boxBlockEncryption.Text = "";
-            // 
-            // boxSymmetricEncryption
-            // 
-            this.boxSymmetricEncryption.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.boxSymmetricEncryption.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.boxSymmetricEncryption.Location = new System.Drawing.Point(3, 2);
-            this.boxSymmetricEncryption.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.boxSymmetricEncryption.Name = "boxSymmetricEncryption";
-            this.boxSymmetricEncryption.ReadOnly = true;
-            this.boxSymmetricEncryption.Size = new System.Drawing.Size(884, 474);
-            this.boxSymmetricEncryption.TabIndex = 1;
-            this.boxSymmetricEncryption.Text = "";
-            // 
-            // boxAsymmetricEncryption
-            // 
-            this.boxAsymmetricEncryption.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.boxAsymmetricEncryption.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.boxAsymmetricEncryption.Location = new System.Drawing.Point(3, 2);
-            this.boxAsymmetricEncryption.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.boxAsymmetricEncryption.Name = "boxAsymmetricEncryption";
-            this.boxAsymmetricEncryption.ReadOnly = true;
-            this.boxAsymmetricEncryption.Size = new System.Drawing.Size(884, 474);
-            this.boxAsymmetricEncryption.TabIndex = 1;
-            this.boxAsymmetricEncryption.Text = "";
+            this.boxBasicsConcepts.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.boxBasicsConcepts.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.boxBasicsConcepts.Location = new System.Drawing.Point(3, 3);
+            this.boxBasicsConcepts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.boxBasicsConcepts.Name = "boxBasicsConcepts";
+            this.boxBasicsConcepts.ReadOnly = true;
+            this.boxBasicsConcepts.Size = new System.Drawing.Size(884, 472);
+            this.boxBasicsConcepts.TabIndex = 1;
+            this.boxBasicsConcepts.Text = "";
             // 
             // MainForm
             // 
@@ -1123,6 +1150,7 @@
             this.tabBasics.ResumeLayout(false);
             this.tabsBasics.ResumeLayout(false);
             this.tabBasicsBasics.ResumeLayout(false);
+            this.tabBasicsConcepts.ResumeLayout(false);
             this.tabBasicsBlocks.ResumeLayout(false);
             this.tabBasicsSymmetric.ResumeLayout(false);
             this.tabBasicsAssymetric.ResumeLayout(false);
@@ -1244,6 +1272,8 @@
         private System.Windows.Forms.RichTextBox boxBlockEncryption;
         private System.Windows.Forms.RichTextBox boxSymmetricEncryption;
         private System.Windows.Forms.RichTextBox boxAsymmetricEncryption;
+        private System.Windows.Forms.TabPage tabBasicsConcepts;
+        private System.Windows.Forms.RichTextBox boxBasicsConcepts;
 
     }
 }

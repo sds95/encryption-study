@@ -135,6 +135,9 @@
   <data name="EncryptionAlgorithms" xml:space="preserve">
     <value>Алгоритмы шифрования</value>
   </data>
+  <data name="Exordium" xml:space="preserve">
+    <value>Введение</value>
+  </data>
   <data name="LanguageSettings" xml:space="preserve">
     <value>Настройки</value>
   </data>
