@@ -16,10 +16,6 @@ namespace EncryptionStudy
 
             // Initialize components.
             InitCaptions();
-
-            // Load RTF resources.
-            // All RTF resources should be put inside resx files or so.
-            //boxBasics.LoadFile("Basics En.rtf");
         }
 
         private void InitCaptions()

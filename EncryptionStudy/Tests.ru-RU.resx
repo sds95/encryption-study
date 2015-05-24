@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Answer10_1" xml:space="preserve">
+    <value>a)	Шифрование независимыми блоками</value>
+  </data>
+  <data name="Answer10_2" xml:space="preserve">
+    <value>b)	Шифрование, зависящее от предыдущих блоков</value>
+  </data>
+  <data name="Answer10_3" xml:space="preserve">
+    <value>c)	Дополнение до целого блока</value>
+  </data>
+  <data name="Answer11_1" xml:space="preserve">
+    <value>a)	Получатель не сможет найти конец полезных данных</value>
+  </data>
+  <data name="Answer11_2" xml:space="preserve">
+    <value>b)	Есть риск утечки информации</value>
+  </data>
+  <data name="Answer11_3" xml:space="preserve">
+    <value>c)	Нет верного ответа</value>
+  </data>
+  <data name="Answer12_1" xml:space="preserve">
+    <value>a)	Замены, перестановки, гаммирования, составные</value>
+  </data>
+  <data name="Answer12_2" xml:space="preserve">
+    <value>b)	Симметричные, ассиметричные и потоковые</value>
+  </data>
+  <data name="Answer12_3" xml:space="preserve">
+    <value>c)	Замены и перестановки</value>
+  </data>
+  <data name="Answer13_1" xml:space="preserve">
+    <value>a)	Метод криптографического преобразования, заключающийся в перестановке местами символов исходного текста по некоторому правилу</value>
+  </data>
+  <data name="Answer13_2" xml:space="preserve">
+    <value>b)	Система подстановки блоков</value>
+  </data>
+  <data name="Answer13_3" xml:space="preserve">
+    <value>c)	Метод преобразований, заключающийся в замене символов исходного текста на другие</value>
+  </data>
+  <data name="Answer14_1" xml:space="preserve">
+    <value>a)	Гаммирования</value>
+  </data>
+  <data name="Answer14_2" xml:space="preserve">
+    <value>b)	Потоковый</value>
+  </data>
+  <data name="Answer14_3" xml:space="preserve">
+    <value>c)	Замены</value>
+  </data>
+  <data name="Answer15_1" xml:space="preserve">
+    <value>a)	Блоковому шифрованию</value>
+  </data>
+  <data name="Answer15_2" xml:space="preserve">
+    <value>b)	Потоковому шифрованию</value>
+  </data>
+  <data name="Answer15_3" xml:space="preserve">
+    <value>c)	К обоим видам шифрования</value>
+  </data>
+  <data name="Answer16_1" xml:space="preserve">
+    <value>a)	Симметричный алгоритм работает медленнее ассиметричного</value>
+  </data>
+  <data name="Answer16_2" xml:space="preserve">
+    <value>b)	Ассиметричный алгоритм работает медленнее симметричного</value>
+  </data>
+  <data name="Answer16_3" xml:space="preserve">
+    <value>c)	Оба алгоритма при работе требуют много вычислительных ресурсов</value>
+  </data>
+  <data name="Answer17_1" xml:space="preserve">
+    <value>a)	3</value>
+  </data>
+  <data name="Answer17_2" xml:space="preserve">
+    <value>b)	2</value>
+  </data>
+  <data name="Answer17_3" xml:space="preserve">
+    <value>c)	4</value>
+  </data>
+  <data name="Answer18_1" xml:space="preserve">
+    <value>a)	Такую же криптоустойчивость как и сильнейший из используемых им шифров</value>
+  </data>
+  <data name="Answer18_2" xml:space="preserve">
+    <value>b)	Такую же криптоустойчивость как и слабейший из используемых им шифров</value>
+  </data>
+  <data name="Answer18_3" xml:space="preserve">
+    <value>c)	 Криптоустойчивость зависит от всех используемых им шифров</value>
+  </data>
+  <data name="Answer19_1" xml:space="preserve">
+    <value>a)	Секретная информация, используемая криптографическим алгоритмом при шифровании/расшифровке сообщений</value>
+  </data>
+  <data name="Answer19_2" xml:space="preserve">
+    <value>b)	Случайно генерирующийся ключ симметричного шифра для гибридного шифрования</value>
+  </data>
+  <data name="Answer19_3" xml:space="preserve">
+    <value>c)	Нет верного ответа</value>
+  </data>
+  <data name="Answer1_1" xml:space="preserve">
+    <value>a)	3</value>
+  </data>
+  <data name="Answer1_2" xml:space="preserve">
+    <value>b)	2</value>
+  </data>
+  <data name="Answer1_3" xml:space="preserve">
+    <value>c)	4</value>
+  </data>
+  <data name="Answer20_1" xml:space="preserve">
+    <value>a)	Преобразование, при котором символы исходного текста складываются по модулю, равному мощности алфавита, с символами псевдослучайной последовательности</value>
+  </data>
+  <data name="Answer20_2" xml:space="preserve">
+    <value>b)	Разновидность гаммирования которая преобразует открытый текст в шифрованный последовательно, по одному биту</value>
+  </data>
+  <data name="Answer20_3" xml:space="preserve">
+    <value>c)	Нет правильного ответа</value>
+  </data>
+  <data name="Answer2_1" xml:space="preserve">
+    <value>a)	меры для ограничения доступа к информации</value>
+  </data>
+  <data name="Answer2_2" xml:space="preserve">
+    <value>b)	удостоверения подлинности и неизменности информации</value>
+  </data>
+  <data name="Answer2_3" xml:space="preserve">
+    <value>c)	оба варианта верны</value>
+  </data>
+  <data name="Answer3_1" xml:space="preserve">
+    <value>a)	Дешевизна</value>
+  </data>
+  <data name="Answer3_2" xml:space="preserve">
+    <value>b)	Перечень вероятных угроз</value>
+  </data>
+  <data name="Answer3_3" xml:space="preserve">
+    <value>c)	Необходимость в защите</value>
+  </data>
+  <data name="Answer4_1" xml:space="preserve">
+    <value>a)	Секретный текст для шифрования/расшифровки сообщения</value>
+  </data>
+  <data name="Answer4_2" xml:space="preserve">
+    <value>b)	Секретная формула для шифрования/расшифровки сообщения</value>
+  </data>
+  <data name="Answer4_3" xml:space="preserve">
+    <value>c)	Секретная информация для шифрования/расшифровки сообщения</value>
+  </data>
+  <data name="Answer5_1" xml:space="preserve">
+    <value>a)	В симметричном один ключ, а ассиметричном 2 ключа</value>
+  </data>
+  <data name="Answer5_2" xml:space="preserve">
+    <value>b)	В симметричном два ключа, а ассиметричном 1 ключ</value>
+  </data>
+  <data name="Answer5_3" xml:space="preserve">
+    <value>c)	Нет отличий</value>
+  </data>
+  <data name="Answer6_1" xml:space="preserve">
+    <value>a)	Симметричное шифрование</value>
+  </data>
+  <data name="Answer6_2" xml:space="preserve">
+    <value>b)	Ассиметричное шифрование</value>
+  </data>
+  <data name="Answer6_3" xml:space="preserve">
+    <value>c)	Оба вида шифрования</value>
+  </data>
+  <data name="Answer7_1" xml:space="preserve">
+    <value>a)	Наука о методах нахождения уязвимых мест в алгоритме шифрования</value>
+  </data>
+  <data name="Answer7_2" xml:space="preserve">
+    <value>b)	Наука о методах нахождения исходного текста</value>
+  </data>
+  <data name="Answer7_3" xml:space="preserve">
+    <value>c)	Оба варианта верны</value>
+  </data>
+  <data name="Answer8_1" xml:space="preserve">
+    <value>a)	Текст делиться на только на 2 блока</value>
+  </data>
+  <data name="Answer8_2" xml:space="preserve">
+    <value>b)	Текст делиться на большое количество разных по длине блоков</value>
+  </data>
+  <data name="Answer8_3" xml:space="preserve">
+    <value>c)	Текст делиться на равные блоки</value>
+  </data>
+  <data name="Answer9_1" xml:space="preserve">
+    <value>a)	Шифрование не возможно</value>
+  </data>
+  <data name="Answer9_2" xml:space="preserve">
+    <value>b)	Блок дополняется до нужной длинны</value>
+  </data>
+  <data name="Answer9_3" xml:space="preserve">
+    <value>c)	Незаполненный блок не участвует в шифровании</value>
+  </data>
+  <data name="Question1" xml:space="preserve">
+    <value>Количество аспектов защиты?</value>
+  </data>
+  <data name="Question10" xml:space="preserve">
+    <value>В каком из методов незавершенный блок заполняется нулевыми, и единичным битом.</value>
+  </data>
+  <data name="Question11" xml:space="preserve">
+    <value>Почему шифрование независимыми блоками не эффективно при большом количестве информации?</value>
+  </data>
+  <data name="Question12" xml:space="preserve">
+    <value>Блоковые шифры делятся на</value>
+  </data>
+  <data name="Question13" xml:space="preserve">
+    <value>Шифр подстановки это –</value>
+  </data>
+  <data name="Question14" xml:space="preserve">
+    <value>Простейший блоковый шифр</value>
+  </data>
+  <data name="Question15" xml:space="preserve">
+    <value>Гаммирование относиться к</value>
+  </data>
+  <data name="Question16" xml:space="preserve">
+    <value>Укажите верное утверждение</value>
+  </data>
+  <data name="Question17" xml:space="preserve">
+    <value>Количество способов блочного шифрования</value>
+  </data>
+  <data name="Question18" xml:space="preserve">
+    <value>Гибридный шифр имеет</value>
+  </data>
+  <data name="Question19" xml:space="preserve">
+    <value>Сеансовый ключ это</value>
+  </data>
+  <data name="Question2" xml:space="preserve">
+    <value>Защита информации это –</value>
+  </data>
+  <data name="Question20" xml:space="preserve">
+    <value>Шифр перестановки это</value>
+  </data>
+  <data name="Question3" xml:space="preserve">
+    <value>Принцип второго аспекта защиты информации</value>
+  </data>
+  <data name="Question4" xml:space="preserve">
+    <value>Ключ это –</value>
+  </data>
+  <data name="Question5" xml:space="preserve">
+    <value>Отличие симметричного шифрования и ассиметричного?</value>
+  </data>
+  <data name="Question6" xml:space="preserve">
+    <value>Гибридный шифр использует:</value>
+  </data>
+  <data name="Question7" xml:space="preserve">
+    <value>Криптоанализ – это</value>
+  </data>
+  <data name="Question8" xml:space="preserve">
+    <value>Особенность блочного шифрования</value>
+  </data>
+  <data name="Question9" xml:space="preserve">
+    <value>Если длина сообщения меньше длины блока, то</value>
+  </data>
+</root>
