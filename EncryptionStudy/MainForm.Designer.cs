@@ -96,7 +96,7 @@
             this.lbQuestion1 = new System.Windows.Forms.Label();
             this.tabAlgorythms = new System.Windows.Forms.TabPage();
             this.splitInfoAndExample = new System.Windows.Forms.SplitContainer();
-            this.boxCeasar = new System.Windows.Forms.RichTextBox();
+            this.boxEncryptionAlgorithm = new System.Windows.Forms.RichTextBox();
             this.splitEncSettingsAndExample = new System.Windows.Forms.SplitContainer();
             this.inputEncryptionKeyword = new System.Windows.Forms.TextBox();
             this.inputEncryptionText = new System.Windows.Forms.TextBox();
@@ -104,7 +104,7 @@
             this.labelEncryptionKeyword = new System.Windows.Forms.Label();
             this.btnEncryptionStart = new System.Windows.Forms.Button();
             this.comboEncryptionLanguage = new System.Windows.Forms.ComboBox();
-            this.comboEncryption = new System.Windows.Forms.ComboBox();
+            this.ComboEncryption = new System.Windows.Forms.ComboBox();
             this.tabSettings = new System.Windows.Forms.TabPage();
             this.labelLanguage = new System.Windows.Forms.Label();
             this.comboLanguage = new System.Windows.Forms.ComboBox();
@@ -967,7 +967,7 @@
             // 
             // splitInfoAndExample.Panel1
             // 
-            this.splitInfoAndExample.Panel1.Controls.Add(this.boxCeasar);
+            this.splitInfoAndExample.Panel1.Controls.Add(this.boxEncryptionAlgorithm);
             // 
             // splitInfoAndExample.Panel2
             // 
@@ -976,17 +976,17 @@
             this.splitInfoAndExample.SplitterDistance = 449;
             this.splitInfoAndExample.TabIndex = 1;
             // 
-            // boxCeasar
+            // boxEncryptionAlgorithm
             // 
-            this.boxCeasar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.boxCeasar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.boxCeasar.Location = new System.Drawing.Point(0, 0);
-            this.boxCeasar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.boxCeasar.Name = "boxCeasar";
-            this.boxCeasar.ReadOnly = true;
-            this.boxCeasar.Size = new System.Drawing.Size(447, 505);
-            this.boxCeasar.TabIndex = 1;
-            this.boxCeasar.Text = "";
+            this.boxEncryptionAlgorithm.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.boxEncryptionAlgorithm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.boxEncryptionAlgorithm.Location = new System.Drawing.Point(0, 0);
+            this.boxEncryptionAlgorithm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.boxEncryptionAlgorithm.Name = "boxEncryptionAlgorithm";
+            this.boxEncryptionAlgorithm.ReadOnly = true;
+            this.boxEncryptionAlgorithm.Size = new System.Drawing.Size(447, 505);
+            this.boxEncryptionAlgorithm.TabIndex = 1;
+            this.boxEncryptionAlgorithm.Text = "";
             // 
             // splitEncSettingsAndExample
             // 
@@ -1005,7 +1005,7 @@
             this.splitEncSettingsAndExample.Panel1.Controls.Add(this.labelEncryptionKeyword);
             this.splitEncSettingsAndExample.Panel1.Controls.Add(this.btnEncryptionStart);
             this.splitEncSettingsAndExample.Panel1.Controls.Add(this.comboEncryptionLanguage);
-            this.splitEncSettingsAndExample.Panel1.Controls.Add(this.comboEncryption);
+            this.splitEncSettingsAndExample.Panel1.Controls.Add(this.ComboEncryption);
             // 
             // splitEncSettingsAndExample.Panel2
             // 
@@ -1078,13 +1078,13 @@
             this.comboEncryptionLanguage.Size = new System.Drawing.Size(434, 24);
             this.comboEncryptionLanguage.TabIndex = 2;
             // 
-            // comboEncryption
+            // ComboEncryption
             // 
-            this.comboEncryption.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.ComboEncryption.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboEncryption.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboEncryption.FormattingEnabled = true;
-            this.comboEncryption.Items.AddRange(new object[] {
+            this.ComboEncryption.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboEncryption.FormattingEnabled = true;
+            this.ComboEncryption.Items.AddRange(new object[] {
             "Ceasar encryption",
             "Ceasar modernisation (Afine) encryption",
             "Ceasar modernisation (Keyword) encryption",
@@ -1094,11 +1094,11 @@
             "Encryption tables",
             "DES",
             "RSA"});
-            this.comboEncryption.Location = new System.Drawing.Point(3, 2);
-            this.comboEncryption.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboEncryption.Name = "comboEncryption";
-            this.comboEncryption.Size = new System.Drawing.Size(434, 24);
-            this.comboEncryption.TabIndex = 0;
+            this.ComboEncryption.Location = new System.Drawing.Point(3, 2);
+            this.ComboEncryption.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ComboEncryption.Name = "ComboEncryption";
+            this.ComboEncryption.Size = new System.Drawing.Size(434, 24);
+            this.ComboEncryption.TabIndex = 0;
             // 
             // tabSettings
             // 
@@ -1208,9 +1208,9 @@
         private System.Windows.Forms.Label labelLanguage;
         private System.Windows.Forms.ComboBox comboLanguage;
         private System.Windows.Forms.SplitContainer splitInfoAndExample;
-        private System.Windows.Forms.RichTextBox boxCeasar;
+        private System.Windows.Forms.RichTextBox boxEncryptionAlgorithm;
         private System.Windows.Forms.SplitContainer splitEncSettingsAndExample;
-        private System.Windows.Forms.ComboBox comboEncryption;
+        private System.Windows.Forms.ComboBox ComboEncryption;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.RadioButton answer10_3;
         private System.Windows.Forms.RadioButton answer10_2;

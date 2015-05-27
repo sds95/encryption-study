@@ -67,34 +67,66 @@ namespace EncryptionStudy
             tabSettings.Text = Strings.LanguageSettings;
                 labelLanguage.Text = Strings.LbLanguage;
 
+            //Second part of theory
+            if (Thread.CurrentThread.CurrentUICulture == CultureInfo.GetCultureInfo("ru-RU"))
+            {
+                switch (ComboEncryption.SelectedIndex)
+                {
+                    case 0: boxEncryptionAlgorithm.LoadFile("Ceasar Ru.rtf");
+                    case 1: boxEncryptionAlgorithm.LoadFile("Ceasar Afine Ru.rtf");
+                    case 2: boxEncryptionAlgorithm.LoadFile("Ceasar Keyword Ru.rtf");
+                    case 3: boxEncryptionAlgorithm.LoadFile("Visioner Ru.rtf");
+                    case 4: boxEncryptionAlgorithm.LoadFile("Playfer Ru.rtf");
+                    case 5: boxEncryptionAlgorithm.LoadFile("Magical square Ru.rtf");
+                    case 6: boxEncryptionAlgorithm.LoadFile("Encryption tables Ru.rtf");
+                    case 7: boxEncryptionAlgorithm.LoadFile("DES Ru.rtf");
+                    case 8: boxEncryptionAlgorithm.LoadFile("RSA Ru.rtf");
+                }
+            }
+            else
+            { 
+                switch (ComboEncryption.SelectedIndex)
+                {
+                    case 0: boxEncryptionAlgorithm.LoadFile("Ceasar En.rtf");
+                    case 1: boxEncryptionAlgorithm.LoadFile("Ceasar Afine En.rtf");
+                    case 2: boxEncryptionAlgorithm.LoadFile("Ceasar Keyword En.rtf");
+                    case 3: boxEncryptionAlgorithm.LoadFile("Visioner En.rtf");
+                    case 4: boxEncryptionAlgorithm.LoadFile("Playfer En.rtf");
+                    case 5: boxEncryptionAlgorithm.LoadFile("Magical square En.rtf");
+                    case 6: boxEncryptionAlgorithm.LoadFile("Encryption tables En.rtf");
+                    case 7: boxEncryptionAlgorithm.LoadFile("DES En.rtf");
+                    case 8: boxEncryptionAlgorithm.LoadFile("RSA En.rtf");
+                 }
+            }
+
             //Tests
             string[] question = new string[20] {Tests.Question1 ,Tests.Question2, Tests.Question3, Tests.Question4, Tests.Question5, Tests.Question6, Tests.Question7, Tests.Question8, Tests.Question9, Tests.Question10,
             Tests.Question11, Tests.Question12, Tests.Question13, Tests.Question14, Tests.Question15, Tests.Question16, Tests.Question17, Tests.Question18, Tests.Question19, Tests.Question20};
             
-            string[,] answers = new string[60,2] {{Tests.Answer1_1, Tests.Question1}, {Tests.Answer1_2, Tests.Question1}, {Tests.Answer1_3, Tests.Question1}, 
-            {Tests.Answer2_1, Tests.Question2}, {Tests.Answer2_2, Tests.Question2}, {Tests.Answer2_3, Tests.Question2},
-            {Tests.Answer3_1, Tests.Question3}, {Tests.Answer3_2, Tests.Question3}, {Tests.Answer3_3, Tests.Question3},
-            {Tests.Answer4_1, Tests.Question4}, {Tests.Answer4_2, Tests.Question4}, {Tests.Answer4_3, Tests.Question4},
-            {Tests.Answer5_1, Tests.Question5}, {Tests.Answer5_2, Tests.Question5}, {Tests.Answer5_3, Tests.Question5},
-            {Tests.Answer6_1, Tests.Question6}, {Tests.Answer6_2, Tests.Question6}, {Tests.Answer6_3, Tests.Question6},
-            {Tests.Answer7_1, Tests.Question7}, {Tests.Answer7_2, Tests.Question7}, {Tests.Answer7_3, Tests.Question7},
-            {Tests.Answer8_1, Tests.Question8}, {Tests.Answer8_2, Tests.Question8}, {Tests.Answer8_3, Tests.Question8},
-            {Tests.Answer9_1, Tests.Question9}, {Tests.Answer9_2, Tests.Question9}, {Tests.Answer9_3, Tests.Question9},
-            {Tests.Answer10_1, Tests.Question10}, {Tests.Answer10_2, Tests.Question10}, {Tests.Answer10_3, Tests.Question10},
-            {Tests.Answer11_1, Tests.Question11}, {Tests.Answer11_2, Tests.Question11}, {Tests.Answer11_3, Tests.Question11},
-            {Tests.Answer12_1, Tests.Question12}, {Tests.Answer12_2, Tests.Question12}, {Tests.Answer12_3, Tests.Question12},
-            {Tests.Answer13_1, Tests.Question13}, {Tests.Answer13_2, Tests.Question13}, {Tests.Answer13_3, Tests.Question13},
-            {Tests.Answer14_1, Tests.Question14}, {Tests.Answer14_2, Tests.Question14}, {Tests.Answer14_3, Tests.Question14},
-            {Tests.Answer15_1, Tests.Question15}, {Tests.Answer15_2, Tests.Question15}, {Tests.Answer15_3, Tests.Question15},
-            {Tests.Answer16_1, Tests.Question16}, {Tests.Answer16_2, Tests.Question16}, {Tests.Answer16_3, Tests.Question16},
-            {Tests.Answer17_1, Tests.Question17}, {Tests.Answer17_2, Tests.Question17}, {Tests.Answer17_3, Tests.Question17},
-            {Tests.Answer18_1, Tests.Question18}, {Tests.Answer18_2, Tests.Question18}, {Tests.Answer18_3, Tests.Question18},
-            {Tests.Answer19_1, Tests.Question19}, {Tests.Answer19_2, Tests.Question19}, {Tests.Answer19_3, Tests.Question19},
-            {Tests.Answer20_1, Tests.Question20}, {Tests.Answer20_2, Tests.Question20}, {Tests.Answer20_3, Tests.Question20}};
+            string[,] answers = new string[20,3] {{Tests.Answer1_1, Tests.Answer1_2, Tests.Answer1_3}, 
+            {Tests.Answer2_1, Tests.Answer2_2, Tests.Answer2_3},
+            {Tests.Answer3_1, Tests.Answer3_2, Tests.Answer3_3},
+            {Tests.Answer4_1, Tests.Answer4_2, Tests.Answer4_3},
+            {Tests.Answer5_1, Tests.Answer5_2, Tests.Answer5_3},
+            {Tests.Answer6_1, Tests.Answer6_2, Tests.Answer6_3},
+            {Tests.Answer7_1, Tests.Answer7_2, Tests.Answer7_3},
+            {Tests.Answer8_1, Tests.Answer8_2, Tests.Answer8_3},
+            {Tests.Answer9_1, Tests.Answer9_2, Tests.Answer9_3},
+            {Tests.Answer10_1, Tests.Answer10_2, Tests.Answer10_3},
+            {Tests.Answer11_1, Tests.Answer11_2, Tests.Answer11_3},
+            {Tests.Answer12_1, Tests.Answer12_2, Tests.Answer12_3},
+            {Tests.Answer13_1, Tests.Answer13_2, Tests.Answer13_3},
+            {Tests.Answer14_1, Tests.Answer14_2, Tests.Answer14_3},
+            {Tests.Answer15_1, Tests.Answer15_2, Tests.Answer15_3},
+            {Tests.Answer16_1, Tests.Answer16_2, Tests.Answer16_3},
+            {Tests.Answer17_1, Tests.Answer17_2, Tests.Answer17_3},
+            {Tests.Answer18_1, Tests.Answer18_2, Tests.Answer18_3},
+            {Tests.Answer19_1, Tests.Answer19_2, Tests.Answer19_3},
+            {Tests.Answer20_1, Tests.Answer20_2, Tests.Answer20_3}};
 
-            int count = 0, s = 0;
+            int count = 0, s = 10;
             bool[] boolarray = new bool[20];
-
+            
             while (count < 10)
             {
                 Random rand = new Random(1-20);
@@ -107,8 +139,7 @@ namespace EncryptionStudy
             }
         }
         
-        
-        
+           
         /*
         static HashSet<int> set = new HashSet<int>();
         static Random r = new Random();
