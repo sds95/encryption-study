@@ -73,14 +73,23 @@ namespace EncryptionStudy
                 switch (ComboEncryption.SelectedIndex)
                 {
                     case 0: boxEncryptionAlgorithm.LoadFile("Ceasar Ru.rtf");
+                        break;
                     case 1: boxEncryptionAlgorithm.LoadFile("Ceasar Afine Ru.rtf");
+                        break;
                     case 2: boxEncryptionAlgorithm.LoadFile("Ceasar Keyword Ru.rtf");
+                        break;
                     case 3: boxEncryptionAlgorithm.LoadFile("Visioner Ru.rtf");
+                        break;
                     case 4: boxEncryptionAlgorithm.LoadFile("Playfer Ru.rtf");
+                        break;
                     case 5: boxEncryptionAlgorithm.LoadFile("Magical square Ru.rtf");
+                        break;
                     case 6: boxEncryptionAlgorithm.LoadFile("Encryption tables Ru.rtf");
+                        break;
                     case 7: boxEncryptionAlgorithm.LoadFile("DES Ru.rtf");
+                        break;
                     case 8: boxEncryptionAlgorithm.LoadFile("RSA Ru.rtf");
+                        break;
                 }
             }
             else
@@ -88,14 +97,23 @@ namespace EncryptionStudy
                 switch (ComboEncryption.SelectedIndex)
                 {
                     case 0: boxEncryptionAlgorithm.LoadFile("Ceasar En.rtf");
+                        break;
                     case 1: boxEncryptionAlgorithm.LoadFile("Ceasar Afine En.rtf");
+                        break;
                     case 2: boxEncryptionAlgorithm.LoadFile("Ceasar Keyword En.rtf");
+                        break;
                     case 3: boxEncryptionAlgorithm.LoadFile("Visioner En.rtf");
+                        break;
                     case 4: boxEncryptionAlgorithm.LoadFile("Playfer En.rtf");
+                        break;
                     case 5: boxEncryptionAlgorithm.LoadFile("Magical square En.rtf");
+                        break;
                     case 6: boxEncryptionAlgorithm.LoadFile("Encryption tables En.rtf");
+                        break;
                     case 7: boxEncryptionAlgorithm.LoadFile("DES En.rtf");
+                        break;
                     case 8: boxEncryptionAlgorithm.LoadFile("RSA En.rtf");
+                        break;
                  }
             }
 
@@ -127,7 +145,7 @@ namespace EncryptionStudy
             int count = 0, s = 10;
             bool[] boolarray = new bool[20];
             
-            while (count < 10)
+            /*while (count < 10)
             {
                 Random rand = new Random(1-20);
                 if (!boolarray[s])
@@ -136,7 +154,7 @@ namespace EncryptionStudy
                     boolarray[s] = true;
                     count++;
                 }
-            }
+            }*/
         }
         
            
