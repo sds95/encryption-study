@@ -123,6 +123,30 @@ namespace EncryptionStudy
                 }
             }
         }
+
+        private void CheckResult()
+        {
+            Label[] questions = { lbQuestion1, lbQuestion2, lbQuestion3, lbQuestion4, lbQuestion5, lbQuestion6, lbQuestion7, lbQuestion8, lbQuestion9, lbQuestion10 };
+            RadioButton[,] answers = { {answer1_1, answer1_2, answer1_3},
+                                       {answer2_1, answer2_2, answer2_3},
+                                       {answer3_1, answer3_2, answer3_3},
+                                       {answer4_1, answer4_2, answer4_3},
+                                       {answer5_1, answer5_2, answer5_3},
+                                       {answer6_1, answer6_2, answer6_3},
+                                       {answer7_1, answer7_2, answer7_3},
+                                       {answer8_1, answer8_2, answer8_3},
+                                       {answer9_1, answer9_2, answer9_3},
+                                       {answer10_1, answer10_2, answer10_3}};
+            string[] rightAnswers = { Tests.Question1Answer, Tests.Question2Answer, Tests.Question3Answer, Tests.Question4Answer, Tests.Question5Answer, Tests.Question6Answer, Tests.Question7Answer, Tests.Question8Answer, Tests.Question9Answer, Tests.Question10Answer };
+
+            int points = 0;
+            for (int i = 0; i < 10; i++)
+            {
+                if (answers[i, Convert.ToInt16(rightAnswers[i])].Checked)
+                    points++;
+            }
+            MessageBox.Show("Количество сраных баллов: " + points.ToString());
+        }
         
         private void comboLanguage_SelectedIndexChanged(object sender, EventArgs e)
         {

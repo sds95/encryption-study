@@ -621,9 +621,27 @@ namespace EncryptionStudy {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
+        internal static string Question10Answer {
+            get {
+                return ResourceManager.GetString("Question10Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
         internal static string Question11 {
             get {
                 return ResourceManager.GetString("Question11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string Question11Answer {
+            get {
+                return ResourceManager.GetString("Question11Answer", resourceCulture);
             }
         }
         
@@ -639,9 +657,27 @@ namespace EncryptionStudy {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
+        internal static string Question12Answer {
+            get {
+                return ResourceManager.GetString("Question12Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
         internal static string Question13 {
             get {
                 return ResourceManager.GetString("Question13", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string Question13Answer {
+            get {
+                return ResourceManager.GetString("Question13Answer", resourceCulture);
             }
         }
         
@@ -657,9 +693,27 @@ namespace EncryptionStudy {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
+        internal static string Question14Answer {
+            get {
+                return ResourceManager.GetString("Question14Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
         internal static string Question15 {
             get {
                 return ResourceManager.GetString("Question15", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string Question15Answer {
+            get {
+                return ResourceManager.GetString("Question15Answer", resourceCulture);
             }
         }
         
@@ -675,9 +729,27 @@ namespace EncryptionStudy {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
+        internal static string Question16Answer {
+            get {
+                return ResourceManager.GetString("Question16Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
         internal static string Question17 {
             get {
                 return ResourceManager.GetString("Question17", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string Question17Answer {
+            get {
+                return ResourceManager.GetString("Question17Answer", resourceCulture);
             }
         }
         
@@ -693,9 +765,36 @@ namespace EncryptionStudy {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
+        internal static string Question18Answer {
+            get {
+                return ResourceManager.GetString("Question18Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
         internal static string Question19 {
             get {
                 return ResourceManager.GetString("Question19", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string Question19Answer {
+            get {
+                return ResourceManager.GetString("Question19Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string Question1Answer {
+            get {
+                return ResourceManager.GetString("Question1Answer", resourceCulture);
             }
         }
         
@@ -720,9 +819,36 @@ namespace EncryptionStudy {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
+        internal static string Question20Answer {
+            get {
+                return ResourceManager.GetString("Question20Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string Question2Answer {
+            get {
+                return ResourceManager.GetString("Question2Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
         internal static string Question3 {
             get {
                 return ResourceManager.GetString("Question3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string Question3Answer {
+            get {
+                return ResourceManager.GetString("Question3Answer", resourceCulture);
             }
         }
         
@@ -738,9 +864,27 @@ namespace EncryptionStudy {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
+        internal static string Question4Answer {
+            get {
+                return ResourceManager.GetString("Question4Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
         internal static string Question5 {
             get {
                 return ResourceManager.GetString("Question5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string Question5Answer {
+            get {
+                return ResourceManager.GetString("Question5Answer", resourceCulture);
             }
         }
         
@@ -756,9 +900,27 @@ namespace EncryptionStudy {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
+        internal static string Question6Answer {
+            get {
+                return ResourceManager.GetString("Question6Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
         internal static string Question7 {
             get {
                 return ResourceManager.GetString("Question7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string Question7Answer {
+            get {
+                return ResourceManager.GetString("Question7Answer", resourceCulture);
             }
         }
         
@@ -774,9 +936,27 @@ namespace EncryptionStudy {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
+        internal static string Question8Answer {
+            get {
+                return ResourceManager.GetString("Question8Answer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
         internal static string Question9 {
             get {
                 return ResourceManager.GetString("Question9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string Question9Answer {
+            get {
+                return ResourceManager.GetString("Question9Answer", resourceCulture);
             }
         }
     }
