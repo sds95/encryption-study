@@ -61,7 +61,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на a) 3.
         /// </summary>
         internal static string Answer1_1 {
             get {
@@ -70,7 +70,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на b) 2.
         /// </summary>
         internal static string Answer1_2 {
             get {
@@ -79,7 +79,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на c) 4.
         /// </summary>
         internal static string Answer1_3 {
             get {
@@ -88,7 +88,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на a) Independent blocks encryption.
         /// </summary>
         internal static string Answer10_1 {
             get {
@@ -97,7 +97,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на b)  Encryption, dependent on the previous blocks.
         /// </summary>
         internal static string Answer10_2 {
             get {
@@ -106,7 +106,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на c) Whole block completion.
         /// </summary>
         internal static string Answer10_3 {
             get {
@@ -115,7 +115,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на a) A recipient will not be able to find the end of useful data.
         /// </summary>
         internal static string Answer11_1 {
             get {
@@ -124,7 +124,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на b) There is a risk of information leak.
         /// </summary>
         internal static string Answer11_2 {
             get {
@@ -133,7 +133,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на c) There is no correct answer.
         /// </summary>
         internal static string Answer11_3 {
             get {
@@ -142,7 +142,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на a) Substitution, permutation, XOR ciphers.
         /// </summary>
         internal static string Answer12_1 {
             get {
@@ -151,7 +151,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на b) Symmetric, asymmetric and streamer ciphers.
         /// </summary>
         internal static string Answer12_2 {
             get {
@@ -160,7 +160,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на c) Substitution and permutation ciphers.
         /// </summary>
         internal static string Answer12_3 {
             get {
@@ -169,7 +169,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на a) A method of cryptographic conversion, which lies in a swap of initial text symbols according to a certain rule.
         /// </summary>
         internal static string Answer13_1 {
             get {
@@ -178,7 +178,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на b) A system of block substitution.
         /// </summary>
         internal static string Answer13_2 {
             get {
@@ -187,7 +187,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на c) A method of conversion, which lies in a substitution of initial text symbols to another ones..
         /// </summary>
         internal static string Answer13_3 {
             get {
@@ -196,7 +196,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на a) XOR cipher.
         /// </summary>
         internal static string Answer14_1 {
             get {
@@ -205,7 +205,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на b) Streamer cipher.
         /// </summary>
         internal static string Answer14_2 {
             get {
@@ -214,7 +214,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на c) Substitution cipher.
         /// </summary>
         internal static string Answer14_3 {
             get {
@@ -223,7 +223,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на a) Block encryption.
         /// </summary>
         internal static string Answer15_1 {
             get {
@@ -232,7 +232,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на b) Streamer encryption.
         /// </summary>
         internal static string Answer15_2 {
             get {
@@ -241,7 +241,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на c) To the both types of encryption.
         /// </summary>
         internal static string Answer15_3 {
             get {
@@ -250,7 +250,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на a) A symmetric algorithm works slower than an asymmetric one.
         /// </summary>
         internal static string Answer16_1 {
             get {
@@ -259,7 +259,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на b) An asymmetric algorithm works slower than a symmetric one.
         /// </summary>
         internal static string Answer16_2 {
             get {
@@ -268,7 +268,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на c) Both algorithms require lots of computational resources.
         /// </summary>
         internal static string Answer16_3 {
             get {
@@ -277,7 +277,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на a) 3.
         /// </summary>
         internal static string Answer17_1 {
             get {
@@ -286,7 +286,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на b) 2.
         /// </summary>
         internal static string Answer17_2 {
             get {
@@ -295,7 +295,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на c) 4.
         /// </summary>
         internal static string Answer17_3 {
             get {
@@ -304,7 +304,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на a) The same cryptographic strength as the strongest cipher it uses.
         /// </summary>
         internal static string Answer18_1 {
             get {
@@ -313,7 +313,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на b) The same cryptographic strength as the weakest cipher it uses.
         /// </summary>
         internal static string Answer18_2 {
             get {
@@ -322,7 +322,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на c) Cryptographic strength depends on all the ciphers used.
         /// </summary>
         internal static string Answer18_3 {
             get {
@@ -331,7 +331,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на a) Secret information, used by a cryptographic algorithm while encrypting/ decrypting of the message.
         /// </summary>
         internal static string Answer19_1 {
             get {
@@ -340,7 +340,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на b) Randomly generated key of a symmetric cipher for a hybrid encryption.
         /// </summary>
         internal static string Answer19_2 {
             get {
@@ -349,7 +349,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на c) There is no correct answer.
         /// </summary>
         internal static string Answer19_3 {
             get {
@@ -358,7 +358,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на a)	measures to restrict access to information.
         /// </summary>
         internal static string Answer2_1 {
             get {
@@ -367,7 +367,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на b)	verification of authenticity and intactness of information.
         /// </summary>
         internal static string Answer2_2 {
             get {
@@ -376,7 +376,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на c)	 both variants are correct.
         /// </summary>
         internal static string Answer2_3 {
             get {
@@ -385,7 +385,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на a)A conversion, when symbols of an initial text are folded according to a module, which is equal in capacity with the alphabet, with symbols of pseudo-random sequence.
         /// </summary>
         internal static string Answer20_1 {
             get {
@@ -394,7 +394,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на b) A XOR form, which converses an open text into encrypted one subsequently, bite by bite..
         /// </summary>
         internal static string Answer20_2 {
             get {
@@ -403,7 +403,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на c) There is no correct answer.
         /// </summary>
         internal static string Answer20_3 {
             get {
@@ -412,7 +412,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на a)	Cheapness.
         /// </summary>
         internal static string Answer3_1 {
             get {
@@ -421,7 +421,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на b)	A list of possible threats.
         /// </summary>
         internal static string Answer3_2 {
             get {
@@ -430,7 +430,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на c)	Necessity of protection.
         /// </summary>
         internal static string Answer3_3 {
             get {
@@ -439,7 +439,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на a)	A secret text for encryption/decryption of the message.
         /// </summary>
         internal static string Answer4_1 {
             get {
@@ -448,7 +448,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на b)	A secret formula for encryption/decryption of the message.
         /// </summary>
         internal static string Answer4_2 {
             get {
@@ -457,7 +457,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на c)	A secret information for encryption/decryption of the message.
         /// </summary>
         internal static string Answer4_3 {
             get {
@@ -466,7 +466,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на a)	Symmetric has only one key, while asymmetric has 2 keys.
         /// </summary>
         internal static string Answer5_1 {
             get {
@@ -475,7 +475,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на b)	Symmetric has two keys, while asymmetric has one.
         /// </summary>
         internal static string Answer5_2 {
             get {
@@ -484,7 +484,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на c)	There are no differences.
         /// </summary>
         internal static string Answer5_3 {
             get {
@@ -493,7 +493,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на a) Symmetric encryption.
         /// </summary>
         internal static string Answer6_1 {
             get {
@@ -502,7 +502,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на b) Asymmetric encryption.
         /// </summary>
         internal static string Answer6_2 {
             get {
@@ -511,7 +511,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на c) Both types of encryption.
         /// </summary>
         internal static string Answer6_3 {
             get {
@@ -520,7 +520,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на a) A study of methods of detection of vulnerable places in an algorithm.
         /// </summary>
         internal static string Answer7_1 {
             get {
@@ -529,7 +529,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на b) A study of methods of initial text detection.
         /// </summary>
         internal static string Answer7_2 {
             get {
@@ -538,7 +538,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на c) Both variants are correct.
         /// </summary>
         internal static string Answer7_3 {
             get {
@@ -547,7 +547,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на a) The text is divided only into 2 blocks.
         /// </summary>
         internal static string Answer8_1 {
             get {
@@ -556,7 +556,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на b) The text is divided into a great amount of blocks of different length.
         /// </summary>
         internal static string Answer8_2 {
             get {
@@ -565,7 +565,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на c) The text is divided into equal blocks.
         /// </summary>
         internal static string Answer8_3 {
             get {
@@ -574,7 +574,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на a) Encryption is impossible.
         /// </summary>
         internal static string Answer9_1 {
             get {
@@ -583,7 +583,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на b) Block is completed to the necessary length.
         /// </summary>
         internal static string Answer9_2 {
             get {
@@ -592,7 +592,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на c) Unfilled block does not participate in encryption.
         /// </summary>
         internal static string Answer9_3 {
             get {
@@ -601,7 +601,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на How many aspects of protection exist?.
         /// </summary>
         internal static string Question1 {
             get {
@@ -610,7 +610,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на In which of the methods the unfinished block is filled with zero ones and a single bite?.
         /// </summary>
         internal static string Question10 {
             get {
@@ -619,7 +619,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на 2.
         /// </summary>
         internal static string Question10Answer {
             get {
@@ -628,7 +628,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на Why independent blocks encryption is not efficient when dealing with great amounts of information?.
         /// </summary>
         internal static string Question11 {
             get {
@@ -637,7 +637,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на 1.
         /// </summary>
         internal static string Question11Answer {
             get {
@@ -646,7 +646,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на Block ciphers are divided into:.
         /// </summary>
         internal static string Question12 {
             get {
@@ -655,7 +655,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на 0.
         /// </summary>
         internal static string Question12Answer {
             get {
@@ -664,7 +664,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на Substitution cipher is –.
         /// </summary>
         internal static string Question13 {
             get {
@@ -673,7 +673,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на 0.
         /// </summary>
         internal static string Question13Answer {
             get {
@@ -682,7 +682,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на The simplest block cipher is-.
         /// </summary>
         internal static string Question14 {
             get {
@@ -691,7 +691,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на 1.
         /// </summary>
         internal static string Question14Answer {
             get {
@@ -700,7 +700,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на XOR is related to.
         /// </summary>
         internal static string Question15 {
             get {
@@ -709,7 +709,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на 2.
         /// </summary>
         internal static string Question15Answer {
             get {
@@ -718,7 +718,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на Mark the correct statement.
         /// </summary>
         internal static string Question16 {
             get {
@@ -727,7 +727,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на 1.
         /// </summary>
         internal static string Question16Answer {
             get {
@@ -736,7 +736,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на The number of ways of block encryption is.
         /// </summary>
         internal static string Question17 {
             get {
@@ -745,7 +745,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на 0.
         /// </summary>
         internal static string Question17Answer {
             get {
@@ -754,7 +754,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на Hybrid key has.
         /// </summary>
         internal static string Question18 {
             get {
@@ -763,7 +763,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на 1.
         /// </summary>
         internal static string Question18Answer {
             get {
@@ -772,7 +772,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на Session key is-.
         /// </summary>
         internal static string Question19 {
             get {
@@ -781,7 +781,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на 1.
         /// </summary>
         internal static string Question19Answer {
             get {
@@ -790,7 +790,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на 0.
         /// </summary>
         internal static string Question1Answer {
             get {
@@ -799,7 +799,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на The protection of information means-.
         /// </summary>
         internal static string Question2 {
             get {
@@ -808,7 +808,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на Permutation cipher is.
         /// </summary>
         internal static string Question20 {
             get {
@@ -817,7 +817,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на 2.
         /// </summary>
         internal static string Question20Answer {
             get {
@@ -826,7 +826,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на 2.
         /// </summary>
         internal static string Question2Answer {
             get {
@@ -835,7 +835,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на The principle of the second aspect of information security.
         /// </summary>
         internal static string Question3 {
             get {
@@ -844,7 +844,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на 1.
         /// </summary>
         internal static string Question3Answer {
             get {
@@ -853,7 +853,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на A key is-.
         /// </summary>
         internal static string Question4 {
             get {
@@ -862,7 +862,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на 2.
         /// </summary>
         internal static string Question4Answer {
             get {
@@ -871,7 +871,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на What is the difference between a symmetric encryption and an asymmetric one?.
         /// </summary>
         internal static string Question5 {
             get {
@@ -880,7 +880,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на 0.
         /// </summary>
         internal static string Question5Answer {
             get {
@@ -889,7 +889,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на Hybrid cipher uses:.
         /// </summary>
         internal static string Question6 {
             get {
@@ -898,7 +898,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на 2.
         /// </summary>
         internal static string Question6Answer {
             get {
@@ -907,7 +907,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на Cryptanalysis is-.
         /// </summary>
         internal static string Question7 {
             get {
@@ -916,7 +916,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на 2.
         /// </summary>
         internal static string Question7Answer {
             get {
@@ -925,7 +925,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на The peculiarity of block encryption is-.
         /// </summary>
         internal static string Question8 {
             get {
@@ -934,7 +934,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на 2.
         /// </summary>
         internal static string Question8Answer {
             get {
@@ -943,7 +943,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на If the length of a message is less than the length of a block, then.
         /// </summary>
         internal static string Question9 {
             get {
@@ -952,7 +952,7 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на .
+        ///   Ищет локализованную строку, похожую на 1.
         /// </summary>
         internal static string Question9Answer {
             get {

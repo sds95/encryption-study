@@ -118,303 +118,303 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Answer10_1" xml:space="preserve">
-    <value />
+    <value>a) Independent blocks encryption</value>
   </data>
   <data name="Answer10_2" xml:space="preserve">
-    <value />
+    <value>b)  Encryption, dependent on the previous blocks</value>
   </data>
   <data name="Answer10_3" xml:space="preserve">
-    <value />
+    <value>c) Whole block completion</value>
   </data>
   <data name="Answer11_1" xml:space="preserve">
-    <value />
+    <value>a) A recipient will not be able to find the end of useful data</value>
   </data>
   <data name="Answer11_2" xml:space="preserve">
-    <value />
+    <value>b) There is a risk of information leak</value>
   </data>
   <data name="Answer11_3" xml:space="preserve">
-    <value />
+    <value>c) There is no correct answer</value>
   </data>
   <data name="Answer12_1" xml:space="preserve">
-    <value />
+    <value>a) Substitution, permutation, XOR ciphers</value>
   </data>
   <data name="Answer12_2" xml:space="preserve">
-    <value />
+    <value>b) Symmetric, asymmetric and streamer ciphers</value>
   </data>
   <data name="Answer12_3" xml:space="preserve">
-    <value />
+    <value>c) Substitution and permutation ciphers</value>
   </data>
   <data name="Answer13_1" xml:space="preserve">
-    <value />
+    <value>a) A method of cryptographic conversion, which lies in a swap of initial text symbols according to a certain rule</value>
   </data>
   <data name="Answer13_2" xml:space="preserve">
-    <value />
+    <value>b) A system of block substitution</value>
   </data>
   <data name="Answer13_3" xml:space="preserve">
-    <value />
+    <value>c) A method of conversion, which lies in a substitution of initial text symbols to another ones.</value>
   </data>
   <data name="Answer14_1" xml:space="preserve">
-    <value />
+    <value>a) XOR cipher</value>
   </data>
   <data name="Answer14_2" xml:space="preserve">
-    <value />
+    <value>b) Streamer cipher</value>
   </data>
   <data name="Answer14_3" xml:space="preserve">
-    <value />
+    <value>c) Substitution cipher</value>
   </data>
   <data name="Answer15_1" xml:space="preserve">
-    <value />
+    <value>a) Block encryption</value>
   </data>
   <data name="Answer15_2" xml:space="preserve">
-    <value />
+    <value>b) Streamer encryption</value>
   </data>
   <data name="Answer15_3" xml:space="preserve">
-    <value />
+    <value>c) To the both types of encryption</value>
   </data>
   <data name="Answer16_1" xml:space="preserve">
-    <value />
+    <value>a) A symmetric algorithm works slower than an asymmetric one</value>
   </data>
   <data name="Answer16_2" xml:space="preserve">
-    <value />
+    <value>b) An asymmetric algorithm works slower than a symmetric one</value>
   </data>
   <data name="Answer16_3" xml:space="preserve">
-    <value />
+    <value>c) Both algorithms require lots of computational resources</value>
   </data>
   <data name="Answer17_1" xml:space="preserve">
-    <value />
+    <value>a) 3</value>
   </data>
   <data name="Answer17_2" xml:space="preserve">
-    <value />
+    <value>b) 2</value>
   </data>
   <data name="Answer17_3" xml:space="preserve">
-    <value />
+    <value>c) 4</value>
   </data>
   <data name="Answer18_1" xml:space="preserve">
-    <value />
+    <value>a) The same cryptographic strength as the strongest cipher it uses</value>
   </data>
   <data name="Answer18_2" xml:space="preserve">
-    <value />
+    <value>b) The same cryptographic strength as the weakest cipher it uses</value>
   </data>
   <data name="Answer18_3" xml:space="preserve">
-    <value />
+    <value>c) Cryptographic strength depends on all the ciphers used</value>
   </data>
   <data name="Answer19_1" xml:space="preserve">
-    <value />
+    <value>a) Secret information, used by a cryptographic algorithm while encrypting/ decrypting of the message</value>
   </data>
   <data name="Answer19_2" xml:space="preserve">
-    <value />
+    <value>b) Randomly generated key of a symmetric cipher for a hybrid encryption</value>
   </data>
   <data name="Answer19_3" xml:space="preserve">
-    <value />
+    <value>c) There is no correct answer</value>
   </data>
   <data name="Answer1_1" xml:space="preserve">
-    <value />
+    <value>a) 3</value>
   </data>
   <data name="Answer1_2" xml:space="preserve">
-    <value />
+    <value>b) 2</value>
   </data>
   <data name="Answer1_3" xml:space="preserve">
-    <value />
+    <value>c) 4</value>
   </data>
   <data name="Answer20_1" xml:space="preserve">
-    <value />
+    <value>a)A conversion, when symbols of an initial text are folded according to a module, which is equal in capacity with the alphabet, with symbols of pseudo-random sequence</value>
   </data>
   <data name="Answer20_2" xml:space="preserve">
-    <value />
+    <value>b) A XOR form, which converses an open text into encrypted one subsequently, bite by bite.</value>
   </data>
   <data name="Answer20_3" xml:space="preserve">
-    <value />
+    <value>c) There is no correct answer</value>
   </data>
   <data name="Answer2_1" xml:space="preserve">
-    <value />
+    <value>a)	measures to restrict access to information</value>
   </data>
   <data name="Answer2_2" xml:space="preserve">
-    <value />
+    <value>b)	verification of authenticity and intactness of information</value>
   </data>
   <data name="Answer2_3" xml:space="preserve">
-    <value />
+    <value>c)	 both variants are correct</value>
   </data>
   <data name="Answer3_1" xml:space="preserve">
-    <value />
+    <value>a)	Cheapness</value>
   </data>
   <data name="Answer3_2" xml:space="preserve">
-    <value />
+    <value>b)	A list of possible threats</value>
   </data>
   <data name="Answer3_3" xml:space="preserve">
-    <value />
+    <value>c)	Necessity of protection</value>
   </data>
   <data name="Answer4_1" xml:space="preserve">
-    <value />
+    <value>a)	A secret text for encryption/decryption of the message</value>
   </data>
   <data name="Answer4_2" xml:space="preserve">
-    <value />
+    <value>b)	A secret formula for encryption/decryption of the message</value>
   </data>
   <data name="Answer4_3" xml:space="preserve">
-    <value />
+    <value>c)	A secret information for encryption/decryption of the message</value>
   </data>
   <data name="Answer5_1" xml:space="preserve">
-    <value />
+    <value>a)	Symmetric has only one key, while asymmetric has 2 keys</value>
   </data>
   <data name="Answer5_2" xml:space="preserve">
-    <value />
+    <value>b)	Symmetric has two keys, while asymmetric has one</value>
   </data>
   <data name="Answer5_3" xml:space="preserve">
-    <value />
+    <value>c)	There are no differences</value>
   </data>
   <data name="Answer6_1" xml:space="preserve">
-    <value />
+    <value>a) Symmetric encryption</value>
   </data>
   <data name="Answer6_2" xml:space="preserve">
-    <value />
+    <value>b) Asymmetric encryption</value>
   </data>
   <data name="Answer6_3" xml:space="preserve">
-    <value />
+    <value>c) Both types of encryption</value>
   </data>
   <data name="Answer7_1" xml:space="preserve">
-    <value />
+    <value>a) A study of methods of detection of vulnerable places in an algorithm</value>
   </data>
   <data name="Answer7_2" xml:space="preserve">
-    <value />
+    <value>b) A study of methods of initial text detection</value>
   </data>
   <data name="Answer7_3" xml:space="preserve">
-    <value />
+    <value>c) Both variants are correct</value>
   </data>
   <data name="Answer8_1" xml:space="preserve">
-    <value />
+    <value>a) The text is divided only into 2 blocks</value>
   </data>
   <data name="Answer8_2" xml:space="preserve">
-    <value />
+    <value>b) The text is divided into a great amount of blocks of different length</value>
   </data>
   <data name="Answer8_3" xml:space="preserve">
-    <value />
+    <value>c) The text is divided into equal blocks</value>
   </data>
   <data name="Answer9_1" xml:space="preserve">
-    <value />
+    <value>a) Encryption is impossible</value>
   </data>
   <data name="Answer9_2" xml:space="preserve">
-    <value />
+    <value>b) Block is completed to the necessary length</value>
   </data>
   <data name="Answer9_3" xml:space="preserve">
-    <value />
+    <value>c) Unfilled block does not participate in encryption</value>
   </data>
   <data name="Question1" xml:space="preserve">
-    <value />
+    <value>How many aspects of protection exist?</value>
   </data>
   <data name="Question10" xml:space="preserve">
-    <value />
+    <value>In which of the methods the unfinished block is filled with zero ones and a single bite?</value>
   </data>
   <data name="Question10Answer" xml:space="preserve">
-    <value />
+    <value>2</value>
   </data>
   <data name="Question11" xml:space="preserve">
-    <value />
+    <value>Why independent blocks encryption is not efficient when dealing with great amounts of information?</value>
   </data>
   <data name="Question11Answer" xml:space="preserve">
-    <value />
+    <value>1</value>
   </data>
   <data name="Question12" xml:space="preserve">
-    <value />
+    <value>Block ciphers are divided into:</value>
   </data>
   <data name="Question12Answer" xml:space="preserve">
-    <value />
+    <value>0</value>
   </data>
   <data name="Question13" xml:space="preserve">
-    <value />
+    <value>Substitution cipher is –</value>
   </data>
   <data name="Question13Answer" xml:space="preserve">
-    <value />
+    <value>0</value>
   </data>
   <data name="Question14" xml:space="preserve">
-    <value />
+    <value>The simplest block cipher is-</value>
   </data>
   <data name="Question14Answer" xml:space="preserve">
-    <value />
+    <value>1</value>
   </data>
   <data name="Question15" xml:space="preserve">
-    <value />
+    <value>XOR is related to</value>
   </data>
   <data name="Question15Answer" xml:space="preserve">
-    <value />
+    <value>2</value>
   </data>
   <data name="Question16" xml:space="preserve">
-    <value />
+    <value>Mark the correct statement</value>
   </data>
   <data name="Question16Answer" xml:space="preserve">
-    <value />
+    <value>1</value>
   </data>
   <data name="Question17" xml:space="preserve">
-    <value />
+    <value>The number of ways of block encryption is</value>
   </data>
   <data name="Question17Answer" xml:space="preserve">
-    <value />
+    <value>0</value>
   </data>
   <data name="Question18" xml:space="preserve">
-    <value />
+    <value>Hybrid key has</value>
   </data>
   <data name="Question18Answer" xml:space="preserve">
-    <value />
+    <value>1</value>
   </data>
   <data name="Question19" xml:space="preserve">
-    <value />
+    <value>Session key is-</value>
   </data>
   <data name="Question19Answer" xml:space="preserve">
-    <value />
+    <value>1</value>
   </data>
   <data name="Question1Answer" xml:space="preserve">
-    <value />
+    <value>0</value>
   </data>
   <data name="Question2" xml:space="preserve">
-    <value />
+    <value>The protection of information means-</value>
   </data>
   <data name="Question20" xml:space="preserve">
-    <value />
+    <value>Permutation cipher is</value>
   </data>
   <data name="Question20Answer" xml:space="preserve">
-    <value />
+    <value>2</value>
   </data>
   <data name="Question2Answer" xml:space="preserve">
-    <value />
+    <value>2</value>
   </data>
   <data name="Question3" xml:space="preserve">
-    <value />
+    <value>The principle of the second aspect of information security</value>
   </data>
   <data name="Question3Answer" xml:space="preserve">
-    <value />
+    <value>1</value>
   </data>
   <data name="Question4" xml:space="preserve">
-    <value />
+    <value>A key is-</value>
   </data>
   <data name="Question4Answer" xml:space="preserve">
-    <value />
+    <value>2</value>
   </data>
   <data name="Question5" xml:space="preserve">
-    <value />
+    <value>What is the difference between a symmetric encryption and an asymmetric one?</value>
   </data>
   <data name="Question5Answer" xml:space="preserve">
-    <value />
+    <value>0</value>
   </data>
   <data name="Question6" xml:space="preserve">
-    <value />
+    <value>Hybrid cipher uses:</value>
   </data>
   <data name="Question6Answer" xml:space="preserve">
-    <value />
+    <value>2</value>
   </data>
   <data name="Question7" xml:space="preserve">
-    <value />
+    <value>Cryptanalysis is-</value>
   </data>
   <data name="Question7Answer" xml:space="preserve">
-    <value />
+    <value>2</value>
   </data>
   <data name="Question8" xml:space="preserve">
-    <value />
+    <value>The peculiarity of block encryption is-</value>
   </data>
   <data name="Question8Answer" xml:space="preserve">
-    <value />
+    <value>2</value>
   </data>
   <data name="Question9" xml:space="preserve">
-    <value />
+    <value>If the length of a message is less than the length of a block, then</value>
   </data>
   <data name="Question9Answer" xml:space="preserve">
-    <value />
+    <value>1</value>
   </data>
 </root>
