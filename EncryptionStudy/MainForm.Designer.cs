@@ -1099,6 +1099,7 @@
             this.ComboEncryption.Name = "ComboEncryption";
             this.ComboEncryption.Size = new System.Drawing.Size(434, 24);
             this.ComboEncryption.TabIndex = 0;
+            this.ComboEncryption.SelectedIndexChanged += new System.EventHandler(this.ComboEncryption_SelectedIndexChanged);
             // 
             // tabSettings
             // 

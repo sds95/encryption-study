@@ -13,6 +13,17 @@ namespace EncryptionStudy
         public MainForm()
         {
             InitializeComponent();
+            Label[] questions = { lbQuestion1, lbQuestion2, lbQuestion3, lbQuestion4, lbQuestion5, lbQuestion6, lbQuestion7, lbQuestion8, lbQuestion9, lbQuestion10 };
+            RadioButton[,] answers = { {answer1_1, answer1_2, answer1_3},
+                                       {answer2_1, answer2_2, answer2_3},
+                                       {answer3_1, answer3_2, answer3_3},
+                                       {answer4_1, answer4_2, answer4_3},
+                                       {answer5_1, answer5_2, answer5_3},
+                                       {answer6_1, answer6_2, answer6_3},
+                                       {answer7_1, answer7_2, answer7_3},
+                                       {answer8_1, answer8_2, answer8_3},
+                                       {answer9_1, answer9_2, answer9_3},
+                                       {answer10_1, answer10_2, answer10_3}};
 
             // Load language.
             comboLanguage.SelectedIndex = Properties.Settings.Default.Language;
@@ -67,56 +78,6 @@ namespace EncryptionStudy
             tabSettings.Text = Strings.LanguageSettings;
                 labelLanguage.Text = Strings.LbLanguage;
 
-            //Second part of theory
-            if (Thread.CurrentThread.CurrentUICulture == CultureInfo.GetCultureInfo("ru-RU"))
-            {
-                switch (ComboEncryption.SelectedIndex)
-                {
-                    case 0: boxEncryptionAlgorithm.LoadFile("Ceasar Ru.rtf");
-                        break;
-                    case 1: boxEncryptionAlgorithm.LoadFile("Ceasar Afine Ru.rtf");
-                        break;
-                    case 2: boxEncryptionAlgorithm.LoadFile("Ceasar Keyword Ru.rtf");
-                        break;
-                    case 3: boxEncryptionAlgorithm.LoadFile("Visioner Ru.rtf");
-                        break;
-                    case 4: boxEncryptionAlgorithm.LoadFile("Playfer Ru.rtf");
-                        break;
-                    case 5: boxEncryptionAlgorithm.LoadFile("Magical square Ru.rtf");
-                        break;
-                    case 6: boxEncryptionAlgorithm.LoadFile("Encryption tables Ru.rtf");
-                        break;
-                    case 7: boxEncryptionAlgorithm.LoadFile("DES Ru.rtf");
-                        break;
-                    case 8: boxEncryptionAlgorithm.LoadFile("RSA Ru.rtf");
-                        break;
-                }
-            }
-            else
-            { 
-                switch (ComboEncryption.SelectedIndex)
-                {
-                    case 0: boxEncryptionAlgorithm.LoadFile("Ceasar En.rtf");
-                        break;
-                    case 1: boxEncryptionAlgorithm.LoadFile("Ceasar Afine En.rtf");
-                        break;
-                    case 2: boxEncryptionAlgorithm.LoadFile("Ceasar Keyword En.rtf");
-                        break;
-                    case 3: boxEncryptionAlgorithm.LoadFile("Visioner En.rtf");
-                        break;
-                    case 4: boxEncryptionAlgorithm.LoadFile("Playfer En.rtf");
-                        break;
-                    case 5: boxEncryptionAlgorithm.LoadFile("Magical square En.rtf");
-                        break;
-                    case 6: boxEncryptionAlgorithm.LoadFile("Encryption tables En.rtf");
-                        break;
-                    case 7: boxEncryptionAlgorithm.LoadFile("DES En.rtf");
-                        break;
-                    case 8: boxEncryptionAlgorithm.LoadFile("RSA En.rtf");
-                        break;
-                 }
-            }
-
             //Tests
             string[] question = new string[20] {Tests.Question1 ,Tests.Question2, Tests.Question3, Tests.Question4, Tests.Question5, Tests.Question6, Tests.Question7, Tests.Question8, Tests.Question9, Tests.Question10,
             Tests.Question11, Tests.Question12, Tests.Question13, Tests.Question14, Tests.Question15, Tests.Question16, Tests.Question17, Tests.Question18, Tests.Question19, Tests.Question20};
@@ -142,19 +103,22 @@ namespace EncryptionStudy
             {Tests.Answer19_1, Tests.Answer19_2, Tests.Answer19_3},
             {Tests.Answer20_1, Tests.Answer20_2, Tests.Answer20_3}};
 
-            int count = 0, s = 10;
+            int count = 0;
             bool[] boolarray = new bool[20];
             
-            /*while (count < 10)
+            while (count < 10)
             {
-                Random rand = new Random(1-20);
-                if (!boolarray[s])
+                int rand = new Random().Next(1,20);
+                if (!boolarray[rand])
                 {
-                    addquestion(s);
-                    boolarray[s] = true;
+                    questions[rand].Text = question[rand];
+                    answers[rand, 1].Text = answers[rand, 1];
+                    answers[rand, 2].Text = answers[rand, 2];
+                    answers[rand, 3].Text = answers[rand, 3];
+                    boolarray[rand] = true;
                     count++;
                 }
-            }*/
+            }
         }
         
            
@@ -185,6 +149,112 @@ namespace EncryptionStudy
             Properties.Settings.Default.Language = comboLanguage.SelectedIndex;
             Properties.Settings.Default.Save();
             InitCaptions();
+        }
+
+        private void ComboEncryption_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Thread.CurrentThread.CurrentUICulture == CultureInfo.GetCultureInfo("ru-RU"))
+            {
+                switch (ComboEncryption.SelectedIndex)
+                {
+                    case 0:
+                        {
+                            boxEncryptionAlgorithm.LoadFile("Ceasar Ru.rtf");
+                            break;
+                        }
+                    case 1:
+                        {
+                            boxEncryptionAlgorithm.LoadFile("Ceasar Afine Ru.rtf");
+                            break;
+                        }
+                    case 2:
+                        {
+                            boxEncryptionAlgorithm.LoadFile("Ceasar Keyword Ru.rtf");
+                            break;
+                        }
+                    case 3:
+                        {
+                            boxEncryptionAlgorithm.LoadFile("Visioner Ru.rtf");
+                            break;
+                        }
+                    case 4:
+                        {
+                            boxEncryptionAlgorithm.LoadFile("Playfer Ru.rtf");
+                            break;
+                        }
+                    case 5:
+                        {
+                            boxEncryptionAlgorithm.LoadFile("Magical square Ru.rtf");
+                            break;
+                        }
+                    case 6:
+                        {
+                            boxEncryptionAlgorithm.LoadFile("Encryption tables Ru.rtf");
+                            break;
+                        }
+                    case 7:
+                        {
+                            boxEncryptionAlgorithm.LoadFile("DES Ru.rtf");
+                            break;
+                        }
+                    case 8:
+                        {
+                            boxEncryptionAlgorithm.LoadFile("RSA Ru.rtf");
+                            break;
+                        }
+                }
+            }
+            else
+            {
+                switch (ComboEncryption.SelectedIndex)
+                {
+                    case 0:
+                        {
+                            boxEncryptionAlgorithm.LoadFile("Ceasar En.rtf");
+                            break;
+                        }
+                    case 1:
+                        {
+                            boxEncryptionAlgorithm.LoadFile("Ceasar Afine En.rtf");
+                            break;
+                        }
+                    case 2:
+                        {
+                            boxEncryptionAlgorithm.LoadFile("Ceasar Keyword En.rtf");
+                            break;
+                        }
+                    case 3:
+                        {
+                            boxEncryptionAlgorithm.LoadFile("Visioner En.rtf");
+                            break;
+                        }
+                    case 4:
+                        {
+                            boxEncryptionAlgorithm.LoadFile("Playfer En.rtf");
+                            break;
+                        }
+                    case 5:
+                        {
+                            boxEncryptionAlgorithm.LoadFile("Magical square En.rtf");
+                            break;
+                        }
+                    case 6:
+                        {
+                            boxEncryptionAlgorithm.LoadFile("Encryption tables En.rtf");
+                            break;
+                        }
+                    case 7:
+                        {
+                            boxEncryptionAlgorithm.LoadFile("DES En.rtf");
+                            break;
+                        }
+                    case 8:
+                        {
+                            boxEncryptionAlgorithm.LoadFile("RSA En.rtf");
+                            break;
+                        }
+                }
+            }
         }
     }
 }
