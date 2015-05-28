@@ -13,17 +13,6 @@ namespace EncryptionStudy
         public MainForm()
         {
             InitializeComponent();
-            Label[] questions = { lbQuestion1, lbQuestion2, lbQuestion3, lbQuestion4, lbQuestion5, lbQuestion6, lbQuestion7, lbQuestion8, lbQuestion9, lbQuestion10 };
-            RadioButton[,] answers = { {answer1_1, answer1_2, answer1_3},
-                                       {answer2_1, answer2_2, answer2_3},
-                                       {answer3_1, answer3_2, answer3_3},
-                                       {answer4_1, answer4_2, answer4_3},
-                                       {answer5_1, answer5_2, answer5_3},
-                                       {answer6_1, answer6_2, answer6_3},
-                                       {answer7_1, answer7_2, answer7_3},
-                                       {answer8_1, answer8_2, answer8_3},
-                                       {answer9_1, answer9_2, answer9_3},
-                                       {answer10_1, answer10_2, answer10_3}};
 
             // Load language.
             comboLanguage.SelectedIndex = Properties.Settings.Default.Language;
@@ -53,11 +42,13 @@ namespace EncryptionStudy
             }
             else
             {
+                /*
                 boxBasics.LoadFile("Exordium En.rtf");
                 boxBasicsConcepts.LoadFile("Basic concepts En.rtf");
                 boxBlockEncryption.LoadFile("Block encryption En.rtf");
                 boxSymmetricEncryption.LoadFile("Symmetric encryption En.rtf");
                 boxAsymmetricEncryption.LoadFile("Asymmetric encryption En.rtf");
+                */
             }
 
             // Tabs for first part of theory.
@@ -78,11 +69,24 @@ namespace EncryptionStudy
             tabSettings.Text = Strings.LanguageSettings;
                 labelLanguage.Text = Strings.LbLanguage;
 
-            //Tests
-            string[] question = new string[20] {Tests.Question1 ,Tests.Question2, Tests.Question3, Tests.Question4, Tests.Question5, Tests.Question6, Tests.Question7, Tests.Question8, Tests.Question9, Tests.Question10,
+            // Tests.
+
+            Label[] questions = { lbQuestion1, lbQuestion2, lbQuestion3, lbQuestion4, lbQuestion5, lbQuestion6, lbQuestion7, lbQuestion8, lbQuestion9, lbQuestion10 };
+            RadioButton[,] answers = { {answer1_1, answer1_2, answer1_3},
+                                       {answer2_1, answer2_2, answer2_3},
+                                       {answer3_1, answer3_2, answer3_3},
+                                       {answer4_1, answer4_2, answer4_3},
+                                       {answer5_1, answer5_2, answer5_3},
+                                       {answer6_1, answer6_2, answer6_3},
+                                       {answer7_1, answer7_2, answer7_3},
+                                       {answer8_1, answer8_2, answer8_3},
+                                       {answer9_1, answer9_2, answer9_3},
+                                       {answer10_1, answer10_2, answer10_3}};
+
+            string[] questionStrings = new string[20] {Tests.Question1 ,Tests.Question2, Tests.Question3, Tests.Question4, Tests.Question5, Tests.Question6, Tests.Question7, Tests.Question8, Tests.Question9, Tests.Question10,
             Tests.Question11, Tests.Question12, Tests.Question13, Tests.Question14, Tests.Question15, Tests.Question16, Tests.Question17, Tests.Question18, Tests.Question19, Tests.Question20};
             
-            string[,] answers = new string[20,3] {{Tests.Answer1_1, Tests.Answer1_2, Tests.Answer1_3}, 
+            string[,] answerStrings = new string[20,3] {{Tests.Answer1_1, Tests.Answer1_2, Tests.Answer1_3}, 
             {Tests.Answer2_1, Tests.Answer2_2, Tests.Answer2_3},
             {Tests.Answer3_1, Tests.Answer3_2, Tests.Answer3_3},
             {Tests.Answer4_1, Tests.Answer4_2, Tests.Answer4_3},
@@ -108,13 +112,13 @@ namespace EncryptionStudy
             
             while (count < 10)
             {
-                int rand = new Random().Next(1,20);
+                int rand = new Random().Next(0,19);
                 if (!boolarray[rand])
                 {
-                    questions[rand].Text = question[rand];
-                    answers[rand, 1].Text = answers[rand, 1];
-                    answers[rand, 2].Text = answers[rand, 2];
-                    answers[rand, 3].Text = answers[rand, 3];
+                    questions[count].Text = questionStrings[rand];
+                    answers[count, 0].Text = answerStrings[rand, 0];
+                    answers[count, 1].Text = answerStrings[rand, 1];
+                    answers[count, 2].Text = answerStrings[rand, 2];
                     boolarray[rand] = true;
                     count++;
                 }
