@@ -38,6 +38,7 @@ namespace EncryptionStudy
 
             // Buttons.
             btnEncryptionStart.Text = Strings.BtnStart;
+            btnCheck.Text = Strings.BtnCheck;
 
             // Labels.
             labelEncryptionKeyword.Text = Strings.LbKeyword;
@@ -137,7 +138,7 @@ namespace EncryptionStudy
                                        {answer8_1, answer8_2, answer8_3},
                                        {answer9_1, answer9_2, answer9_3},
                                        {answer10_1, answer10_2, answer10_3}};
-            string[] rightAnswers = { Tests.Question1Answer, Tests.Question2Answer, Tests.Question3Answer, Tests.Question4Answer, Tests.Question5Answer, Tests.Question6Answer, Tests.Question7Answer, Tests.Question8Answer, Tests.Question9Answer, Tests.Question10Answer };
+            string[] rightAnswers = new string [10] { Tests.Question1Answer, Tests.Question2Answer, Tests.Question3Answer, Tests.Question4Answer, Tests.Question5Answer, Tests.Question6Answer, Tests.Question7Answer, Tests.Question8Answer, Tests.Question9Answer, Tests.Question10Answer };
 
             int points = 0;
             for (int i = 0; i < 10; i++)
@@ -145,7 +146,7 @@ namespace EncryptionStudy
                 if (answers[i, Convert.ToInt16(rightAnswers[i])].Checked)
                     points++;
             }
-            MessageBox.Show("Количество сраных баллов: " + points.ToString());
+            MessageBox.Show("Количество набранных баллов: " + points.ToString());
         }
         
         private void comboLanguage_SelectedIndexChanged(object sender, EventArgs e)
@@ -205,6 +206,11 @@ namespace EncryptionStudy
                     break;
                 }
             }
+        }
+
+        private void btnCheck_Click(object sender, EventArgs e)
+        {
+            CheckResult();
         }
     }
 }

@@ -344,6 +344,7 @@
             this.btnCheck.TabIndex = 4;
             this.btnCheck.Text = "Check";
             this.btnCheck.UseVisualStyleBackColor = true;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
             // panel10
             // 

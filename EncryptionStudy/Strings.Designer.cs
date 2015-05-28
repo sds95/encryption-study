@@ -88,6 +88,15 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Check.
+        /// </summary>
+        internal static string BtnCheck {
+            get {
+                return ResourceManager.GetString("BtnCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Start.
         /// </summary>
         internal static string BtnStart {

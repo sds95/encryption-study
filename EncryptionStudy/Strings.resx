@@ -126,6 +126,9 @@
   <data name="BlockEncryption" xml:space="preserve">
     <value>Block encryption</value>
   </data>
+  <data name="BtnCheck" xml:space="preserve">
+    <value>Check</value>
+  </data>
   <data name="BtnStart" xml:space="preserve">
     <value>Start</value>
   </data>

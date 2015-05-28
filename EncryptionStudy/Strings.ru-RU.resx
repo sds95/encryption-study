@@ -126,6 +126,9 @@
   <data name="BlockEncryption" xml:space="preserve">
     <value>Блочное шифрование</value>
   </data>
+  <data name="BtnCheck" xml:space="preserve">
+    <value>Проверка</value>
+  </data>
   <data name="BtnStart" xml:space="preserve">
     <value>Старт</value>
   </data>
