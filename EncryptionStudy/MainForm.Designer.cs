@@ -1063,6 +1063,7 @@
             this.btnEncryptionStart.TabIndex = 3;
             this.btnEncryptionStart.Text = "Start";
             this.btnEncryptionStart.UseVisualStyleBackColor = true;
+            this.btnEncryptionStart.Click += new System.EventHandler(this.btnEncryptionStart_Click);
             // 
             // comboEncryptionLanguage
             // 
@@ -1078,6 +1079,7 @@
             this.comboEncryptionLanguage.Name = "comboEncryptionLanguage";
             this.comboEncryptionLanguage.Size = new System.Drawing.Size(434, 24);
             this.comboEncryptionLanguage.TabIndex = 2;
+            this.comboEncryptionLanguage.SelectedIndexChanged += new System.EventHandler(this.comboEncryptionLanguage_SelectedIndexChanged);
             // 
             // ComboEncryption
             // 

@@ -56,11 +56,12 @@ namespace EncryptionStudy
             tabSettings.Text = Strings.LanguageSettings;
             tabTest.Text = Strings.Tests;
 
-            // Load theory and test.
+            // Load the first part of the theory and test.
             LoadTheory();
             LoadTest();
         }
 
+        //Load the first part of the theory
         private void LoadTheory()
         {
             boxBasics.LoadFile("Exordium " + locale + ".rtf");
@@ -70,6 +71,7 @@ namespace EncryptionStudy
             boxAsymmetricEncryption.LoadFile("Asymmetric encryption " + locale + ".rtf");
         }
 
+        //Load test
         private void LoadTest()
         {
             Label[] questions = { lbQuestion1, lbQuestion2, lbQuestion3, lbQuestion4, lbQuestion5, lbQuestion6, lbQuestion7, lbQuestion8, lbQuestion9, lbQuestion10 };
@@ -125,6 +127,7 @@ namespace EncryptionStudy
             }
         }
 
+        //Checking of test results
         private void CheckResult()
         {
             Label[] questions = { lbQuestion1, lbQuestion2, lbQuestion3, lbQuestion4, lbQuestion5, lbQuestion6, lbQuestion7, lbQuestion8, lbQuestion9, lbQuestion10 };
@@ -138,7 +141,7 @@ namespace EncryptionStudy
                                        {answer8_1, answer8_2, answer8_3},
                                        {answer9_1, answer9_2, answer9_3},
                                        {answer10_1, answer10_2, answer10_3}};
-            string[] rightAnswers = new string [10] { Tests.Question1Answer, Tests.Question2Answer, Tests.Question3Answer, Tests.Question4Answer, Tests.Question5Answer, Tests.Question6Answer, Tests.Question7Answer, Tests.Question8Answer, Tests.Question9Answer, Tests.Question10Answer };
+            string[] rightAnswers = new string[10] { Tests.Question1Answer, Tests.Question2Answer, Tests.Question3Answer, Tests.Question4Answer, Tests.Question5Answer, Tests.Question6Answer, Tests.Question7Answer, Tests.Question8Answer, Tests.Question9Answer, Tests.Question10Answer };
 
             int points = 0;
             for (int i = 0; i < 10; i++)
@@ -146,9 +149,35 @@ namespace EncryptionStudy
                 if (answers[i, Convert.ToInt16(rightAnswers[i])].Checked)
                     points++;
             }
-            MessageBox.Show("Количество набранных баллов: " + points.ToString());
+
+            if (locale == "Ru")
+            {
+                MessageBox.Show("Количество набранных баллов: " + points.ToString());
+                if (points >= 8)
+                {
+                    MessageBox.Show("Вы набрали необходимое количество баллов для перехода ко второй части обучения");
+                }
+                else
+                {
+                    MessageBox.Show("Вы не набрали необходимое количество баллов для перехода ко второй части обучения");
+                }
+            }
+            else
+            { 
+                MessageBox.Show("Number of points: " + points.ToString());
+                if (points >= 8)
+                {
+                    MessageBox.Show("You collect the necessary points to move to the second part of learning");
+                }
+                else
+                { 
+                    MessageBox.Show("You did not collect the necessary points to move to the second part of learning");
+                }
+                
+            }
         }
         
+        //Change the language
         private void comboLanguage_SelectedIndexChanged(object sender, EventArgs e)
         {
             Properties.Settings.Default.Language = comboLanguage.SelectedIndex;
@@ -156,6 +185,13 @@ namespace EncryptionStudy
             InitCaptions();
         }
 
+        //Test button 
+        private void btnCheck_Click(object sender, EventArgs e)
+        {
+            CheckResult();
+        }
+
+        //Load the second part of the theory and encryption algorithms
         private void ComboEncryption_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (ComboEncryption.SelectedIndex)
@@ -163,54 +199,135 @@ namespace EncryptionStudy
                 case 0:
                 {
                     boxEncryptionAlgorithm.LoadFile("Ceasar " + locale + ".rtf");
+                    CeasarEncryption();
                     break;
                 }
                 case 1:
                 {
                     boxEncryptionAlgorithm.LoadFile("Ceasar Afine " + locale + ".rtf");
+                    AfineCeasarEncryption();
                     break;
                 }
                 case 2:
                 {
                     boxEncryptionAlgorithm.LoadFile("Ceasar Keyword " + locale + ".rtf");
+                    CeasarKeywordEncryption();
                     break;
                 }
                 case 3:
                 {
                     boxEncryptionAlgorithm.LoadFile("Visioner " + locale + ".rtf");
+                    VisionerEncryption();
                     break;
                 }
                 case 4:
                 {
                     boxEncryptionAlgorithm.LoadFile("Playfer " + locale + ".rtf");
+                    PlayferEncryption();
                     break;
                 }
                 case 5:
                 {
                     boxEncryptionAlgorithm.LoadFile("Magical square " + locale + ".rtf");
+                    MagicalSquareEncryption();
                     break;
                 }
                 case 6:
                 {
                     boxEncryptionAlgorithm.LoadFile("Encryption tables " + locale + ".rtf");
+                    EncryptionTables();
                     break;
                 }
                 case 7:
                 {
                     boxEncryptionAlgorithm.LoadFile("DES " + locale + ".rtf");
+                    DesEncryption();
                     break;
                 }
                 case 8:
                 {
                     boxEncryptionAlgorithm.LoadFile("RSA " + locale + ".rtf");
+                    RsaEncryption();
                     break;
                 }
             }
         }
+        
+        //Alphabet for encryption algorithms
+        private void AlphabetEncryptionAlgorithms(object sender, EventArgs e)
+        { 
+            string EnAlphabet = "abcdefghijklmnopqrstuvwxyz";
+            string RuAlphabet = "абвгдежзийклмнопрстуфхцчшщъыьэюя";
+        }
 
-        private void btnCheck_Click(object sender, EventArgs e)
+        //Language for encryption examples
+        private void comboEncryptionLanguage_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CheckResult();
+            bool language;
+            switch (comboEncryptionLanguage.SelectedIndex)
+            {
+            case 0: 
+                { 
+                    language = true; 
+                    break; 
+                }
+            case 1: 
+                { 
+                    language = false; 
+                    break; 
+                }
+            }
+        }
+
+        //Encryption algorithms
+        private void CeasarEncryption()
+        {
+            
+        }
+
+        private void AfineCeasarEncryption()
+        {
+            
+        }
+
+        private void CeasarKeywordEncryption()
+        {
+            
+        }
+
+        private void VisionerEncryption()
+        { 
+        
+        }
+
+        private void PlayferEncryption()
+        { 
+        
+        }
+
+        private void MagicalSquareEncryption()
+        { 
+        
+        }
+
+        private void EncryptionTables()
+        { 
+        
+        }
+
+        private void DesEncryption()
+        { 
+        
+        }
+
+        private void RsaEncryption()
+        { 
+        
+        }
+
+        private void btnEncryptionStart_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
