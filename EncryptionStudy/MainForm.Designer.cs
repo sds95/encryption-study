@@ -108,6 +108,7 @@
             this.tabSettings = new System.Windows.Forms.TabPage();
             this.labelLanguage = new System.Windows.Forms.Label();
             this.comboLanguage = new System.Windows.Forms.ComboBox();
+            this.boxExamplesEncryption = new System.Windows.Forms.RichTextBox();
             this.tabsMain.SuspendLayout();
             this.tabBasics.SuspendLayout();
             this.tabsBasics.SuspendLayout();
@@ -135,6 +136,7 @@
             this.splitInfoAndExample.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitEncSettingsAndExample)).BeginInit();
             this.splitEncSettingsAndExample.Panel1.SuspendLayout();
+            this.splitEncSettingsAndExample.Panel2.SuspendLayout();
             this.splitEncSettingsAndExample.SuspendLayout();
             this.tabSettings.SuspendLayout();
             this.SuspendLayout();
@@ -1011,6 +1013,7 @@
             // splitEncSettingsAndExample.Panel2
             // 
             this.splitEncSettingsAndExample.Panel2.AutoScroll = true;
+            this.splitEncSettingsAndExample.Panel2.Controls.Add(this.boxExamplesEncryption);
             this.splitEncSettingsAndExample.Size = new System.Drawing.Size(445, 507);
             this.splitEncSettingsAndExample.SplitterDistance = 260;
             this.splitEncSettingsAndExample.TabIndex = 0;
@@ -1140,6 +1143,15 @@
             this.comboLanguage.TabIndex = 0;
             this.comboLanguage.SelectedIndexChanged += new System.EventHandler(this.comboLanguage_SelectedIndexChanged);
             // 
+            // boxExamplesEncryption
+            // 
+            this.boxExamplesEncryption.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.boxExamplesEncryption.Location = new System.Drawing.Point(0, 0);
+            this.boxExamplesEncryption.Name = "boxExamplesEncryption";
+            this.boxExamplesEncryption.Size = new System.Drawing.Size(443, 241);
+            this.boxExamplesEncryption.TabIndex = 0;
+            this.boxExamplesEncryption.Text = "";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1188,6 +1200,7 @@
             this.splitInfoAndExample.ResumeLayout(false);
             this.splitEncSettingsAndExample.Panel1.ResumeLayout(false);
             this.splitEncSettingsAndExample.Panel1.PerformLayout();
+            this.splitEncSettingsAndExample.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitEncSettingsAndExample)).EndInit();
             this.splitEncSettingsAndExample.ResumeLayout(false);
             this.tabSettings.ResumeLayout(false);
@@ -1278,6 +1291,7 @@
         private System.Windows.Forms.RichTextBox boxAsymmetricEncryption;
         private System.Windows.Forms.TabPage tabBasicsConcepts;
         private System.Windows.Forms.RichTextBox boxBasicsConcepts;
+        private System.Windows.Forms.RichTextBox boxExamplesEncryption;
 
     }
 }

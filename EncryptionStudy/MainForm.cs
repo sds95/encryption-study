@@ -154,26 +154,17 @@ namespace EncryptionStudy
             {
                 MessageBox.Show("Количество набранных баллов: " + points.ToString());
                 if (points >= 8)
-                {
                     MessageBox.Show("Вы набрали необходимое количество баллов для перехода ко второй части обучения");
-                }
                 else
-                {
                     MessageBox.Show("Вы не набрали необходимое количество баллов для перехода ко второй части обучения");
-                }
             }
             else
             { 
                 MessageBox.Show("Number of points: " + points.ToString());
                 if (points >= 8)
-                {
                     MessageBox.Show("You collect the necessary points to move to the second part of learning");
-                }
                 else
-                { 
                     MessageBox.Show("You did not collect the necessary points to move to the second part of learning");
-                }
-                
             }
         }
         
@@ -191,7 +182,7 @@ namespace EncryptionStudy
             CheckResult();
         }
 
-        //Load the second part of the theory and encryption algorithms
+        //Load the second part of the theory.
         private void ComboEncryption_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (ComboEncryption.SelectedIndex)
@@ -199,81 +190,68 @@ namespace EncryptionStudy
                 case 0:
                 {
                     boxEncryptionAlgorithm.LoadFile("Ceasar " + locale + ".rtf");
-                    CeasarEncryption();
                     break;
                 }
                 case 1:
                 {
                     boxEncryptionAlgorithm.LoadFile("Ceasar Afine " + locale + ".rtf");
-                    AfineCeasarEncryption();
                     break;
                 }
                 case 2:
                 {
                     boxEncryptionAlgorithm.LoadFile("Ceasar Keyword " + locale + ".rtf");
-                    CeasarKeywordEncryption();
                     break;
                 }
                 case 3:
                 {
                     boxEncryptionAlgorithm.LoadFile("Visioner " + locale + ".rtf");
-                    VisionerEncryption();
                     break;
                 }
                 case 4:
                 {
                     boxEncryptionAlgorithm.LoadFile("Playfer " + locale + ".rtf");
-                    PlayferEncryption();
                     break;
                 }
                 case 5:
                 {
                     boxEncryptionAlgorithm.LoadFile("Magical square " + locale + ".rtf");
-                    MagicalSquareEncryption();
                     break;
                 }
                 case 6:
                 {
                     boxEncryptionAlgorithm.LoadFile("Encryption tables " + locale + ".rtf");
-                    EncryptionTables();
                     break;
                 }
                 case 7:
                 {
                     boxEncryptionAlgorithm.LoadFile("DES " + locale + ".rtf");
-                    DesEncryption();
                     break;
                 }
                 case 8:
                 {
                     boxEncryptionAlgorithm.LoadFile("RSA " + locale + ".rtf");
-                    RsaEncryption();
                     break;
                 }
             }
         }
         
         //Alphabet for encryption algorithms
-        private void AlphabetEncryptionAlgorithms(object sender, EventArgs e)
-        { 
-            string EnAlphabet = "abcdefghijklmnopqrstuvwxyz";
-            string RuAlphabet = "абвгдежзийклмнопрстуфхцчшщъыьэюя";
-        }
-
+        string Alphabet;
+        
         //Language for encryption examples
         private void comboEncryptionLanguage_SelectedIndexChanged(object sender, EventArgs e)
         {
-            bool language;
+            
             switch (comboEncryptionLanguage.SelectedIndex)
             {
             case 0: 
                 { 
-                    language = true; 
+                    Alphabet = "abcdefghijklmnopqrstuvwxyz";
                     break; 
                 }
             case 1: 
                 { 
-                    language = false; 
+                    Alphabet = "абвгдежзийклмнопрстуфхцчшщъыьэюя";
                     break; 
                 }
             }
@@ -282,7 +260,25 @@ namespace EncryptionStudy
         //Encryption algorithms
         private void CeasarEncryption()
         {
-            
+            int s = 0, k = 0;
+            try { k = Convert.ToInt32(inputEncryptionKeyword); }
+            catch { MessageBox.Show("В ключе должно быть число!"); }
+
+            for (int i = 0; i < inputEncryptionText.Text.Length; i++)
+            {
+                if (inputEncryptionText.Text[i] != ' ')
+                {
+                    for (int j = 0; j < Alphabet.Length; j++)
+                    {
+                        if (Alphabet[j] == inputEncryptionText.Text[i])
+                        {
+                            s = j + k;
+                            s = s % Alphabet.Length;
+                            boxExamplesEncryption.Text = Alphabet[s];
+                        }
+                    }
+                }
+            }
         }
 
         private void AfineCeasarEncryption()
@@ -325,9 +321,68 @@ namespace EncryptionStudy
         
         }
 
+        //Load examples of encryptions
         private void btnEncryptionStart_Click(object sender, EventArgs e)
         {
-
+            if (locale == "RU")
+            {
+                if (inputEncryptionKeyword.MaxLength > 20 && inputEncryptionText.MaxLength > 30)
+                    MessageBox.Show("Вы ввели слишком много символом в текст или ключ");
+            }
+            else
+            {
+                if (inputEncryptionKeyword.MaxLength > 20 && inputEncryptionText.MaxLength > 30)
+                    MessageBox.Show("You entered too many characters in text or in key");
+            }
+           
+            switch (ComboEncryption.SelectedIndex)
+            {
+                case 0:
+                {
+                    CeasarEncryption();
+                    break;
+                }
+                case 1:
+                {
+                    AfineCeasarEncryption();
+                    break;
+                }
+                case 2:
+                {
+                    CeasarKeywordEncryption();
+                    break;
+                }
+                case 3:
+                {
+                    VisionerEncryption();
+                    break;
+                }
+                case 4:
+                {
+                    PlayferEncryption();
+                    break;
+                }
+                case 5:
+                {
+                    MagicalSquareEncryption();
+                    break;
+                }
+                case 6:
+                {
+                    EncryptionTables();
+                    break;
+                }
+                case 7:
+                {
+                    DesEncryption();
+                    break;
+                }
+                case 8:
+                {
+                    RsaEncryption();
+                    break;
+                }
+            }
         }
     }
 }
