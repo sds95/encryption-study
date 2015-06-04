@@ -235,10 +235,8 @@ namespace EncryptionStudy
             }
         }
         
-        //Alphabet for encryption algorithms
-        string Alphabet;
-        
         //Language for encryption examples
+        string Alphabet;
         private void comboEncryptionLanguage_SelectedIndexChanged(object sender, EventArgs e)
         {
             
@@ -262,7 +260,7 @@ namespace EncryptionStudy
         {
             int s = 0, k = 0;
             try { k = Convert.ToInt32(inputEncryptionKeyword); }
-            catch { MessageBox.Show("В ключе должно быть число!"); }
+            catch { MessageBox.Show("В ключе должно быть введено число!"); }
 
             for (int i = 0; i < inputEncryptionText.Text.Length; i++)
             {
@@ -283,7 +281,34 @@ namespace EncryptionStudy
 
         private void AfineCeasarEncryption()
         {
+            int s = 0, k = 0, a = 0, n =0;
+            try 
+            { 
+                k = Convert.ToInt32(inputEncryptionKeyword);
+                a = Convert.ToInt32(inputAkeyAfinEncryption);
+            }
+            catch { MessageBox.Show("В ключах должны быть введены числа!"); }
+
+            if (comboEncryptionLanguage.SelectedIndex == 0)
+                n = 25;
+            else
+                n = 31;
             
+            for (int i = 0; i < inputEncryptionText.Text.Length; i++)
+            {
+                if (inputEncryptionText.Text[i] != ' ')
+                {
+                    for (int j = 0; j < Alphabet.Length; j++)
+                    {
+                        if (Alphabet[j] == inputEncryptionText.Text[i])
+                        {
+                            s = j + k;
+                            s = s % Alphabet.Length;
+                            boxExamplesEncryption.Text = Alphabet[(a*s + k) % n];
+                        }
+                    }
+                }
+            }
         }
 
         private void CeasarKeywordEncryption()
@@ -345,6 +370,8 @@ namespace EncryptionStudy
                 case 1:
                 {
                     AfineCeasarEncryption();
+                    lbAkeyAfin.Visible = true;
+                    inputAkeyAfinEncryption.Visible = true;
                     break;
                 }
                 case 2:
