@@ -184,7 +184,7 @@ namespace EncryptionStudy
         //Load the second part of the theory.
         private void ComboEncryption_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (ComboEncryption.SelectedIndex)
+            switch (ComboEncryption.SelectedIndex)//Выбор теории
             {
                 case 0:
                 {
@@ -241,7 +241,7 @@ namespace EncryptionStudy
         private void comboEncryptionLanguage_SelectedIndexChanged(object sender, EventArgs e)
         {
             
-            switch (comboEncryptionLanguage.SelectedIndex)
+            switch (comboEncryptionLanguage.SelectedIndex)//Выбор алфавита
             {
             case 0: 
                 { 
@@ -257,55 +257,55 @@ namespace EncryptionStudy
         }
 
         //Encryption algorithms
-        private void CeasarEncryption()
+        private void CeasarEncryption()//Шифр Цезаря
         {
             int s = 0, k = 0;
             try { k = Convert.ToInt32(inputEncryptionKeyword.Text); } //Ввод ключа и его проверка
             catch { MessageBox.Show("В ключе должно быть введено число!"); }
 
-            for (int i = 0; i < inputEncryptionText.Text.Length; i++) //
+            for (int i = 0; i < inputEncryptionText.Text.Length; i++) 
             {
-                if (inputEncryptionText.Text[i] != ' ')
+                if (inputEncryptionText.Text[i] != ' ')//Шифрование, пока не равно пробелу
                 {
                     for (int j = 0; j < Alphabet.Length; j++)
                     {
-                        if (Alphabet[j] == inputEncryptionText.Text[i])
+                        if (Alphabet[j] == inputEncryptionText.Text[i])//Поиск совпадения и вывод результата
                         {
                             s = j + k;
                             s = s % Alphabet.Length;
-                            boxExamplesEncryption.Text += "Результат шифрования: " + Alphabet[s].ToString();
+                            boxExamplesEncryption.Text += Alphabet[s].ToString();
                         }
                     }
                 }
             }
         }
 
-        private void AfineCeasarEncryption()
+        private void AfineCeasarEncryption()//Афинский шифр Цезаря
         {
             int s = 0, k = 0, a = 0, n =0;
-            try 
+            try //Ввод ключей и их проверка
             { 
                 k = Convert.ToInt32(inputEncryptionKeyword.Text);
                 a = Convert.ToInt32(inputAkeyAfinEncryption.Text);
             }
             catch { MessageBox.Show("В ключах должны быть введены числа!"); }
 
-            if (comboEncryptionLanguage.SelectedIndex == 0)
+            if (comboEncryptionLanguage.SelectedIndex == 0)//Нумирация букв алфавита идет с нуля
                 n = 25;
             else
                 n = 31;
             
             for (int i = 0; i < inputEncryptionText.Text.Length; i++)
             {
-                if (inputEncryptionText.Text[i] != ' ')
+                if (inputEncryptionText.Text[i] != ' ')//Шифрование, пока не равно пробелу
                 {
                     for (int j = 0; j < Alphabet.Length; j++)
                     {
-                        if (Alphabet[j] == inputEncryptionText.Text[i])
+                        if (Alphabet[j] == inputEncryptionText.Text[i])//Поиск совпадения и вывод результата
                         {
                             s = j + k;
                             s = s % Alphabet.Length;
-                            boxExamplesEncryption.Text += "Результат шифрования: " + Alphabet[(a*s + k) % n].ToString();
+                            boxExamplesEncryption.Text += Alphabet[(a*s + k) % n].ToString();
                         }
                     }
                 }
@@ -319,7 +319,113 @@ namespace EncryptionStudy
 
         private void VisionerEncryption()
         { 
-            
+            string s = ""; //Строка, к которой применяется шифрования
+            string result = ""; //Строка - результат шифрования
+            string key = ""; //Строка - ключ шифра
+            string key_on_s = ""; //Ключ длиной строки
+            int x = 0, y = 0; //Координаты нового символа из таблицы Виженера
+            int registr = 0; //Регистр символа
+            char dublicat; //Дубликат прописной буквы
+
+            //Формирование таблицы Виженера
+            int shift = 0;
+            char[,] tabula_recta = new char[Alphabet.Length, Alphabet.Length]; //Таблица Виженера
+            //Формирование таблицы
+            for (int i = 0; i < Alphabet.Length; i++)
+                for (int j = 0; j < Alphabet.Length; j++)
+                {
+                    shift = j + i;
+                    if (shift >= Alphabet.Length) shift = shift % Alphabet.Length;
+                    tabula_recta[i, j] = Alphabet[shift];
+                }
+            //Объявление флага, для считывания ключа
+            bool flag = false;
+            //Пока не будет введен ключ из разрешенных символов (прописные и строчные буквы кирилицы)
+            while (flag != true)
+            {
+                flag = true;
+                //Считывание строки
+                key = inputEncryptionKeyword.Text;
+                //Цикл по каждому элементу ключа
+                for (int i = 0; i < key.Length; i++)
+                {
+                    //Если элемент ключа не принадлежит алфавиту кирилицы, изменить флаг
+                    if ((Convert.ToInt16(key[i]) < 1072) || (Convert.ToInt16(key[i]) > 1103))
+                        flag = false;
+                }
+                //Если ключ имеет запрещенные символы, то сообщение об ошибке
+                if (flag == false)
+                    MessageBox.Show("Ключ имеет запрещенные символы, повторите ввод");
+            }
+                //Считывание строки
+                s = inputEncryptionText.Text;
+                //Выполение шифрования
+                //Формирование строки, длиной шифруемой, состоящей из повторений ключа
+                for (int i = 0; i < s.Length; i++)
+                {
+                    key_on_s += key[i % key.Length];
+                }
+                //Шифрование при помощи таблицы
+                for (int i = 0; i < s.Length; i++)
+                {
+                    //Если не кириллица
+                    if (((int)(s[i]) < 1040) || ((int)(s[i]) > 1103))
+                        result += s[i];
+                    else
+                    {
+                        //Поиск в первом столбце строки, начинающейся с символа ключа
+                        int l = 0;
+                        flag = false;
+                        //Пока не найден символ
+                        while ((l < Alphabet.Length) && (flag == false))
+                        {
+                            //Если символ найден
+                            if (key_on_s[i] == tabula_recta[l, 0])
+                            {
+                                //Запоминаем в х номер строки
+                                x = l;
+                                flag = true;
+                            }
+                            l++;
+                        }
+                        //Уменьшаем временно регистр прописной буквы
+                        if ((Convert.ToInt16(s[i]) < 1072) && (Convert.ToInt16(s[i]) >= 1040))
+                        {
+                            dublicat = Convert.ToChar(Convert.ToInt16(s[i]) + Alphabet.Length);
+                            registr = 1;
+                        }
+                        else
+                        {
+                            registr = 0;
+                            dublicat = s[i];
+                        }
+                        l = 0;
+                        flag = false;
+                        //Пока не найден столбец в первой строке с символом строки
+                        while ((l < Alphabet.Length) && (flag == false))
+                        {
+                            //Проверка совпадения
+                            if (dublicat == tabula_recta[0, l])
+                            {
+                                //Запоминаем номер столбца
+                                y = l;
+                                flag = true;
+                            }
+                            l++;
+                        }
+                        //Увеличиваем регистр буквы до прописной
+                        if (registr == 1)
+                        {
+                            //Изменяем символ на первоначальный регистр
+                            dublicat = Convert.ToChar(Convert.ToInt16(tabula_recta[x, y]) - Alphabet.Length);
+                            result += dublicat;
+                        }
+                        else
+                            result += tabula_recta[x, y];
+                        }
+                //Вывод на экран зашифрованной строки
+                boxExamplesEncryption.Text = result; //Вывод результа
+            } 
         }
 
         private void PlayferEncryption()
@@ -465,8 +571,8 @@ namespace EncryptionStudy
                     //записыавем результат кодирования
                     encodetString = encodetString + s1 + s2;
                 }
-
-                boxExamplesEncryption.Text = "Результат шифрования: " + encodetString.ToLower();
+                //Выодим результат
+                boxExamplesEncryption.Text = encodetString.ToLower();
             }
         }
 
@@ -493,9 +599,9 @@ namespace EncryptionStudy
         //Load examples of encryptions
         private void btnEncryptionStart_Click(object sender, EventArgs e)
         {
-            if (locale == "RU")
+            if (locale == "RU")//В зависимости от выбранного языка выбирается язык вывода сообщения об ошибке
             {
-                if (inputEncryptionKeyword.MaxLength > 20 && inputEncryptionText.MaxLength > 30)
+                if (inputEncryptionKeyword.MaxLength > 20 && inputEncryptionText.MaxLength > 30)//Ограничения на ввод текста и ключа
                     MessageBox.Show("Вы ввели слишком много символом в текст или ключ");
             }
             else
@@ -503,7 +609,8 @@ namespace EncryptionStudy
                 if (inputEncryptionKeyword.MaxLength > 20 && inputEncryptionText.MaxLength > 30)
                     MessageBox.Show("You entered too many characters in text or in key");
             }
-           
+
+           //Вызов метода шифрования
             switch (ComboEncryption.SelectedIndex)
             {
                 case 0:
