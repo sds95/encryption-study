@@ -98,6 +98,8 @@
             this.splitInfoAndExample = new System.Windows.Forms.SplitContainer();
             this.boxEncryptionAlgorithm = new System.Windows.Forms.RichTextBox();
             this.splitEncSettingsAndExample = new System.Windows.Forms.SplitContainer();
+            this.inputAkeyAfinEncryption = new System.Windows.Forms.TextBox();
+            this.lbAkeyAfin = new System.Windows.Forms.Label();
             this.inputEncryptionKeyword = new System.Windows.Forms.TextBox();
             this.inputEncryptionText = new System.Windows.Forms.TextBox();
             this.labelEncryptionText = new System.Windows.Forms.Label();
@@ -109,8 +111,6 @@
             this.tabSettings = new System.Windows.Forms.TabPage();
             this.labelLanguage = new System.Windows.Forms.Label();
             this.comboLanguage = new System.Windows.Forms.ComboBox();
-            this.lbAkeyAfin = new System.Windows.Forms.Label();
-            this.inputAkeyAfinEncryption = new System.Windows.Forms.TextBox();
             this.tabsMain.SuspendLayout();
             this.tabBasics.SuspendLayout();
             this.tabsBasics.SuspendLayout();
@@ -1022,12 +1022,36 @@
             this.splitEncSettingsAndExample.SplitterDistance = 260;
             this.splitEncSettingsAndExample.TabIndex = 0;
             // 
+            // inputAkeyAfinEncryption
+            // 
+            this.inputAkeyAfinEncryption.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.inputAkeyAfinEncryption.Location = new System.Drawing.Point(399, 126);
+            this.inputAkeyAfinEncryption.MaxLength = 5;
+            this.inputAkeyAfinEncryption.Name = "inputAkeyAfinEncryption";
+            this.inputAkeyAfinEncryption.Size = new System.Drawing.Size(38, 22);
+            this.inputAkeyAfinEncryption.TabIndex = 10;
+            this.inputAkeyAfinEncryption.Visible = false;
+            // 
+            // lbAkeyAfin
+            // 
+            this.lbAkeyAfin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbAkeyAfin.AutoSize = true;
+            this.lbAkeyAfin.Location = new System.Drawing.Point(364, 129);
+            this.lbAkeyAfin.Name = "lbAkeyAfin";
+            this.lbAkeyAfin.Size = new System.Drawing.Size(29, 17);
+            this.lbAkeyAfin.TabIndex = 9;
+            this.lbAkeyAfin.Text = "A =";
+            this.lbAkeyAfin.Visible = false;
+            // 
             // inputEncryptionKeyword
             // 
             this.inputEncryptionKeyword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.inputEncryptionKeyword.Location = new System.Drawing.Point(7, 126);
             this.inputEncryptionKeyword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.inputEncryptionKeyword.MaxLength = 20;
             this.inputEncryptionKeyword.Name = "inputEncryptionKeyword";
             this.inputEncryptionKeyword.Size = new System.Drawing.Size(351, 22);
             this.inputEncryptionKeyword.TabIndex = 8;
@@ -1038,6 +1062,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.inputEncryptionText.Location = new System.Drawing.Point(7, 80);
             this.inputEncryptionText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.inputEncryptionText.MaxLength = 30;
             this.inputEncryptionText.Name = "inputEncryptionText";
             this.inputEncryptionText.Size = new System.Drawing.Size(430, 22);
             this.inputEncryptionText.TabIndex = 7;
@@ -1155,28 +1180,6 @@
             this.comboLanguage.Size = new System.Drawing.Size(263, 24);
             this.comboLanguage.TabIndex = 0;
             this.comboLanguage.SelectedIndexChanged += new System.EventHandler(this.comboLanguage_SelectedIndexChanged);
-            // 
-            // lbAkeyAfin
-            // 
-            this.lbAkeyAfin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbAkeyAfin.AutoSize = true;
-            this.lbAkeyAfin.Location = new System.Drawing.Point(364, 129);
-            this.lbAkeyAfin.Name = "lbAkeyAfin";
-            this.lbAkeyAfin.Size = new System.Drawing.Size(29, 17);
-            this.lbAkeyAfin.TabIndex = 9;
-            this.lbAkeyAfin.Text = "A =";
-            this.lbAkeyAfin.Visible = false;
-            // 
-            // inputAkeyAfinEncryption
-            // 
-            this.inputAkeyAfinEncryption.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.inputAkeyAfinEncryption.Location = new System.Drawing.Point(399, 126);
-            this.inputAkeyAfinEncryption.Name = "inputAkeyAfinEncryption";
-            this.inputAkeyAfinEncryption.Size = new System.Drawing.Size(38, 22);
-            this.inputAkeyAfinEncryption.TabIndex = 10;
-            this.inputAkeyAfinEncryption.Visible = false;
             // 
             // MainForm
             // 

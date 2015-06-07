@@ -5,7 +5,6 @@ using System.Globalization;
 using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
-
 using System.Resources;
 
 namespace EncryptionStudy
@@ -195,6 +194,8 @@ namespace EncryptionStudy
                 case 1:
                 {
                     boxEncryptionAlgorithm.LoadFile("Ceasar Afine " + locale + ".rtf");
+                    lbAkeyAfin.Visible = true;
+                    inputAkeyAfinEncryption.Visible = true;
                     break;
                 }
                 case 2:
@@ -259,10 +260,10 @@ namespace EncryptionStudy
         private void CeasarEncryption()
         {
             int s = 0, k = 0;
-            try { k = Convert.ToInt32(inputEncryptionKeyword); }
+            try { k = Convert.ToInt32(inputEncryptionKeyword.Text); } //Ввод ключа и его проверка
             catch { MessageBox.Show("В ключе должно быть введено число!"); }
 
-            for (int i = 0; i < inputEncryptionText.Text.Length; i++)
+            for (int i = 0; i < inputEncryptionText.Text.Length; i++) //
             {
                 if (inputEncryptionText.Text[i] != ' ')
                 {
@@ -272,7 +273,7 @@ namespace EncryptionStudy
                         {
                             s = j + k;
                             s = s % Alphabet.Length;
-                            boxExamplesEncryption.Text = Alphabet[s];
+                            boxExamplesEncryption.Text += "Результат шифрования: " + Alphabet[s].ToString();
                         }
                     }
                 }
@@ -284,8 +285,8 @@ namespace EncryptionStudy
             int s = 0, k = 0, a = 0, n =0;
             try 
             { 
-                k = Convert.ToInt32(inputEncryptionKeyword);
-                a = Convert.ToInt32(inputAkeyAfinEncryption);
+                k = Convert.ToInt32(inputEncryptionKeyword.Text);
+                a = Convert.ToInt32(inputAkeyAfinEncryption.Text);
             }
             catch { MessageBox.Show("В ключах должны быть введены числа!"); }
 
@@ -304,7 +305,7 @@ namespace EncryptionStudy
                         {
                             s = j + k;
                             s = s % Alphabet.Length;
-                            boxExamplesEncryption.Text = Alphabet[(a*s + k) % n];
+                            boxExamplesEncryption.Text += "Результат шифрования: " + Alphabet[(a*s + k) % n].ToString();
                         }
                     }
                 }
@@ -318,12 +319,155 @@ namespace EncryptionStudy
 
         private void VisionerEncryption()
         { 
-        
+            
         }
 
         private void PlayferEncryption()
         { 
-        
+            //матрица алфавита шифрования
+            string[,] encriptionMatrix =
+                                         {
+                                         {"А", "Ч", "Б", "М", "Ц", "В"}, //первая строка матрицы
+                                         {"Ь", "Г", "Н", "Ш", "Д", "О"}, //вторая строка матрицы
+                                         {"Е", "Щ", ",", "Х", "У", "П"}, //третья строка матрицы
+                                         {".", "З", "Ъ", "Р", "И", "Й"}, //четвертая строка матрицы
+                                         {"С", "-", "К", "Э", "Т", "Л"}, //пятая строка матрицы
+                                         {"Ю", "Я", " ", "Ы", "Ф", "Ж"}  //шестая строка матрицы
+                                         };
+
+            string text = ""; //исходный текст для шифрования
+            int i_first = 0, j_first = 0;  //координаты первого символа 
+            int i_second = 0, j_second = 0;//координаты второго символа 
+            string  s1 = "", s2 = ""; //строки для хранения зашифрованного символа 
+            string encodetString = ""; //зашифрованая строка
+         
+            text = Convert.ToString(inputEncryptionText.Text).ToUpper();
+            int t = text.Length; //длина входного слова
+                int i, j;
+                //проверяем, четное ли число символов в строке
+                int temp = t % 2;
+                if (temp != 0) //если нет
+                {               //то добавляем в конец строки символ " " 
+                    text = text.PadRight((t + 1), ' ');
+                } 
+
+                 int len = text.Length / 2; /*длина нового массива -
+                                                равная половине длины входного слова
+                                                 т.к. в новом масиве каждый элемент будет
+                                                   содержать 2 элемента из старого массива*/
+
+            string[] str = new string[len]; //новый массив
+
+            int l = -1; //служебная переменная
+
+            for (i = 0; i < t; i += 2) //в старом массиве шаг равен 2
+            {
+                l++; //индексы для нового массива
+                if (l < len)
+                {
+                    //Элемент_нового_массива[i] =  Элемент_старого_массива[i] +  Элемент_старого_массива[i+1]
+                    str[l] = Convert.ToString(text[i]) + Convert.ToString(text[i + 1]);
+                }
+
+            }
+
+            //координаты очередного найденного символа из каждой пары
+
+            foreach (string both in str)
+            {
+                for (i = 0; i < 6; i++)
+                {
+                    for (j = 0; j < 6; j++)
+                    {
+                        //координаты первого символа пары в исходной матрице
+                        if (both[0] == Convert.ToChar(encriptionMatrix[i, j]))
+                        {
+                            i_first = i;
+                            j_first = j;
+                           
+                        }
+
+                        //координаты второго символа пары в исходной матрице
+                        if (both[1] == Convert.ToChar(encriptionMatrix[i, j]))
+                        {
+                            i_second = i;
+                            j_second = j;
+                           
+                        }
+                    }
+                }
+
+                //если пара символов находится в одной строке
+                if (i_first == i_second)
+                {
+                    if (j_first == 5) /*если символ последний в строке,
+                                       кодируем его первым символом из матрицы*/
+                    {
+                        s1 = Convert.ToString(encriptionMatrix[i_first, 0]);
+                    }
+                    //если символ не последний, кодируем его стоящим справа от него
+                    else
+                    {
+                        s1 = Convert.ToString(encriptionMatrix[i_first, j_first + 1]);
+                    }
+
+                    if (j_second == 5) /*если символ последний в строке
+                                       кодируем его первым символом из матрицы*/
+                    {
+                        s2 = Convert.ToString(encriptionMatrix[i_second, 0]);
+                    }
+                    //если символ не последний, кодируем его стоящим справа от него
+                    else
+                    {
+                        s2 = Convert.ToString(encriptionMatrix[i_second, j_second + 1]);
+                    }
+
+                }
+
+                //если пара символов находится в одном столбце
+                if (j_first == j_second)
+                {
+                    if (i_first == 5)
+                    {
+                        s1 = Convert.ToString(encriptionMatrix[0, j_first]);
+                    }
+                    else
+                    {
+                        s1 = Convert.ToString(encriptionMatrix[i_first + 1, j_first]);
+                    }
+
+                    if (i_second == 5)
+                    {
+                        s2 = Convert.ToString(encriptionMatrix[0, j_second]);
+                    }
+
+                    else
+                    {
+                        s2 = Convert.ToString(encriptionMatrix[i_second + 1, j_second]);
+                    }
+                }
+
+                //если пара символов находиться в разных столбцах и строках
+                if (i_first != i_second && j_first != j_second)
+                {
+
+                    s1 = Convert.ToString(encriptionMatrix[i_first, j_second]);
+                    s2 = Convert.ToString(encriptionMatrix[i_second, j_first]);
+                }
+
+                if (s1 == s2)
+                {
+                    encodetString = encodetString + s1 + "=" + s2;
+                }
+                else
+                {
+
+                    //записыавем результат кодирования
+                    encodetString = encodetString + s1 + s2;
+                }
+
+                boxExamplesEncryption.Text = "Результат шифрования: " + encodetString.ToLower();
+            }
         }
 
         private void MagicalSquareEncryption()
@@ -370,8 +514,6 @@ namespace EncryptionStudy
                 case 1:
                 {
                     AfineCeasarEncryption();
-                    lbAkeyAfin.Visible = true;
-                    inputAkeyAfinEncryption.Visible = true;
                     break;
                 }
                 case 2:
