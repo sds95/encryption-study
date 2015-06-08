@@ -160,6 +160,24 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Number of columns.
+        /// </summary>
+        internal static string LbStoEncTables {
+            get {
+                return ResourceManager.GetString("LbStoEncTables", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Number of strings.
+        /// </summary>
+        internal static string LbStrEncTables {
+            get {
+                return ResourceManager.GetString("LbStrEncTables", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Text.
         /// </summary>
         internal static string LbText {

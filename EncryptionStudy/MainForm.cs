@@ -43,6 +43,8 @@ namespace EncryptionStudy
             labelEncryptionKeyword.Text = Strings.LbKeyword;
             labelEncryptionText.Text = Strings.LbText;
             labelLanguage.Text = Strings.LbLanguage;
+            labelStrEncryptionTables.Text = Strings.LbStrEncTables;
+            labelStolbEncryptionTables.Text = Strings.LbStoEncTables;
 
             // Tabs.
             tabAlgorythms.Text = Strings.EncryptionAlgorithms;
@@ -221,6 +223,12 @@ namespace EncryptionStudy
                 case 6:
                 {
                     boxEncryptionAlgorithm.LoadFile("Encryption tables " + locale + ".rtf");
+                    labelStrEncryptionTables.Visible = true;
+                    labelStolbEncryptionTables.Visible = true;
+                    boxStrEncryptionTables.Visible = true;
+                    boxStolbEncryptionTables.Visible = true;
+                    labelEncryptionKeyword.Visible = false;
+                    inputEncryptionKeyword.Visible = false;
                     break;
                 }
                 case 7:
@@ -576,14 +584,86 @@ namespace EncryptionStudy
             }
         }
 
-        private void MagicalSquareEncryption()
+        private void MagicalSquareEncryption()//Шифрование магическим квадратом
         { 
-        
+            string a = "";  //Переменная в которую вводится текст, и в которую затем записывается результат
+            string[,] b = new string[4, 4];     
+            int[,] c = new int[4, 4];   //Магический квадрат
+            string[] d = new string[16];    
+            string[] g = new string[16];    
+            int i = 0, j = 0, k = 0, l = 0;
+            
+            a = inputEncryptionText.Text;
+            
+            //Массив каждой ячейке которого присвоен свой номер
+            c[0, 0] = 16; c[0, 1] = 3; c[0, 2] = 2; c[0, 3] = 13;
+            c[1, 0] = 5; c[1, 1] = 10; c[1, 2] = 11; c[1, 3] = 8;
+            c[2, 0] = 9; c[2, 1] = 6; c[2, 2] = 7; c[2, 3] = 12;
+            c[3, 0] = 4; c[3, 1] = 15; c[3, 2] = 14; c[3, 3] = 1;
+
+            while(a.Length < 16)    //Если букв меньше чем элементов в массиве 
+            {
+                a = a + " "; //то оставшиеся элементы массива заполняем пустыми значениями
+            }
+
+            for (i = 0; i < 4; i++)
+            {
+                for (j = 0; j < 4; j++)
+                {
+                    k = c[i, j];
+                    g[k - 1] = a.Substring(l, 1);
+                    l++;
+                }
+            }
+            k = 0; 
+            a = "";
+            
+            for(i = 0; i < 16; i++)
+            {
+                a = a + g[i];
+            }
+            boxExamplesEncryption.Text = a;
         }
 
         private void EncryptionTables()
         { 
-        
+            int a, b, i, j, k;
+            string c;
+            string[,] d = new string[50, 50];
+            //Ввод кол-во строк, столбцов и текста
+            a = Convert.ToInt32(boxStrEncryptionTables.Text);
+            b = Convert.ToInt32(boxStolbEncryptionTables.Text);
+            c = inputEncryptionText.Text;
+
+            k = a * b;//Кол-во элементов массива
+           
+            while (c.Length < k)//Создание массива
+            {
+                c = c + " ";
+            }
+
+            //Заполнение массива
+            k = 0;
+            for (i = 0; i < a; i++)
+            {
+                for (j = 0; j < b; j++)
+                {
+                    d[j, i] = c.Substring(k, 1);
+                    k++;
+                }
+            }
+
+            c = "";
+            
+            //Вывод результата в строку
+            for (i = 0; i < a; i++)
+            {
+                for (j = 0; j < b; j++)
+                {
+                    c = c + d[i, j];
+                }
+            }
+            boxExamplesEncryption.Text = c;//Вывод результата на экран
         }
 
         private void DesEncryption()
@@ -601,12 +681,12 @@ namespace EncryptionStudy
         {
             if (locale == "RU")//В зависимости от выбранного языка выбирается язык вывода сообщения об ошибке
             {
-                if (inputEncryptionKeyword.MaxLength > 20 && inputEncryptionText.MaxLength > 30)//Ограничения на ввод текста и ключа
+                if (inputEncryptionKeyword.MaxLength > 20 && inputEncryptionText.MaxLength > 50)//Ограничения на ввод текста и ключа
                     MessageBox.Show("Вы ввели слишком много символом в текст или ключ");
             }
             else
             {
-                if (inputEncryptionKeyword.MaxLength > 20 && inputEncryptionText.MaxLength > 30)
+                if (inputEncryptionKeyword.MaxLength > 20 && inputEncryptionText.MaxLength > 50)
                     MessageBox.Show("You entered too many characters in text or in key");
             }
 

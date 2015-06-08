@@ -98,6 +98,10 @@
             this.splitInfoAndExample = new System.Windows.Forms.SplitContainer();
             this.boxEncryptionAlgorithm = new System.Windows.Forms.RichTextBox();
             this.splitEncSettingsAndExample = new System.Windows.Forms.SplitContainer();
+            this.boxStolbEncryptionTables = new System.Windows.Forms.TextBox();
+            this.boxStrEncryptionTables = new System.Windows.Forms.TextBox();
+            this.labelStolbEncryptionTables = new System.Windows.Forms.Label();
+            this.labelStrEncryptionTables = new System.Windows.Forms.Label();
             this.inputAkeyAfinEncryption = new System.Windows.Forms.TextBox();
             this.lbAkeyAfin = new System.Windows.Forms.Label();
             this.inputEncryptionKeyword = new System.Windows.Forms.TextBox();
@@ -1004,6 +1008,10 @@
             // 
             // splitEncSettingsAndExample.Panel1
             // 
+            this.splitEncSettingsAndExample.Panel1.Controls.Add(this.boxStolbEncryptionTables);
+            this.splitEncSettingsAndExample.Panel1.Controls.Add(this.boxStrEncryptionTables);
+            this.splitEncSettingsAndExample.Panel1.Controls.Add(this.labelStolbEncryptionTables);
+            this.splitEncSettingsAndExample.Panel1.Controls.Add(this.labelStrEncryptionTables);
             this.splitEncSettingsAndExample.Panel1.Controls.Add(this.inputAkeyAfinEncryption);
             this.splitEncSettingsAndExample.Panel1.Controls.Add(this.lbAkeyAfin);
             this.splitEncSettingsAndExample.Panel1.Controls.Add(this.inputEncryptionKeyword);
@@ -1019,8 +1027,44 @@
             this.splitEncSettingsAndExample.Panel2.AutoScroll = true;
             this.splitEncSettingsAndExample.Panel2.Controls.Add(this.boxExamplesEncryption);
             this.splitEncSettingsAndExample.Size = new System.Drawing.Size(445, 507);
-            this.splitEncSettingsAndExample.SplitterDistance = 260;
+            this.splitEncSettingsAndExample.SplitterDistance = 323;
             this.splitEncSettingsAndExample.TabIndex = 0;
+            // 
+            // boxStolbEncryptionTables
+            // 
+            this.boxStolbEncryptionTables.Location = new System.Drawing.Point(367, 156);
+            this.boxStolbEncryptionTables.Name = "boxStolbEncryptionTables";
+            this.boxStolbEncryptionTables.Size = new System.Drawing.Size(70, 22);
+            this.boxStolbEncryptionTables.TabIndex = 14;
+            this.boxStolbEncryptionTables.Visible = false;
+            // 
+            // boxStrEncryptionTables
+            // 
+            this.boxStrEncryptionTables.Location = new System.Drawing.Point(136, 156);
+            this.boxStrEncryptionTables.Name = "boxStrEncryptionTables";
+            this.boxStrEncryptionTables.Size = new System.Drawing.Size(70, 22);
+            this.boxStrEncryptionTables.TabIndex = 13;
+            this.boxStrEncryptionTables.Visible = false;
+            // 
+            // labelStolbEncryptionTables
+            // 
+            this.labelStolbEncryptionTables.AutoSize = true;
+            this.labelStolbEncryptionTables.Location = new System.Drawing.Point(228, 159);
+            this.labelStolbEncryptionTables.Name = "labelStolbEncryptionTables";
+            this.labelStolbEncryptionTables.Size = new System.Drawing.Size(130, 17);
+            this.labelStolbEncryptionTables.TabIndex = 12;
+            this.labelStolbEncryptionTables.Text = "Number of columns";
+            this.labelStolbEncryptionTables.Visible = false;
+            // 
+            // labelStrEncryptionTables
+            // 
+            this.labelStrEncryptionTables.AutoSize = true;
+            this.labelStrEncryptionTables.Location = new System.Drawing.Point(4, 159);
+            this.labelStrEncryptionTables.Name = "labelStrEncryptionTables";
+            this.labelStrEncryptionTables.Size = new System.Drawing.Size(120, 17);
+            this.labelStrEncryptionTables.TabIndex = 11;
+            this.labelStrEncryptionTables.Text = "Number of strings";
+            this.labelStrEncryptionTables.Visible = false;
             // 
             // inputAkeyAfinEncryption
             // 
@@ -1062,7 +1106,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.inputEncryptionText.Location = new System.Drawing.Point(7, 80);
             this.inputEncryptionText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.inputEncryptionText.MaxLength = 30;
+            this.inputEncryptionText.MaxLength = 50;
             this.inputEncryptionText.Name = "inputEncryptionText";
             this.inputEncryptionText.Size = new System.Drawing.Size(430, 22);
             this.inputEncryptionText.TabIndex = 7;
@@ -1088,7 +1132,7 @@
             // btnEncryptionStart
             // 
             this.btnEncryptionStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEncryptionStart.Location = new System.Drawing.Point(7, 230);
+            this.btnEncryptionStart.Location = new System.Drawing.Point(7, 293);
             this.btnEncryptionStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEncryptionStart.Name = "btnEncryptionStart";
             this.btnEncryptionStart.Size = new System.Drawing.Size(119, 26);
@@ -1141,7 +1185,7 @@
             this.boxExamplesEncryption.Dock = System.Windows.Forms.DockStyle.Fill;
             this.boxExamplesEncryption.Location = new System.Drawing.Point(0, 0);
             this.boxExamplesEncryption.Name = "boxExamplesEncryption";
-            this.boxExamplesEncryption.Size = new System.Drawing.Size(443, 241);
+            this.boxExamplesEncryption.Size = new System.Drawing.Size(443, 178);
             this.boxExamplesEncryption.TabIndex = 0;
             this.boxExamplesEncryption.Text = "";
             // 
@@ -1323,6 +1367,10 @@
         private System.Windows.Forms.RichTextBox boxExamplesEncryption;
         private System.Windows.Forms.TextBox inputAkeyAfinEncryption;
         private System.Windows.Forms.Label lbAkeyAfin;
+        private System.Windows.Forms.TextBox boxStolbEncryptionTables;
+        private System.Windows.Forms.TextBox boxStrEncryptionTables;
+        private System.Windows.Forms.Label labelStolbEncryptionTables;
+        private System.Windows.Forms.Label labelStrEncryptionTables;
 
     }
 }

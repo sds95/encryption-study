@@ -150,6 +150,12 @@
   <data name="LbLanguage" xml:space="preserve">
     <value>Язык</value>
   </data>
+  <data name="LbStoEncTables" xml:space="preserve">
+    <value>Количество столбцов</value>
+  </data>
+  <data name="LbStrEncTables" xml:space="preserve">
+    <value>Количество строк</value>
+  </data>
   <data name="LbText" xml:space="preserve">
     <value>Текст</value>
   </data>
