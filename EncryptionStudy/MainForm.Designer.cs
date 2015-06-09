@@ -225,7 +225,7 @@
             this.tabBasicsConcepts.Location = new System.Drawing.Point(4, 4);
             this.tabBasicsConcepts.Name = "tabBasicsConcepts";
             this.tabBasicsConcepts.Padding = new System.Windows.Forms.Padding(3);
-            this.tabBasicsConcepts.Size = new System.Drawing.Size(890, 478);
+            this.tabBasicsConcepts.Size = new System.Drawing.Size(975, 478);
             this.tabBasicsConcepts.TabIndex = 4;
             this.tabBasicsConcepts.Text = "Basic concepts";
             this.tabBasicsConcepts.UseVisualStyleBackColor = true;
@@ -238,7 +238,7 @@
             this.boxBasicsConcepts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.boxBasicsConcepts.Name = "boxBasicsConcepts";
             this.boxBasicsConcepts.ReadOnly = true;
-            this.boxBasicsConcepts.Size = new System.Drawing.Size(884, 472);
+            this.boxBasicsConcepts.Size = new System.Drawing.Size(969, 472);
             this.boxBasicsConcepts.TabIndex = 1;
             this.boxBasicsConcepts.Text = "";
             // 
@@ -249,7 +249,7 @@
             this.tabBasicsBlocks.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabBasicsBlocks.Name = "tabBasicsBlocks";
             this.tabBasicsBlocks.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabBasicsBlocks.Size = new System.Drawing.Size(890, 478);
+            this.tabBasicsBlocks.Size = new System.Drawing.Size(975, 478);
             this.tabBasicsBlocks.TabIndex = 1;
             this.tabBasicsBlocks.Text = "Block encryption";
             this.tabBasicsBlocks.UseVisualStyleBackColor = true;
@@ -262,7 +262,7 @@
             this.boxBlockEncryption.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.boxBlockEncryption.Name = "boxBlockEncryption";
             this.boxBlockEncryption.ReadOnly = true;
-            this.boxBlockEncryption.Size = new System.Drawing.Size(884, 474);
+            this.boxBlockEncryption.Size = new System.Drawing.Size(969, 474);
             this.boxBlockEncryption.TabIndex = 1;
             this.boxBlockEncryption.Text = "";
             // 
@@ -273,7 +273,7 @@
             this.tabBasicsSymmetric.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabBasicsSymmetric.Name = "tabBasicsSymmetric";
             this.tabBasicsSymmetric.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabBasicsSymmetric.Size = new System.Drawing.Size(890, 478);
+            this.tabBasicsSymmetric.Size = new System.Drawing.Size(975, 478);
             this.tabBasicsSymmetric.TabIndex = 2;
             this.tabBasicsSymmetric.Text = "Symmetric encryption";
             this.tabBasicsSymmetric.UseVisualStyleBackColor = true;
@@ -286,7 +286,7 @@
             this.boxSymmetricEncryption.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.boxSymmetricEncryption.Name = "boxSymmetricEncryption";
             this.boxSymmetricEncryption.ReadOnly = true;
-            this.boxSymmetricEncryption.Size = new System.Drawing.Size(884, 474);
+            this.boxSymmetricEncryption.Size = new System.Drawing.Size(969, 474);
             this.boxSymmetricEncryption.TabIndex = 1;
             this.boxSymmetricEncryption.Text = "";
             // 
@@ -297,7 +297,7 @@
             this.tabBasicsAssymetric.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabBasicsAssymetric.Name = "tabBasicsAssymetric";
             this.tabBasicsAssymetric.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabBasicsAssymetric.Size = new System.Drawing.Size(890, 478);
+            this.tabBasicsAssymetric.Size = new System.Drawing.Size(975, 478);
             this.tabBasicsAssymetric.TabIndex = 3;
             this.tabBasicsAssymetric.Text = "Asymmetric encryption";
             this.tabBasicsAssymetric.UseVisualStyleBackColor = true;
@@ -310,7 +310,7 @@
             this.boxAsymmetricEncryption.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.boxAsymmetricEncryption.Name = "boxAsymmetricEncryption";
             this.boxAsymmetricEncryption.ReadOnly = true;
-            this.boxAsymmetricEncryption.Size = new System.Drawing.Size(884, 474);
+            this.boxAsymmetricEncryption.Size = new System.Drawing.Size(969, 474);
             this.boxAsymmetricEncryption.TabIndex = 1;
             this.boxAsymmetricEncryption.Text = "";
             // 
@@ -1041,7 +1041,7 @@
             // 
             this.btnDESSelect.Location = new System.Drawing.Point(252, 187);
             this.btnDESSelect.Name = "btnDESSelect";
-            this.btnDESSelect.Size = new System.Drawing.Size(89, 31);
+            this.btnDESSelect.Size = new System.Drawing.Size(117, 31);
             this.btnDESSelect.TabIndex = 16;
             this.btnDESSelect.Text = "Select file";
             this.btnDESSelect.UseVisualStyleBackColor = true;

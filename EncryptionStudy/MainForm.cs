@@ -258,6 +258,7 @@ namespace EncryptionStudy
                     btnDESSelect.Visible = true;
                     labelEncryptionKeyword.Visible = false;
                     inputEncryptionKeyword.Visible = false;
+                    comboEncryptionLanguage.Visible = false;
                     break;
                 }
                 case 8:
@@ -732,8 +733,27 @@ namespace EncryptionStudy
         }
 
         private void RsaEncryption()
-        { 
-        
+        {
+            try
+            { 
+                UnicodeEncoding ByteConverter = new UnicodeEncoding();
+                byte[] dataToEncrypt = ByteConverter.GetBytes(inputEncryptionText.Text);
+                byte[] encryptedData;
+
+                using (RSACryptoServiceProvider RSA = new RSACryptoServiceProvider())
+                {
+                    encryptedData = RSAEncrypt(dataToEncrypt, RSA.ExportParameters(false), false);
+                }
+            }
+            catch (ArgumentNullException)
+            {
+                MessageBox.Show("Шифрование провалилось!");
+            }
+        }
+
+        public static byte[] RSAEncrypt(byte[] DataToEncrypt, RSAParameters RSAKeyInfo, bool DoOAEPPadding)
+        {
+                     
         }
 
         //Load examples of encryptions
