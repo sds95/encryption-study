@@ -6,6 +6,13 @@ using System.Collections.Generic;
 using System.Collections;
 using System.Linq;
 using System.Resources;
+using System.Security.Cryptography;
+using System.IO;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using Microsoft.Office.Interop.Word;
 
 namespace EncryptionStudy
 {
@@ -38,7 +45,8 @@ namespace EncryptionStudy
             // Buttons.
             btnEncryptionStart.Text = Strings.BtnStart;
             btnCheck.Text = Strings.BtnCheck;
-
+            btnDESSelect.Text = Strings.btnDesSelFile;
+         
             // Labels.
             labelEncryptionKeyword.Text = Strings.LbKeyword;
             labelEncryptionText.Text = Strings.LbText;
@@ -65,6 +73,17 @@ namespace EncryptionStudy
         //Load the first part of the theory
         private void LoadTheory()
         {
+            /*Application application = new Application();
+	        //Document document = application.Documents.Open("C:\\word.doc");
+            int count = document.Words.Count;
+	        for (int i = 1; i <= count; i++)
+	        {
+	            // Write the word.
+	            string text = document.Words[i].Text;
+                boxBasics.Text += text;
+	        }
+	        // Close word.
+	        application.Quit();*/
             boxBasics.LoadFile("Exordium " + locale + ".rtf");
             boxBasicsConcepts.LoadFile("Basic concepts " + locale + ".rtf");
             boxBlockEncryption.LoadFile("Block encryption " + locale + ".rtf");
@@ -86,9 +105,9 @@ namespace EncryptionStudy
                                        {answer8_1, answer8_2, answer8_3},
                                        {answer9_1, answer9_2, answer9_3},
                                        {answer10_1, answer10_2, answer10_3}};
-
+            //Массив всех вопросов
             string[] questionStrings = new string[20] {Tests.Question1 ,Tests.Question2, Tests.Question3, Tests.Question4, Tests.Question5, Tests.Question6, Tests.Question7, Tests.Question8, Tests.Question9, Tests.Question10, Tests.Question11, Tests.Question12, Tests.Question13, Tests.Question14, Tests.Question15, Tests.Question16, Tests.Question17, Tests.Question18, Tests.Question19, Tests.Question20};
-            
+            //Массив всех ответов
             string[,] answerStrings = new string[20,3]
                 {{Tests.Answer1_1, Tests.Answer1_2, Tests.Answer1_3}, 
                 {Tests.Answer2_1, Tests.Answer2_2, Tests.Answer2_3},
@@ -113,7 +132,7 @@ namespace EncryptionStudy
 
             int count = 0;
             bool[] boolarray = new bool[20];
-            while (count < 10)
+            while (count < 10)//Вывод ответов на рандомные вопросы
             {
                 int rand = new Random().Next(0,19);
                 if (!boolarray[rand])
@@ -142,16 +161,17 @@ namespace EncryptionStudy
                                        {answer8_1, answer8_2, answer8_3},
                                        {answer9_1, answer9_2, answer9_3},
                                        {answer10_1, answer10_2, answer10_3}};
+            //Правильные ответы
             string[] rightAnswers = new string[10] { Tests.Question1Answer, Tests.Question2Answer, Tests.Question3Answer, Tests.Question4Answer, Tests.Question5Answer, Tests.Question6Answer, Tests.Question7Answer, Tests.Question8Answer, Tests.Question9Answer, Tests.Question10Answer };
 
             int points = 0;
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 10; i++)//Проверка правильного ответа
             {
                 if (answers[i, Convert.ToInt16(rightAnswers[i])].Checked)
                     points++;
             }
 
-            if (locale == "Ru")
+            if (locale == "Ru")//Вывод результата
             {
                 MessageBox.Show("Количество набранных баллов: " + points.ToString());
                 if (points >= 8)
@@ -234,6 +254,10 @@ namespace EncryptionStudy
                 case 7:
                 {
                     boxEncryptionAlgorithm.LoadFile("DES " + locale + ".rtf");
+                    boxDESEncryption.Visible = true;
+                    btnDESSelect.Visible = true;
+                    labelEncryptionKeyword.Visible = false;
+                    inputEncryptionKeyword.Visible = false;
                     break;
                 }
                 case 8:
@@ -625,7 +649,7 @@ namespace EncryptionStudy
             boxExamplesEncryption.Text = a;
         }
 
-        private void EncryptionTables()
+        private void EncryptionTables()//Шифрование таблицей
         { 
             int a, b, i, j, k;
             string c;
@@ -668,7 +692,43 @@ namespace EncryptionStudy
 
         private void DesEncryption()
         { 
-        
+            //После выбора где сохранить файл с ключем
+            if (saveKeyFile.ShowDialog() == DialogResult.OK)
+            {
+                //И после выбора куда сохранить файл
+                if (saveEncFile.ShowDialog() == DialogResult.OK)
+                {
+                    FileStream fsFileOut = File.Create(saveEncFile.FileName);
+                    // The chryptographic service provider we're going to use
+                    DESCryptoServiceProvider cryptAlgorithm = new DESCryptoServiceProvider();
+                    // Этот объект связывает потоки данных в криптографические значения
+                    CryptoStream csEncrypt = new CryptoStream(fsFileOut, cryptAlgorithm.CreateEncryptor(), CryptoStreamMode.Write);
+                    // This stream writer will write the new file
+                    StreamWriter swEncStream = new StreamWriter(csEncrypt);
+                    // This stream reader will read the file to encrypt
+                    StreamReader srFile = new StreamReader(boxDESEncryption.Text);
+                    // Loop through the file to encrypt, line by line
+                    string currLine = srFile.ReadLine();
+                    while (currLine != null)
+                    {
+                        // Write to the encryption stream
+                        swEncStream.Write(currLine);
+                        currLine = srFile.ReadLine();
+                    }
+                    // Wrap things up
+                    srFile.Close();
+                    swEncStream.Flush();
+                    swEncStream.Close();
+
+                    // Create the key file
+                    FileStream fsFileKey = File.Create(saveKeyFile.FileName);
+                    BinaryWriter bwFile = new BinaryWriter(fsFileKey);
+                    bwFile.Write(cryptAlgorithm.Key);
+                    bwFile.Write(cryptAlgorithm.IV);
+                    bwFile.Flush();
+                    bwFile.Close();
+                }
+            }
         }
 
         private void RsaEncryption()
@@ -738,6 +798,14 @@ namespace EncryptionStudy
                     RsaEncryption();
                     break;
                 }
+            }
+        }
+
+        private void btnDESSelect_Click(object sender, EventArgs e)
+        {
+            if (openFile.ShowDialog() == DialogResult.OK)
+            {
+                boxDESEncryption.Text = openFile.FileName;
             }
         }
     }

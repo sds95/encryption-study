@@ -129,6 +129,9 @@
   <data name="BtnCheck" xml:space="preserve">
     <value>Проверка</value>
   </data>
+  <data name="btnDesSelFile" xml:space="preserve">
+    <value>Выбрать файл</value>
+  </data>
   <data name="BtnStart" xml:space="preserve">
     <value>Старт</value>
   </data>

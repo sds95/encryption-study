@@ -98,6 +98,8 @@
             this.splitInfoAndExample = new System.Windows.Forms.SplitContainer();
             this.boxEncryptionAlgorithm = new System.Windows.Forms.RichTextBox();
             this.splitEncSettingsAndExample = new System.Windows.Forms.SplitContainer();
+            this.btnDESSelect = new System.Windows.Forms.Button();
+            this.boxDESEncryption = new System.Windows.Forms.TextBox();
             this.boxStolbEncryptionTables = new System.Windows.Forms.TextBox();
             this.boxStrEncryptionTables = new System.Windows.Forms.TextBox();
             this.labelStolbEncryptionTables = new System.Windows.Forms.Label();
@@ -115,6 +117,9 @@
             this.tabSettings = new System.Windows.Forms.TabPage();
             this.labelLanguage = new System.Windows.Forms.Label();
             this.comboLanguage = new System.Windows.Forms.ComboBox();
+            this.openFile = new System.Windows.Forms.OpenFileDialog();
+            this.saveKeyFile = new System.Windows.Forms.SaveFileDialog();
+            this.saveEncFile = new System.Windows.Forms.SaveFileDialog();
             this.tabsMain.SuspendLayout();
             this.tabBasics.SuspendLayout();
             this.tabsBasics.SuspendLayout();
@@ -158,7 +163,7 @@
             this.tabsMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabsMain.Name = "tabsMain";
             this.tabsMain.SelectedIndex = 0;
-            this.tabsMain.Size = new System.Drawing.Size(912, 540);
+            this.tabsMain.Size = new System.Drawing.Size(997, 540);
             this.tabsMain.TabIndex = 3;
             // 
             // tabBasics
@@ -168,7 +173,7 @@
             this.tabBasics.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabBasics.Name = "tabBasics";
             this.tabBasics.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabBasics.Size = new System.Drawing.Size(904, 511);
+            this.tabBasics.Size = new System.Drawing.Size(989, 511);
             this.tabBasics.TabIndex = 0;
             this.tabBasics.Text = "Cryptography essentials";
             this.tabBasics.UseVisualStyleBackColor = true;
@@ -187,7 +192,7 @@
             this.tabsBasics.Multiline = true;
             this.tabsBasics.Name = "tabsBasics";
             this.tabsBasics.SelectedIndex = 0;
-            this.tabsBasics.Size = new System.Drawing.Size(898, 507);
+            this.tabsBasics.Size = new System.Drawing.Size(983, 507);
             this.tabsBasics.TabIndex = 0;
             // 
             // tabBasicsBasics
@@ -197,7 +202,7 @@
             this.tabBasicsBasics.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabBasicsBasics.Name = "tabBasicsBasics";
             this.tabBasicsBasics.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabBasicsBasics.Size = new System.Drawing.Size(890, 478);
+            this.tabBasicsBasics.Size = new System.Drawing.Size(975, 478);
             this.tabBasicsBasics.TabIndex = 0;
             this.tabBasicsBasics.Text = "Basics";
             this.tabBasicsBasics.UseVisualStyleBackColor = true;
@@ -210,7 +215,7 @@
             this.boxBasics.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.boxBasics.Name = "boxBasics";
             this.boxBasics.ReadOnly = true;
-            this.boxBasics.Size = new System.Drawing.Size(884, 474);
+            this.boxBasics.Size = new System.Drawing.Size(969, 474);
             this.boxBasics.TabIndex = 0;
             this.boxBasics.Text = "";
             // 
@@ -327,7 +332,7 @@
             this.tabTest.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabTest.Name = "tabTest";
             this.tabTest.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabTest.Size = new System.Drawing.Size(904, 511);
+            this.tabTest.Size = new System.Drawing.Size(989, 511);
             this.tabTest.TabIndex = 2;
             this.tabTest.Text = "Test";
             this.tabTest.UseVisualStyleBackColor = true;
@@ -340,7 +345,7 @@
             this.panel11.Location = new System.Drawing.Point(3, 1170);
             this.panel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(877, 27);
+            this.panel11.Size = new System.Drawing.Size(962, 27);
             this.panel11.TabIndex = 4;
             // 
             // btnCheck
@@ -366,7 +371,7 @@
             this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel10.Name = "panel10";
             this.panel10.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.panel10.Size = new System.Drawing.Size(877, 117);
+            this.panel10.Size = new System.Drawing.Size(962, 117);
             this.panel10.TabIndex = 4;
             // 
             // answer10_3
@@ -426,7 +431,7 @@
             this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel9.Name = "panel9";
             this.panel9.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.panel9.Size = new System.Drawing.Size(877, 117);
+            this.panel9.Size = new System.Drawing.Size(962, 117);
             this.panel9.TabIndex = 4;
             // 
             // answer9_3
@@ -486,7 +491,7 @@
             this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel8.Name = "panel8";
             this.panel8.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.panel8.Size = new System.Drawing.Size(877, 117);
+            this.panel8.Size = new System.Drawing.Size(962, 117);
             this.panel8.TabIndex = 4;
             // 
             // answer8_3
@@ -546,7 +551,7 @@
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel7.Name = "panel7";
             this.panel7.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.panel7.Size = new System.Drawing.Size(877, 117);
+            this.panel7.Size = new System.Drawing.Size(962, 117);
             this.panel7.TabIndex = 4;
             // 
             // answer7_3
@@ -606,7 +611,7 @@
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel6.Name = "panel6";
             this.panel6.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.panel6.Size = new System.Drawing.Size(877, 117);
+            this.panel6.Size = new System.Drawing.Size(962, 117);
             this.panel6.TabIndex = 5;
             // 
             // answer6_3
@@ -666,7 +671,7 @@
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
             this.panel5.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.panel5.Size = new System.Drawing.Size(877, 117);
+            this.panel5.Size = new System.Drawing.Size(962, 117);
             this.panel5.TabIndex = 4;
             // 
             // answer5_3
@@ -726,7 +731,7 @@
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.panel4.Size = new System.Drawing.Size(877, 117);
+            this.panel4.Size = new System.Drawing.Size(962, 117);
             this.panel4.TabIndex = 3;
             // 
             // answer4_3
@@ -786,7 +791,7 @@
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.panel3.Size = new System.Drawing.Size(877, 117);
+            this.panel3.Size = new System.Drawing.Size(962, 117);
             this.panel3.TabIndex = 2;
             // 
             // answer3_3
@@ -846,7 +851,7 @@
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.panel2.Size = new System.Drawing.Size(877, 117);
+            this.panel2.Size = new System.Drawing.Size(962, 117);
             this.panel2.TabIndex = 1;
             // 
             // answer2_3
@@ -906,7 +911,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.panel1.Size = new System.Drawing.Size(877, 117);
+            this.panel1.Size = new System.Drawing.Size(962, 117);
             this.panel1.TabIndex = 0;
             // 
             // answer1_3
@@ -961,7 +966,7 @@
             this.tabAlgorythms.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabAlgorythms.Name = "tabAlgorythms";
             this.tabAlgorythms.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabAlgorythms.Size = new System.Drawing.Size(904, 511);
+            this.tabAlgorythms.Size = new System.Drawing.Size(989, 511);
             this.tabAlgorythms.TabIndex = 1;
             this.tabAlgorythms.Text = "Encryption algorythms";
             this.tabAlgorythms.UseVisualStyleBackColor = true;
@@ -981,8 +986,8 @@
             // splitInfoAndExample.Panel2
             // 
             this.splitInfoAndExample.Panel2.Controls.Add(this.splitEncSettingsAndExample);
-            this.splitInfoAndExample.Size = new System.Drawing.Size(898, 507);
-            this.splitInfoAndExample.SplitterDistance = 449;
+            this.splitInfoAndExample.Size = new System.Drawing.Size(983, 507);
+            this.splitInfoAndExample.SplitterDistance = 491;
             this.splitInfoAndExample.TabIndex = 1;
             // 
             // boxEncryptionAlgorithm
@@ -993,7 +998,7 @@
             this.boxEncryptionAlgorithm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.boxEncryptionAlgorithm.Name = "boxEncryptionAlgorithm";
             this.boxEncryptionAlgorithm.ReadOnly = true;
-            this.boxEncryptionAlgorithm.Size = new System.Drawing.Size(447, 505);
+            this.boxEncryptionAlgorithm.Size = new System.Drawing.Size(489, 505);
             this.boxEncryptionAlgorithm.TabIndex = 1;
             this.boxEncryptionAlgorithm.Text = "";
             // 
@@ -1008,6 +1013,8 @@
             // 
             // splitEncSettingsAndExample.Panel1
             // 
+            this.splitEncSettingsAndExample.Panel1.Controls.Add(this.btnDESSelect);
+            this.splitEncSettingsAndExample.Panel1.Controls.Add(this.boxDESEncryption);
             this.splitEncSettingsAndExample.Panel1.Controls.Add(this.boxStolbEncryptionTables);
             this.splitEncSettingsAndExample.Panel1.Controls.Add(this.boxStrEncryptionTables);
             this.splitEncSettingsAndExample.Panel1.Controls.Add(this.labelStolbEncryptionTables);
@@ -1026,13 +1033,33 @@
             // 
             this.splitEncSettingsAndExample.Panel2.AutoScroll = true;
             this.splitEncSettingsAndExample.Panel2.Controls.Add(this.boxExamplesEncryption);
-            this.splitEncSettingsAndExample.Size = new System.Drawing.Size(445, 507);
+            this.splitEncSettingsAndExample.Size = new System.Drawing.Size(488, 507);
             this.splitEncSettingsAndExample.SplitterDistance = 323;
             this.splitEncSettingsAndExample.TabIndex = 0;
             // 
+            // btnDESSelect
+            // 
+            this.btnDESSelect.Location = new System.Drawing.Point(252, 187);
+            this.btnDESSelect.Name = "btnDESSelect";
+            this.btnDESSelect.Size = new System.Drawing.Size(89, 31);
+            this.btnDESSelect.TabIndex = 16;
+            this.btnDESSelect.Text = "Select file";
+            this.btnDESSelect.UseVisualStyleBackColor = true;
+            this.btnDESSelect.Visible = false;
+            this.btnDESSelect.Click += new System.EventHandler(this.btnDESSelect_Click);
+            // 
+            // boxDESEncryption
+            // 
+            this.boxDESEncryption.Location = new System.Drawing.Point(3, 191);
+            this.boxDESEncryption.Name = "boxDESEncryption";
+            this.boxDESEncryption.Size = new System.Drawing.Size(243, 22);
+            this.boxDESEncryption.TabIndex = 15;
+            this.boxDESEncryption.Visible = false;
+            // 
             // boxStolbEncryptionTables
             // 
-            this.boxStolbEncryptionTables.Location = new System.Drawing.Point(367, 156);
+            this.boxStolbEncryptionTables.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.boxStolbEncryptionTables.Location = new System.Drawing.Point(377, 156);
             this.boxStolbEncryptionTables.Name = "boxStolbEncryptionTables";
             this.boxStolbEncryptionTables.Size = new System.Drawing.Size(70, 22);
             this.boxStolbEncryptionTables.TabIndex = 14;
@@ -1048,6 +1075,7 @@
             // 
             // labelStolbEncryptionTables
             // 
+            this.labelStolbEncryptionTables.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelStolbEncryptionTables.AutoSize = true;
             this.labelStolbEncryptionTables.Location = new System.Drawing.Point(228, 159);
             this.labelStolbEncryptionTables.Name = "labelStolbEncryptionTables";
@@ -1073,7 +1101,7 @@
             this.inputAkeyAfinEncryption.Location = new System.Drawing.Point(399, 126);
             this.inputAkeyAfinEncryption.MaxLength = 5;
             this.inputAkeyAfinEncryption.Name = "inputAkeyAfinEncryption";
-            this.inputAkeyAfinEncryption.Size = new System.Drawing.Size(38, 22);
+            this.inputAkeyAfinEncryption.Size = new System.Drawing.Size(81, 22);
             this.inputAkeyAfinEncryption.TabIndex = 10;
             this.inputAkeyAfinEncryption.Visible = false;
             // 
@@ -1108,7 +1136,7 @@
             this.inputEncryptionText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.inputEncryptionText.MaxLength = 50;
             this.inputEncryptionText.Name = "inputEncryptionText";
-            this.inputEncryptionText.Size = new System.Drawing.Size(430, 22);
+            this.inputEncryptionText.Size = new System.Drawing.Size(473, 22);
             this.inputEncryptionText.TabIndex = 7;
             // 
             // labelEncryptionText
@@ -1153,7 +1181,7 @@
             this.comboEncryptionLanguage.Location = new System.Drawing.Point(3, 33);
             this.comboEncryptionLanguage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboEncryptionLanguage.Name = "comboEncryptionLanguage";
-            this.comboEncryptionLanguage.Size = new System.Drawing.Size(434, 24);
+            this.comboEncryptionLanguage.Size = new System.Drawing.Size(477, 24);
             this.comboEncryptionLanguage.TabIndex = 2;
             this.comboEncryptionLanguage.SelectedIndexChanged += new System.EventHandler(this.comboEncryptionLanguage_SelectedIndexChanged);
             // 
@@ -1164,19 +1192,19 @@
             this.ComboEncryption.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboEncryption.FormattingEnabled = true;
             this.ComboEncryption.Items.AddRange(new object[] {
-            "Ceasar encryption",
-            "Ceasar modernisation (Afine) encryption",
-            "Ceasar modernisation (Keyword) encryption",
-            "Visioner encryption",
-            "Playfair encryption",
-            "Magical square encryption",
-            "Encryption tables",
+            "Ceasar encryption \t/  Шифр Цезаря\t",
+            "Ceasar modernisation (Afine) encryption  /  Афинский шифр цезаря",
+            "Ceasar modernisation (Keyword) encryption  /  Шифр Цезаря с ключевым словом",
+            "Visioner encryption  /  Шифр Вижинера",
+            "Playfair encryption  /  Шифр Плейфера",
+            "Magical square encryption  /  Шифрование магическим квадратом",
+            "Encryption tables  /  Шифрование таблицей",
             "DES",
             "RSA"});
             this.ComboEncryption.Location = new System.Drawing.Point(3, 2);
             this.ComboEncryption.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ComboEncryption.Name = "ComboEncryption";
-            this.ComboEncryption.Size = new System.Drawing.Size(434, 24);
+            this.ComboEncryption.Size = new System.Drawing.Size(477, 24);
             this.ComboEncryption.TabIndex = 0;
             this.ComboEncryption.SelectedIndexChanged += new System.EventHandler(this.ComboEncryption_SelectedIndexChanged);
             // 
@@ -1185,7 +1213,7 @@
             this.boxExamplesEncryption.Dock = System.Windows.Forms.DockStyle.Fill;
             this.boxExamplesEncryption.Location = new System.Drawing.Point(0, 0);
             this.boxExamplesEncryption.Name = "boxExamplesEncryption";
-            this.boxExamplesEncryption.Size = new System.Drawing.Size(443, 178);
+            this.boxExamplesEncryption.Size = new System.Drawing.Size(486, 178);
             this.boxExamplesEncryption.TabIndex = 0;
             this.boxExamplesEncryption.Text = "";
             // 
@@ -1197,7 +1225,7 @@
             this.tabSettings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabSettings.Name = "tabSettings";
             this.tabSettings.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabSettings.Size = new System.Drawing.Size(904, 511);
+            this.tabSettings.Size = new System.Drawing.Size(989, 511);
             this.tabSettings.TabIndex = 3;
             this.tabSettings.Text = "Settings";
             this.tabSettings.UseVisualStyleBackColor = true;
@@ -1225,11 +1253,15 @@
             this.comboLanguage.TabIndex = 0;
             this.comboLanguage.SelectedIndexChanged += new System.EventHandler(this.comboLanguage_SelectedIndexChanged);
             // 
+            // openFile
+            // 
+            this.openFile.FileName = "openFile";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(912, 540);
+            this.ClientSize = new System.Drawing.Size(997, 540);
             this.Controls.Add(this.tabsMain);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
@@ -1371,6 +1403,11 @@
         private System.Windows.Forms.TextBox boxStrEncryptionTables;
         private System.Windows.Forms.Label labelStolbEncryptionTables;
         private System.Windows.Forms.Label labelStrEncryptionTables;
+        private System.Windows.Forms.Button btnDESSelect;
+        private System.Windows.Forms.TextBox boxDESEncryption;
+        private System.Windows.Forms.OpenFileDialog openFile;
+        private System.Windows.Forms.SaveFileDialog saveKeyFile;
+        private System.Windows.Forms.SaveFileDialog saveEncFile;
 
     }
 }

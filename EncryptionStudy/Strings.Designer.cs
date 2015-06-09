@@ -97,6 +97,15 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Select file.
+        /// </summary>
+        internal static string btnDesSelFile {
+            get {
+                return ResourceManager.GetString("btnDesSelFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Start.
         /// </summary>
         internal static string BtnStart {
