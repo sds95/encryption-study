@@ -53,7 +53,7 @@ namespace EncryptionStudy
             labelLanguage.Text = Strings.LbLanguage;
             labelStrEncryptionTables.Text = Strings.LbStrEncTables;
             labelStolbEncryptionTables.Text = Strings.LbStoEncTables;
-
+            labelKey.Text = Strings.LbKey;
 
             // Tabs.
             tabAlgorythms.Text = Strings.EncryptionAlgorithms;
@@ -212,18 +212,36 @@ namespace EncryptionStudy
                 case 0:
                 {
                     boxEncryptionAlgorithm.LoadFile("Ceasar " + locale + ".rtf");
+                    settingsVisibleFalse();
+                    labelEncryptionKeyword.Visible = true;
+                    inputEncryptionKeyword.Visible = true;
+                    comboEncryptionLanguage.Visible = true;
+                    labelEncryptionText.Visible = true;
+                    inputEncryptionText.Visible = true;
                     break;
                 }
                 case 1:
                 {
                     boxEncryptionAlgorithm.LoadFile("Ceasar Afine " + locale + ".rtf");
-                    lbAkeyAfin.Visible = true;
+                    settingsVisibleFalse();
+                    labelEncryptionKeyword.Visible = true;
+                    inputEncryptionKeyword.Visible = true;
+                    comboEncryptionLanguage.Visible = true;
+                    labelEncryptionText.Visible = true;
+                    inputEncryptionText.Visible = true;
+                    labelAkeyAfin.Visible = true;
                     inputAkeyKeyEncryption.Visible = true;
                     break;
                 }
                 case 2:
                 {
                     boxEncryptionAlgorithm.LoadFile("Ceasar Keyword " + locale + ".rtf");
+                    settingsVisibleFalse();
+                    labelEncryptionKeyword.Visible = true;
+                    inputEncryptionKeyword.Visible = true;
+                    comboEncryptionLanguage.Visible = true;
+                    labelEncryptionText.Visible = true;
+                    inputEncryptionText.Visible = true;
                     labelKey.Visible = true;
                     inputAkeyKeyEncryption.Visible = true;
                     break;
@@ -231,49 +249,91 @@ namespace EncryptionStudy
                 case 3:
                 {
                     boxEncryptionAlgorithm.LoadFile("Visioner " + locale + ".rtf");
+                    settingsVisibleFalse();
+                    labelEncryptionKeyword.Visible = true;
+                    inputEncryptionKeyword.Visible = true;
+                    comboEncryptionLanguage.Visible = true;
+                    labelEncryptionText.Visible = true;
+                    inputEncryptionText.Visible = true;
                     break;
                 }
                 case 4:
                 {
                     boxEncryptionAlgorithm.LoadFile("Playfer " + locale + ".rtf");
+                    settingsVisibleFalse();
+                    comboEncryptionLanguage.Visible = true;
+                    labelEncryptionText.Visible = true;
+                    inputEncryptionText.Visible = true;
                     break;
                 }
                 case 5:
                 {
                     boxEncryptionAlgorithm.LoadFile("Magical square " + locale + ".rtf");
+                    settingsVisibleFalse();
+                    comboEncryptionLanguage.Visible = true;
+                    labelEncryptionText.Visible = true;
+                    inputEncryptionText.Visible = true;
                     break;
                 }
                 case 6:
                 {
                     boxEncryptionAlgorithm.LoadFile("Encryption tables " + locale + ".rtf");
+                    settingsVisibleFalse();
+                    comboEncryptionLanguage.Visible = true;
+                    labelEncryptionText.Visible = true;
+                    inputEncryptionText.Visible = true;
                     labelStrEncryptionTables.Visible = true;
                     labelStolbEncryptionTables.Visible = true;
                     boxStrEncryptionTables.Visible = true;
                     boxStolbEncryptionTables.Visible = true;
-                    labelEncryptionKeyword.Visible = false;
-                    inputEncryptionKeyword.Visible = false;
                     break;
                 }
                 case 7:
                 {
                     boxEncryptionAlgorithm.LoadFile("DES " + locale + ".rtf");
+                    settingsVisibleFalse();
+                    comboEncryptionLanguage.Visible = true;
+                    labelEncryptionText.Visible = true;
+                    inputEncryptionText.Visible = true;
                     boxDESEncryption.Visible = true;
                     btnDESSelect.Visible = true;
-                    labelEncryptionKeyword.Visible = false;
-                    inputEncryptionKeyword.Visible = false;
-                    comboEncryptionLanguage.Visible = false;
                     break;
                 }
                 case 8:
                 {
                     boxEncryptionAlgorithm.LoadFile("RSA " + locale + ".rtf");
+                    settingsVisibleFalse();
+                    comboEncryptionLanguage.Visible = true;
+                    labelEncryptionText.Visible = true;
+                    inputEncryptionText.Visible = true;
                     break;
                 }
             }
         }
         
+        //
+        private void settingsVisibleFalse()
+        {
+            boxDESEncryption.Visible = false;
+            btnDESSelect.Visible = false;
+            labelKey.Visible = false;
+            labelAkeyAfin.Visible = false;
+            inputAkeyKeyEncryption.Visible = false;
+            labelStrEncryptionTables.Visible = false;
+            labelStolbEncryptionTables.Visible = false;
+            boxStrEncryptionTables.Visible = false;
+            boxStolbEncryptionTables.Visible = false;
+            labelEncryptionKeyword.Visible = false;
+            inputEncryptionKeyword.Visible = false;
+            labelEncryptionText.Visible = false;
+            inputEncryptionText.Visible = false;
+            comboEncryptionLanguage.Visible = false;
+                    
+        }
+
         //Language for encryption examples
         string Alphabet;
+        string [,] encriptionMatrix;
         private void comboEncryptionLanguage_SelectedIndexChanged(object sender, EventArgs e)
         {
             
@@ -348,12 +408,12 @@ namespace EncryptionStudy
             }
         }
 
-        private void CeasarKeywordEncryption()
+        private void CeasarKeywordEncryption()//Шифр Цезаря с ключевым словом
         {
-            string alf2 = String.Empty;
-            string text;
             int key = 0, i = 0;
-            string keyWord = String.Empty;
+            string alf2 = "";
+            string text;
+            string keyWord = "";
             bool pro = false;
 
             text = inputEncryptionText.Text;
@@ -551,14 +611,14 @@ namespace EncryptionStudy
             //матрица алфавита шифрования
             string[,] encriptionMatrix =
                                          {
-                                         {"А", "Ч", "Б", "М", "Ц", "В"}, //первая строка матрицы
-                                         {"Ь", "Г", "Н", "Ш", "Д", "О"}, //вторая строка матрицы
-                                         {"Е", "Щ", ",", "Х", "У", "П"}, //третья строка матрицы
-                                         {".", "З", "Ъ", "Р", "И", "Й"}, //четвертая строка матрицы
-                                         {"С", "-", "К", "Э", "Т", "Л"}, //пятая строка матрицы
-                                         {"Ю", "Я", " ", "Ы", "Ф", "Ж"}  //шестая строка матрицы
+                                         {"А", "Ч", "Б", "М", "Ц", "В"}, 
+                                         {"Ь", "Г", "Н", "Ш", "Д", "О"}, 
+                                         {"Е", "Щ", ",", "Х", "У", "П"}, 
+                                         {".", "З", "Ъ", "Р", "И", "Й"}, 
+                                         {"С", "-", "К", "Э", "Т", "Л"}, 
+                                         {"Ю", "Я", " ", "Ы", "Ф", "Ж"}  
                                          };
-
+            
             string text = ""; //исходный текст для шифрования
             int i_first = 0, j_first = 0;  //координаты первого символа 
             int i_second = 0, j_second = 0;//координаты второго символа 
