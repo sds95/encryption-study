@@ -151,6 +151,15 @@ namespace EncryptionStudy {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Key.
+        /// </summary>
+        internal static string LbKey {
+            get {
+                return ResourceManager.GetString("LbKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Keyword.
         /// </summary>
         internal static string LbKeyword {

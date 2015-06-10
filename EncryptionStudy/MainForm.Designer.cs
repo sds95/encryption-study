@@ -104,7 +104,7 @@
             this.boxStrEncryptionTables = new System.Windows.Forms.TextBox();
             this.labelStolbEncryptionTables = new System.Windows.Forms.Label();
             this.labelStrEncryptionTables = new System.Windows.Forms.Label();
-            this.inputAkeyAfinEncryption = new System.Windows.Forms.TextBox();
+            this.inputAkeyKeyEncryption = new System.Windows.Forms.TextBox();
             this.lbAkeyAfin = new System.Windows.Forms.Label();
             this.inputEncryptionKeyword = new System.Windows.Forms.TextBox();
             this.inputEncryptionText = new System.Windows.Forms.TextBox();
@@ -120,6 +120,7 @@
             this.openFile = new System.Windows.Forms.OpenFileDialog();
             this.saveKeyFile = new System.Windows.Forms.SaveFileDialog();
             this.saveEncFile = new System.Windows.Forms.SaveFileDialog();
+            this.labelKey = new System.Windows.Forms.Label();
             this.tabsMain.SuspendLayout();
             this.tabBasics.SuspendLayout();
             this.tabsBasics.SuspendLayout();
@@ -1013,13 +1014,14 @@
             // 
             // splitEncSettingsAndExample.Panel1
             // 
+            this.splitEncSettingsAndExample.Panel1.Controls.Add(this.labelKey);
             this.splitEncSettingsAndExample.Panel1.Controls.Add(this.btnDESSelect);
             this.splitEncSettingsAndExample.Panel1.Controls.Add(this.boxDESEncryption);
             this.splitEncSettingsAndExample.Panel1.Controls.Add(this.boxStolbEncryptionTables);
             this.splitEncSettingsAndExample.Panel1.Controls.Add(this.boxStrEncryptionTables);
             this.splitEncSettingsAndExample.Panel1.Controls.Add(this.labelStolbEncryptionTables);
             this.splitEncSettingsAndExample.Panel1.Controls.Add(this.labelStrEncryptionTables);
-            this.splitEncSettingsAndExample.Panel1.Controls.Add(this.inputAkeyAfinEncryption);
+            this.splitEncSettingsAndExample.Panel1.Controls.Add(this.inputAkeyKeyEncryption);
             this.splitEncSettingsAndExample.Panel1.Controls.Add(this.lbAkeyAfin);
             this.splitEncSettingsAndExample.Panel1.Controls.Add(this.inputEncryptionKeyword);
             this.splitEncSettingsAndExample.Panel1.Controls.Add(this.inputEncryptionText);
@@ -1094,16 +1096,16 @@
             this.labelStrEncryptionTables.Text = "Number of strings";
             this.labelStrEncryptionTables.Visible = false;
             // 
-            // inputAkeyAfinEncryption
+            // inputAkeyKeyEncryption
             // 
-            this.inputAkeyAfinEncryption.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.inputAkeyKeyEncryption.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.inputAkeyAfinEncryption.Location = new System.Drawing.Point(399, 126);
-            this.inputAkeyAfinEncryption.MaxLength = 5;
-            this.inputAkeyAfinEncryption.Name = "inputAkeyAfinEncryption";
-            this.inputAkeyAfinEncryption.Size = new System.Drawing.Size(81, 22);
-            this.inputAkeyAfinEncryption.TabIndex = 10;
-            this.inputAkeyAfinEncryption.Visible = false;
+            this.inputAkeyKeyEncryption.Location = new System.Drawing.Point(399, 126);
+            this.inputAkeyKeyEncryption.MaxLength = 5;
+            this.inputAkeyKeyEncryption.Name = "inputAkeyKeyEncryption";
+            this.inputAkeyKeyEncryption.Size = new System.Drawing.Size(81, 22);
+            this.inputAkeyKeyEncryption.TabIndex = 10;
+            this.inputAkeyKeyEncryption.Visible = false;
             // 
             // lbAkeyAfin
             // 
@@ -1257,6 +1259,16 @@
             // 
             this.openFile.FileName = "openFile";
             // 
+            // labelKey
+            // 
+            this.labelKey.AutoSize = true;
+            this.labelKey.Location = new System.Drawing.Point(396, 107);
+            this.labelKey.Name = "labelKey";
+            this.labelKey.Size = new System.Drawing.Size(32, 17);
+            this.labelKey.TabIndex = 17;
+            this.labelKey.Text = "Key";
+            this.labelKey.Visible = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1397,7 +1409,7 @@
         private System.Windows.Forms.TabPage tabBasicsConcepts;
         private System.Windows.Forms.RichTextBox boxBasicsConcepts;
         private System.Windows.Forms.RichTextBox boxExamplesEncryption;
-        private System.Windows.Forms.TextBox inputAkeyAfinEncryption;
+        private System.Windows.Forms.TextBox inputAkeyKeyEncryption;
         private System.Windows.Forms.Label lbAkeyAfin;
         private System.Windows.Forms.TextBox boxStolbEncryptionTables;
         private System.Windows.Forms.TextBox boxStrEncryptionTables;
@@ -1408,6 +1420,7 @@
         private System.Windows.Forms.OpenFileDialog openFile;
         private System.Windows.Forms.SaveFileDialog saveKeyFile;
         private System.Windows.Forms.SaveFileDialog saveEncFile;
+        private System.Windows.Forms.Label labelKey;
 
     }
 }

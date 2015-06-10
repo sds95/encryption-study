@@ -54,6 +54,7 @@ namespace EncryptionStudy
             labelStrEncryptionTables.Text = Strings.LbStrEncTables;
             labelStolbEncryptionTables.Text = Strings.LbStoEncTables;
 
+
             // Tabs.
             tabAlgorythms.Text = Strings.EncryptionAlgorithms;
             tabBasics.Text = Strings.CryptographyEssentials;
@@ -217,12 +218,14 @@ namespace EncryptionStudy
                 {
                     boxEncryptionAlgorithm.LoadFile("Ceasar Afine " + locale + ".rtf");
                     lbAkeyAfin.Visible = true;
-                    inputAkeyAfinEncryption.Visible = true;
+                    inputAkeyKeyEncryption.Visible = true;
                     break;
                 }
                 case 2:
                 {
                     boxEncryptionAlgorithm.LoadFile("Ceasar Keyword " + locale + ".rtf");
+                    labelKey.Visible = true;
+                    inputAkeyKeyEncryption.Visible = true;
                     break;
                 }
                 case 3:
@@ -319,7 +322,7 @@ namespace EncryptionStudy
             try //Ввод ключей и их проверка
             { 
                 k = Convert.ToInt32(inputEncryptionKeyword.Text);
-                a = Convert.ToInt32(inputAkeyAfinEncryption.Text);
+                a = Convert.ToInt32(inputAkeyKeyEncryption.Text);
             }
             catch { MessageBox.Show("В ключах должны быть введены числа!"); }
 
@@ -347,10 +350,92 @@ namespace EncryptionStudy
 
         private void CeasarKeywordEncryption()
         {
-            
-        }
+            string alf2 = String.Empty;
+            string text;
+            int key = 0, i = 0;
+            string keyWord = String.Empty;
+            bool pro = false;
 
-        private void VisionerEncryption()
+            text = inputEncryptionText.Text;
+
+            while (pro == false)
+            {
+                try { key = Convert.ToInt32(inputAkeyKeyEncryption.Text); } //Ввод ключа и его проверка
+                catch { MessageBox.Show("В данное поле должно быть введено число!"); }
+
+                char let = 'а';
+                for (int count = 0; count < key % 31; count++)
+                {
+                    alf2 += let;
+                    let++;
+                }
+
+                try { keyWord = inputEncryptionKeyword.Text; }
+                catch
+                { MessageBox.Show("В данное поле должно быть введено слово!"); }
+
+                    int k = alf2.Length;
+                    while (k < Alphabet.Length)
+                    {
+                        i = 0;
+                        while (i < keyWord.Length)
+                        {
+                            bool sym = true;
+                            for (int j = 0; j < alf2.Length; j++)
+                            {
+                                if (alf2[j] == keyWord[i])
+                                {
+                                    sym = false;
+                                    break;
+                                }
+                            }
+                            if (sym)
+                            {
+                                alf2 += keyWord[i];
+                                k++;
+                            }
+                            else
+                            {
+                                sym = true;
+                                for (int j = 0; j < alf2.Length; j++)
+                                {
+                                    if (alf2[j] == let)
+                                    {
+                                        sym = false;
+                                        break;
+                                    }
+                                }
+                                if (sym)
+                                {
+                                    alf2 += let;
+                                }
+                                let++;
+                                k++;
+                            }
+                            i++;
+                        }
+                    }
+                    pro = true;
+                }
+
+                text = text.ToLower();
+
+                for (i = 0; i < text.Length; i++)
+                {
+                    if (text[i] != ' ')
+                    {
+                        for (int j = 0; j < Alphabet.Length; j++)
+                        {
+                            if (Alphabet[j] == text[i])
+                            {
+                                boxExamplesEncryption.Text += alf2[j];
+                            }
+                        }
+                    }
+                }
+            }
+
+        private void VisionerEncryption()//Шифр Вижинера
         { 
             string s = ""; //Строка, к которой применяется шифрования
             string result = ""; //Строка - результат шифрования
@@ -461,7 +546,7 @@ namespace EncryptionStudy
             } 
         }
 
-        private void PlayferEncryption()
+        private void PlayferEncryption()//Шифр Плейфера
         { 
             //матрица алфавита шифрования
             string[,] encriptionMatrix =
@@ -691,7 +776,7 @@ namespace EncryptionStudy
             boxExamplesEncryption.Text = c;//Вывод результата на экран
         }
 
-        private void DesEncryption()
+        private void DesEncryption()//DES
         { 
             //После выбора где сохранить файл с ключем
             if (saveKeyFile.ShowDialog() == DialogResult.OK)
@@ -732,7 +817,15 @@ namespace EncryptionStudy
             }
         }
 
-        private void RsaEncryption()
+        private void btnDESSelect_Click(object sender, EventArgs e)//Сохранение файла с зашифрованым текстом методом DES
+        {
+            if (openFile.ShowDialog() == DialogResult.OK)
+            {
+                boxDESEncryption.Text = openFile.FileName;
+            }
+        }        
+
+        private void RsaEncryption()//RSA
         {
             try
             { 
@@ -753,11 +846,25 @@ namespace EncryptionStudy
 
         public static byte[] RSAEncrypt(byte[] DataToEncrypt, RSAParameters RSAKeyInfo, bool DoOAEPPadding)
         {
-                     
+            try
+            {
+                byte[] encryptedData;
+                using (RSACryptoServiceProvider RSA = new RSACryptoServiceProvider())
+                {
+                    RSA.ImportParameters(RSAKeyInfo);
+                    encryptedData = RSA.Encrypt(DataToEncrypt, DoOAEPPadding);
+                }
+                return encryptedData;
+            }
+            catch(CryptographicException e)
+            {
+                MessageBox.Show(e.Message);
+                return null;
+            }
         }
 
         //Load examples of encryptions
-        private void btnEncryptionStart_Click(object sender, EventArgs e)
+        private void btnEncryptionStart_Click(object sender, EventArgs e)//Обращение к методам шифрования
         {
             if (locale == "RU")//В зависимости от выбранного языка выбирается язык вывода сообщения об ошибке
             {
@@ -818,14 +925,6 @@ namespace EncryptionStudy
                     RsaEncryption();
                     break;
                 }
-            }
-        }
-
-        private void btnDESSelect_Click(object sender, EventArgs e)
-        {
-            if (openFile.ShowDialog() == DialogResult.OK)
-            {
-                boxDESEncryption.Text = openFile.FileName;
             }
         }
     }

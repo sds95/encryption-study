@@ -168,4 +168,7 @@
   <data name="Tests" xml:space="preserve">
     <value>Test</value>
   </data>
+  <data name="LbKey" xml:space="preserve">
+    <value>Key</value>
+  </data>
 </root>
