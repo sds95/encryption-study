@@ -34,5 +34,17 @@ namespace EncryptionStudy.Properties {
                 this["Language"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Theory2Enabled {
+            get {
+                return ((bool)(this["Theory2Enabled"]));
+            }
+            set {
+                this["Theory2Enabled"] = value;
+            }
+        }
     }
 }

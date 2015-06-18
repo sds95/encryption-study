@@ -101,7 +101,7 @@
             this.labelKey = new System.Windows.Forms.Label();
             this.btnDESSelect = new System.Windows.Forms.Button();
             this.boxDESEncryption = new System.Windows.Forms.TextBox();
-            this.boxStolbEncryptionTables = new System.Windows.Forms.TextBox();
+            this.boxStoEncryptionTables = new System.Windows.Forms.TextBox();
             this.boxStrEncryptionTables = new System.Windows.Forms.TextBox();
             this.labelStolbEncryptionTables = new System.Windows.Forms.Label();
             this.labelStrEncryptionTables = new System.Windows.Forms.Label();
@@ -1017,7 +1017,7 @@
             this.splitEncSettingsAndExample.Panel1.Controls.Add(this.labelKey);
             this.splitEncSettingsAndExample.Panel1.Controls.Add(this.btnDESSelect);
             this.splitEncSettingsAndExample.Panel1.Controls.Add(this.boxDESEncryption);
-            this.splitEncSettingsAndExample.Panel1.Controls.Add(this.boxStolbEncryptionTables);
+            this.splitEncSettingsAndExample.Panel1.Controls.Add(this.boxStoEncryptionTables);
             this.splitEncSettingsAndExample.Panel1.Controls.Add(this.boxStrEncryptionTables);
             this.splitEncSettingsAndExample.Panel1.Controls.Add(this.labelStolbEncryptionTables);
             this.splitEncSettingsAndExample.Panel1.Controls.Add(this.labelStrEncryptionTables);
@@ -1069,14 +1069,14 @@
             this.boxDESEncryption.TabIndex = 15;
             this.boxDESEncryption.Visible = false;
             // 
-            // boxStolbEncryptionTables
+            // boxStoEncryptionTables
             // 
-            this.boxStolbEncryptionTables.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.boxStolbEncryptionTables.Location = new System.Drawing.Point(377, 156);
-            this.boxStolbEncryptionTables.Name = "boxStolbEncryptionTables";
-            this.boxStolbEncryptionTables.Size = new System.Drawing.Size(70, 22);
-            this.boxStolbEncryptionTables.TabIndex = 14;
-            this.boxStolbEncryptionTables.Visible = false;
+            this.boxStoEncryptionTables.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.boxStoEncryptionTables.Location = new System.Drawing.Point(377, 156);
+            this.boxStoEncryptionTables.Name = "boxStoEncryptionTables";
+            this.boxStoEncryptionTables.Size = new System.Drawing.Size(70, 22);
+            this.boxStoEncryptionTables.TabIndex = 14;
+            this.boxStoEncryptionTables.Visible = false;
             // 
             // boxStrEncryptionTables
             // 
@@ -1408,7 +1408,7 @@
         private System.Windows.Forms.RichTextBox boxExamplesEncryption;
         private System.Windows.Forms.TextBox inputAkeyKeyEncryption;
         private System.Windows.Forms.Label labelAkeyAfin;
-        private System.Windows.Forms.TextBox boxStolbEncryptionTables;
+        private System.Windows.Forms.TextBox boxStoEncryptionTables;
         private System.Windows.Forms.TextBox boxStrEncryptionTables;
         private System.Windows.Forms.Label labelStolbEncryptionTables;
         private System.Windows.Forms.Label labelStrEncryptionTables;

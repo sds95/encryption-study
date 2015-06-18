@@ -25,6 +25,7 @@ namespace EncryptionStudy
 
             // Load language.
             comboLanguage.SelectedIndex = Properties.Settings.Default.Language;
+            theoryTestVisible();
             InitCaptions();
         }
 
@@ -42,6 +43,10 @@ namespace EncryptionStudy
                 locale = "Ru";
             }
 
+            /*if (Properties.Settings.Default.Theory2Enabled == true)
+            {
+                tabAlgorythms.
+            }*/
             // Buttons.
             btnEncryptionStart.Text = Strings.BtnStart;
             btnCheck.Text = Strings.BtnCheck;
@@ -176,7 +181,10 @@ namespace EncryptionStudy
             {
                 MessageBox.Show("Количество набранных баллов: " + points.ToString());
                 if (points >= 8)
+                {
                     MessageBox.Show("Вы набрали необходимое количество баллов для перехода ко второй части обучения");
+                    Properties.Settings.Default.Theory2Enabled = true;
+                }
                 else
                     MessageBox.Show("Вы не набрали необходимое количество баллов для перехода ко второй части обучения");
             }
@@ -184,7 +192,10 @@ namespace EncryptionStudy
             { 
                 MessageBox.Show("Number of points: " + points.ToString());
                 if (points >= 8)
+                {
                     MessageBox.Show("You collect the necessary points to move to the second part of learning");
+                    Properties.Settings.Default.Theory2Enabled = true;
+                }
                 else
                     MessageBox.Show("You did not collect the necessary points to move to the second part of learning");
             }
@@ -194,6 +205,15 @@ namespace EncryptionStudy
         private void comboLanguage_SelectedIndexChanged(object sender, EventArgs e)
         {
             Properties.Settings.Default.Language = comboLanguage.SelectedIndex;
+            Properties.Settings.Default.Save();
+            InitCaptions();
+        }
+
+
+        //Visible of theory
+        private void theoryTestVisible()
+        {
+            Properties.Settings.Default.Theory2Enabled = false;
             Properties.Settings.Default.Save();
             InitCaptions();
         }
@@ -285,7 +305,7 @@ namespace EncryptionStudy
                     labelStrEncryptionTables.Visible = true;
                     labelStolbEncryptionTables.Visible = true;
                     boxStrEncryptionTables.Visible = true;
-                    boxStolbEncryptionTables.Visible = true;
+                    boxStoEncryptionTables.Visible = true;
                     break;
                 }
                 case 7:
@@ -311,7 +331,8 @@ namespace EncryptionStudy
             }
         }
         
-        //
+
+        //All elements = false
         private void settingsVisibleFalse()
         {
             boxDESEncryption.Visible = false;
@@ -322,13 +343,12 @@ namespace EncryptionStudy
             labelStrEncryptionTables.Visible = false;
             labelStolbEncryptionTables.Visible = false;
             boxStrEncryptionTables.Visible = false;
-            boxStolbEncryptionTables.Visible = false;
+            boxStoEncryptionTables.Visible = false;
             labelEncryptionKeyword.Visible = false;
             inputEncryptionKeyword.Visible = false;
             labelEncryptionText.Visible = false;
             inputEncryptionText.Visible = false;
             comboEncryptionLanguage.Visible = false;
-                    
         }
 
         //Language for encryption examples
@@ -802,7 +822,7 @@ namespace EncryptionStudy
             string[,] d = new string[50, 50];
             //Ввод кол-во строк, столбцов и текста
             a = Convert.ToInt32(boxStrEncryptionTables.Text);
-            b = Convert.ToInt32(boxStolbEncryptionTables.Text);
+            b = Convert.ToInt32(boxStoEncryptionTables.Text);
             c = inputEncryptionText.Text;
 
             k = a * b;//Кол-во элементов массива
